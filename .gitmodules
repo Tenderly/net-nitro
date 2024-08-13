@@ -1,6 +1,6 @@
 [submodule "go-ethereum"]
 	path = go-ethereum
-	url = git@github.com:Tenderly/net-nitro-go-ethereum
+	url = https://github.com/Tenderly/net-nitro-go-ethereum.git
 	branch = master
 [submodule "fastcache"]
 	path = fastcache
