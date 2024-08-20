@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/offchainlabs/nitro/execution/gethexec"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/execution/gethexec"
 	"github.com/spf13/pflag"
 )
 
