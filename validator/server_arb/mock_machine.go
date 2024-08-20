@@ -6,8 +6,8 @@ package server_arb
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/offchainlabs/nitro/validator"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/validator"
 )
 
 type IncorrectMachine struct {
