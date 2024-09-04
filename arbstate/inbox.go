@@ -12,9 +12,9 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 
 	"github.com/tenderly/net-nitro/arbcompress"
 	"github.com/tenderly/net-nitro/arbos/arbosState"

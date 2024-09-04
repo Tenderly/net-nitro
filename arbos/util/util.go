@@ -11,9 +11,9 @@ import (
 	"math/big"
 	"strings"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 	"github.com/tenderly/net-nitro/solgen/go/precompilesgen"
 	pgen "github.com/tenderly/net-nitro/solgen/go/precompilesgen"
 	"github.com/tenderly/net-nitro/util/arbmath"

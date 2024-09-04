@@ -17,11 +17,11 @@
 package state
 
 import (
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
-	"github.com/tenderly/net-nitro-go-ethereum/trie"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/trie"
 )
 
 // NewStateSync creates a new state trie download scheduler.

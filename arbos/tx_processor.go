@@ -14,17 +14,17 @@ import (
 	"github.com/tenderly/net-nitro/arbos/util"
 	"github.com/tenderly/net-nitro/util/arbmath"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 	"github.com/tenderly/net-nitro/arbos/retryables"
 
 	"github.com/tenderly/net-nitro/arbos/arbosState"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
-	glog "github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	glog "github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 var arbosAddress = types.ArbosAddress

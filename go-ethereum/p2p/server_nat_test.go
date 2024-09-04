@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common/mclock"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/notinternal/testlog"
+	"github.com/tenderly/net-nitro/go-ethereum/common/mclock"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/notinternal/testlog"
 )
 
 func TestServerPortMapping(t *testing.T) {

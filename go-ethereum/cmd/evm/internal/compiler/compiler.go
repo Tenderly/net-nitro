@@ -20,7 +20,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/asm"
+	"github.com/tenderly/net-nitro/go-ethereum/core/asm"
 )
 
 func Compile(fn string, src []byte, debug bool) (string, error) {

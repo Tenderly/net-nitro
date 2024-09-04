@@ -27,12 +27,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/notinternal/testlog"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/discover/v5wire"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/notinternal/testlog"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/discover/v5wire"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 	"github.com/stretchr/testify/require"
 	"golang.org/x/exp/slices"
 )

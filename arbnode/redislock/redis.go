@@ -11,7 +11,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/go-redis/redis/v8"
 	"github.com/tenderly/net-nitro/util/stopwaiter"
 	flag "github.com/spf13/pflag"

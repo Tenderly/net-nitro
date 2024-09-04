@@ -13,7 +13,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 	"github.com/tenderly/net-nitro/das/dastree"
 )

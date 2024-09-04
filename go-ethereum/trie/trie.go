@@ -22,11 +22,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/trie/trienode"
-	"github.com/tenderly/net-nitro-go-ethereum/triedb/database"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/trie/trienode"
+	"github.com/tenderly/net-nitro/go-ethereum/triedb/database"
 )
 
 // Trie is a Merkle Patricia Trie. Use New to create a trie that sits on

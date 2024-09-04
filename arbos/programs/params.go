@@ -7,9 +7,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 	"github.com/tenderly/net-nitro/arbos/storage"
 	"github.com/tenderly/net-nitro/arbos/util"
 	am "github.com/tenderly/net-nitro/util/arbmath"

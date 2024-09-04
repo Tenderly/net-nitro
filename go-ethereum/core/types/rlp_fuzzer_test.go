@@ -22,7 +22,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 	"github.com/holiman/uint256"
 )
 

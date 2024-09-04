@@ -10,7 +10,7 @@ import (
 	"os"
 	"path"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 type ArbosInitFileContents struct {

@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/arbos/arbosState"
 	"github.com/tenderly/net-nitro/arbos/programs"
 	"github.com/tenderly/net-nitro/util/arbmath"

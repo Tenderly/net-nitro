@@ -3,8 +3,8 @@ package validator
 import (
 	"context"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
 	"github.com/tenderly/net-nitro/util/containers"
 )
 

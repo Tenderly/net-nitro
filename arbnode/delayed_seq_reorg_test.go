@@ -8,8 +8,8 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 	"github.com/tenderly/net-nitro/arbos/arbostypes"
 	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
 )

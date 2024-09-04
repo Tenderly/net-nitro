@@ -20,10 +20,10 @@ import (
 	"net"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common/mclock"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/nat"
+	"github.com/tenderly/net-nitro/go-ethereum/common/mclock"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/nat"
 )
 
 const (

@@ -19,8 +19,8 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 	"github.com/tenderly/net-nitro/das/dastree"
 	"github.com/tenderly/net-nitro/util/pretty"

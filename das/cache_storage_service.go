@@ -12,9 +12,9 @@ import (
 	"github.com/tenderly/net-nitro/util/pretty"
 	flag "github.com/spf13/pflag"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/lru"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/lru"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 type CacheConfig struct {

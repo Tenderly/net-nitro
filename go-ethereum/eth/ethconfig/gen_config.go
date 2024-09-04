@@ -5,13 +5,13 @@ package ethconfig
 import (
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core"
-	"github.com/tenderly/net-nitro-go-ethereum/core/txpool/blobpool"
-	"github.com/tenderly/net-nitro-go-ethereum/core/txpool/legacypool"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/downloader"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/gasprice"
-	"github.com/tenderly/net-nitro-go-ethereum/miner"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/txpool/blobpool"
+	"github.com/tenderly/net-nitro/go-ethereum/core/txpool/legacypool"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/downloader"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/gasprice"
+	"github.com/tenderly/net-nitro/go-ethereum/miner"
 )
 
 // MarshalTOML marshals as TOML.

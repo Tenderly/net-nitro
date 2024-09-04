@@ -25,7 +25,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
 )
 
 func Wat2Wasm(wat []byte) ([]byte, error) {

@@ -3,7 +3,7 @@ package arbitrum
 import (
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/eth"
+	"github.com/tenderly/net-nitro/go-ethereum/eth"
 )
 
 const (

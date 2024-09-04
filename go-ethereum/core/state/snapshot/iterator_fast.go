@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"golang.org/x/exp/slices"
 )
 

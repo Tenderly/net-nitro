@@ -8,7 +8,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/validator/server_common"
 )
 

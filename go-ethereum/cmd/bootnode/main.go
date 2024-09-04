@@ -25,13 +25,13 @@ import (
 	"os"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/cmd/utils"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/discover"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/nat"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/netutil"
+	"github.com/tenderly/net-nitro/go-ethereum/cmd/utils"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/discover"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/nat"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/netutil"
 )
 
 func main() {

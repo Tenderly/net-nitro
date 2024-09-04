@@ -21,12 +21,12 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/core/txpool"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/downloader"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/protocols/eth"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/txpool"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/downloader"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/protocols/eth"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 const (

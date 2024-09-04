@@ -21,10 +21,10 @@ import (
 	"errors"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 // WaitMined waits for tx to be mined on the blockchain.

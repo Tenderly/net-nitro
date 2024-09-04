@@ -21,12 +21,12 @@ import (
 	"fmt"
 	"net"
 
-	"github.com/tenderly/net-nitro-go-ethereum/cmd/devp2p/internal/ethtest"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/rlpx"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/cmd/devp2p/internal/ethtest"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/rlpx"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 	"github.com/urfave/cli/v2"
 )
 

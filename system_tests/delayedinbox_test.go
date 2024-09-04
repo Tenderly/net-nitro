@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 	"github.com/tenderly/net-nitro/arbos"
 	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
 )

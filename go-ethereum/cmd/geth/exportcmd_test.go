@@ -22,7 +22,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 // TestExport does a basic test of "geth export", exporting the test-genesis.

@@ -19,8 +19,8 @@ package beacon
 import (
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/consensus"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/consensus"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 )
 
 // NewFaker creates a fake consensus engine for testing.

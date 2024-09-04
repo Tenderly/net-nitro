@@ -24,7 +24,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"golang.org/x/exp/slog"
 )
 

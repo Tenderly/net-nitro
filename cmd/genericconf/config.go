@@ -8,8 +8,8 @@ import (
 	"io"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 	flag "github.com/spf13/pflag"
 	"golang.org/x/exp/slog"
 )

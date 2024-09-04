@@ -23,11 +23,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tenderly/net-nitro-go-ethereum/cmd/utils"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/notinternal/flags"
+	"github.com/tenderly/net-nitro/go-ethereum/cmd/utils"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/notinternal/flags"
 	"github.com/gballet/go-verkle"
 	cli "github.com/urfave/cli/v2"
 )

@@ -24,11 +24,11 @@ import (
 	"regexp"
 	"sort"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core"
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/tracers/logger"
-	"github.com/tenderly/net-nitro-go-ethereum/tests"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/tracers/logger"
+	"github.com/tenderly/net-nitro/go-ethereum/tests"
 	"github.com/urfave/cli/v2"
 )
 

@@ -5,7 +5,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/util/stopwaiter"
 	flag "github.com/spf13/pflag"

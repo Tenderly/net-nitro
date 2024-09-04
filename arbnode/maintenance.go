@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbnode/redislock"
 	"github.com/tenderly/net-nitro/execution"
 	"github.com/tenderly/net-nitro/util/stopwaiter"

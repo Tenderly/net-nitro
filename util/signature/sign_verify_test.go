@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 )
 
 func TestSignVerifyModes(t *testing.T) {

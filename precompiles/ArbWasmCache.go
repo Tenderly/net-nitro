@@ -3,7 +3,7 @@
 
 package precompiles
 
-import "github.com/tenderly/net-nitro-go-ethereum/common"
+import "github.com/tenderly/net-nitro/go-ethereum/common"
 
 type ArbWasmCache struct {
 	Address addr // 0x72

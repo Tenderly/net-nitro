@@ -25,7 +25,7 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/validator"
 )
 

@@ -9,7 +9,7 @@ package arbtest
 import (
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 )
 
 func TestProgramArbitratorKeccak(t *testing.T) {

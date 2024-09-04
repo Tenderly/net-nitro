@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
 	"github.com/tenderly/net-nitro/util/contracts"
 )

@@ -21,7 +21,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
 )
 
 func TestResetFreezer(t *testing.T) {

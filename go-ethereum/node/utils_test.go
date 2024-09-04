@@ -20,8 +20,8 @@
 package node
 
 import (
-	"github.com/tenderly/net-nitro-go-ethereum/p2p"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 )
 
 // NoopLifecycle is a trivial implementation of the Service interface.

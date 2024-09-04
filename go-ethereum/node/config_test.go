@@ -23,8 +23,8 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p"
 )
 
 // Tests that datadirs can be successfully created, be them manually configured

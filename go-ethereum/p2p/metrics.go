@@ -22,7 +22,7 @@ import (
 	"errors"
 	"net"
 
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 )
 
 const (

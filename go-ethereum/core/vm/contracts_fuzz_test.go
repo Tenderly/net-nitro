@@ -19,7 +19,7 @@ package vm
 import (
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 func FuzzPrecompiledContracts(f *testing.F) {

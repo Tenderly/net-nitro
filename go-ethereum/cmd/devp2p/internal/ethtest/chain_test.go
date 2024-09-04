@@ -21,9 +21,9 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/protocols/eth"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/protocols/eth"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p"
 	"github.com/stretchr/testify/assert"
 )
 

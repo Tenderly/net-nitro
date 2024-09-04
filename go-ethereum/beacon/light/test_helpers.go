@@ -21,10 +21,10 @@ import (
 	"crypto/sha256"
 	mrand "math/rand"
 
-	"github.com/tenderly/net-nitro-go-ethereum/beacon/merkle"
-	"github.com/tenderly/net-nitro-go-ethereum/beacon/params"
-	"github.com/tenderly/net-nitro-go-ethereum/beacon/types"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/beacon/merkle"
+	"github.com/tenderly/net-nitro/go-ethereum/beacon/params"
+	"github.com/tenderly/net-nitro/go-ethereum/beacon/types"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 func GenerateTestCommittee() *types.SerializedSyncCommittee {

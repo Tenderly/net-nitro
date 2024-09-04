@@ -10,9 +10,9 @@ import (
 
 	"github.com/tenderly/net-nitro/util/pretty"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi/bind"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/das/dastree"
 	"github.com/tenderly/net-nitro/solgen/go/bridgegen"

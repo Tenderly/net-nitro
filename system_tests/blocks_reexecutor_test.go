@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	blocksreexecutor "github.com/tenderly/net-nitro/blocks_reexecutor"
 )
 

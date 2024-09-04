@@ -19,7 +19,7 @@ import (
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 	"github.com/tenderly/net-nitro/blsSignatures"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 func TestDAS_BasicAggregationLocal(t *testing.T) {

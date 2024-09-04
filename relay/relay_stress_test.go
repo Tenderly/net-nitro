@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbos/arbostypes"
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/broadcastclient"

@@ -22,7 +22,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 func TestEncode(t *testing.T) {

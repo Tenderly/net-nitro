@@ -26,12 +26,12 @@ import (
 	"time"
 
 	"github.com/dop251/goja"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/scwallet"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/usbwallet"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
-	"github.com/tenderly/net-nitro-go-ethereum/console/prompt"
-	"github.com/tenderly/net-nitro-go-ethereum/notinternal/jsre"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/scwallet"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/usbwallet"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/console/prompt"
+	"github.com/tenderly/net-nitro/go-ethereum/notinternal/jsre"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 )
 
 // bridge is a collection of JavaScript utility methods to bride the .js runtime

@@ -8,7 +8,7 @@ package addressSet
 import (
 	"errors"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/arbos/storage"
 	"github.com/tenderly/net-nitro/arbos/util"
 )

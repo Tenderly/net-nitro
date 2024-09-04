@@ -19,8 +19,8 @@ package trie
 import (
 	"fmt"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/trie/trienode"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/trie/trienode"
 )
 
 // committer is the tool used for the trie Commit operation. The committer will

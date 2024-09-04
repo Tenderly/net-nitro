@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
 	"github.com/tenderly/net-nitro/arbnode/dataposter/storage"
 	"github.com/tenderly/net-nitro/util/dbutil"
 )

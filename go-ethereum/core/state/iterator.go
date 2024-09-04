@@ -21,10 +21,10 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
-	"github.com/tenderly/net-nitro-go-ethereum/trie"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/trie"
 )
 
 // nodeIterator is an iterator to traverse the entire state trie post-order,

@@ -22,8 +22,8 @@ import (
 	"github.com/mailru/easygo/netpoll"
 	flag "github.com/spf13/pflag"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/broadcaster/backlog"
 	m "github.com/tenderly/net-nitro/broadcaster/message"

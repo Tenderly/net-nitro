@@ -7,8 +7,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
 	"github.com/tenderly/net-nitro/arbutil"
 )
 

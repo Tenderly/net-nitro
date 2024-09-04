@@ -15,7 +15,7 @@ import (
 	"time"
 
 	"github.com/alicebob/miniredis/v2"
-	"github.com/tenderly/net-nitro-go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
 	"github.com/tenderly/net-nitro/arbnode"
 	"github.com/tenderly/net-nitro/util/redisutil"
 )

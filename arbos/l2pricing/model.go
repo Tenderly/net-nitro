@@ -6,7 +6,7 @@ package l2pricing
 import (
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 	"github.com/tenderly/net-nitro/util/arbmath"
 )
 

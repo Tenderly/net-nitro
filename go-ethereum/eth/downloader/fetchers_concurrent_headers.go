@@ -19,9 +19,9 @@ package downloader
 import (
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/protocols/eth"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/protocols/eth"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 // headerQueue implements typedQueue and is a type adapter between the generic

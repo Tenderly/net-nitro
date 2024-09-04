@@ -7,7 +7,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
 	"github.com/tenderly/net-nitro/solgen/go/mocksgen"
 )
 
