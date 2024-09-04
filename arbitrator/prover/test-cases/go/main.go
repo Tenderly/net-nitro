@@ -17,14 +17,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/math"
+	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro-go-ethereum/common/math"
 	merkletree "github.com/wealdtech/go-merkletree"
 
-	"github.com/offchainlabs/nitro/arbcompress"
-	"github.com/offchainlabs/nitro/arbos/programs"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/wavmio"
+	"github.com/tenderly/net-nitro/arbcompress"
+	"github.com/tenderly/net-nitro/arbos/programs"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/wavmio"
 )
 
 // MerkleSample is an example using the Merkle tree to generate and verify proofs.

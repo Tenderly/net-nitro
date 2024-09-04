@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro-go-ethereum/core/types"
 )
 
 func GetLogTransaction(ctx context.Context, client L1Interface, log types.Log) (*types.Transaction, error) {

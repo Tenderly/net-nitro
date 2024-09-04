@@ -20,7 +20,7 @@ authors = ["Offchain Labs"]
 edition = "2021"
 homepage = "https://arbitrum.io"
 license = "BSL"
-repository = "https://github.com/OffchainLabs/nitro.git"
+repository = "https://github.com/tenderly/net-nitro.git"
 rust-version = "1.67"
 
 [workspace.dependencies]

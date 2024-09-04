@@ -3,7 +3,7 @@
 
 package testhelpers
 
-import "github.com/ethereum/go-ethereum/node"
+import "github.com/tenderly/net-nitro-go-ethereum/node"
 
 func CreateStackConfigForTest(dataDir string) *node.Config {
 	stackConf := node.DefaultConfig

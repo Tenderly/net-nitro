@@ -1,5 +1,5 @@
 // Copyright 2024, Offchain Labs, Inc.
-// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE
+// For license information, see https://github.com/tenderly/net-nitro/blob/master/LICENSE
 
 //go:build !wasm
 // +build !wasm
@@ -25,7 +25,7 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
 )
 
 func Wat2Wasm(wat []byte) ([]byte, error) {

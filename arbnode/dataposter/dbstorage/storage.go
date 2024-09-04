@@ -10,9 +10,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/offchainlabs/nitro/arbnode/dataposter/storage"
-	"github.com/offchainlabs/nitro/util/dbutil"
+	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/arbnode/dataposter/storage"
+	"github.com/tenderly/net-nitro/util/dbutil"
 )
 
 // Storage implements db based storage for batch poster.

@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro-go-ethereum/log"
 	"github.com/go-redis/redis/v8"
 )
 
