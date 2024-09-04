@@ -6,7 +6,7 @@ package l2pricing
 import (
 	"math/big"
 
-	"github.com/offchainlabs/nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/arbos/storage"
 )
 
 type L2PricingState struct {

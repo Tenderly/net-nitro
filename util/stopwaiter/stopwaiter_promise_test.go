@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/util/containers"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/util/containers"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 type ClassA struct {
