@@ -14,9 +14,9 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 	"github.com/tenderly/net-nitro/arbutil"

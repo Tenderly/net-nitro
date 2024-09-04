@@ -6,7 +6,7 @@ package statetransfer
 import (
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 type ArbosInitializationInfo struct {

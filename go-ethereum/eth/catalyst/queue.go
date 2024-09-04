@@ -19,10 +19,10 @@ package catalyst
 import (
 	"sync"
 
-	"github.com/tenderly/net-nitro-go-ethereum/beacon/engine"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/miner"
+	"github.com/tenderly/net-nitro/go-ethereum/beacon/engine"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/miner"
 )
 
 // maxTrackedPayloads is the maximum number of prepared payloads the execution

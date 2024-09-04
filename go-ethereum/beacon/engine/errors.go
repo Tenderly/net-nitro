@@ -17,8 +17,8 @@
 package engine
 
 import (
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 )
 
 // EngineAPIError is a standardized error message between consensus and execution

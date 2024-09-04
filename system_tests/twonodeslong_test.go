@@ -17,7 +17,7 @@ import (
 	"github.com/tenderly/net-nitro/arbos/l2pricing"
 	"github.com/tenderly/net-nitro/arbutil"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 )
 
 func testTwoNodesLong(t *testing.T, dasModeStr string) {

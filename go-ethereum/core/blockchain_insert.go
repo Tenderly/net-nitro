@@ -19,10 +19,10 @@ package core
 import (
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/mclock"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/mclock"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 // insertStats tracks and reports on block insertion.

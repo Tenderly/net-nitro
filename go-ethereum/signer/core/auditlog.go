@@ -21,11 +21,11 @@ import (
 	"encoding/json"
 	"os"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/notinternal/ethapi"
-	"github.com/tenderly/net-nitro-go-ethereum/signer/core/apitypes"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/notinternal/ethapi"
+	"github.com/tenderly/net-nitro/go-ethereum/signer/core/apitypes"
 	"golang.org/x/exp/slog"
 )
 

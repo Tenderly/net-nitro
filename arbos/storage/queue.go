@@ -6,7 +6,7 @@ package storage
 import (
 	"github.com/tenderly/net-nitro/arbos/util"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 type Queue struct {

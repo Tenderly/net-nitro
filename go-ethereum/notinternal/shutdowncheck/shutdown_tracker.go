@@ -19,10 +19,10 @@ package shutdowncheck
 import (
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 // ShutdownTracker is a service that reports previous unclean shutdowns

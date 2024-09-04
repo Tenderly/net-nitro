@@ -19,8 +19,8 @@ import (
 	"github.com/tenderly/net-nitro/das/dastree"
 	"github.com/tenderly/net-nitro/util/pretty"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
 	flag "github.com/spf13/pflag"
 )

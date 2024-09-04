@@ -27,8 +27,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbos/util"
 	"github.com/tenderly/net-nitro/arbutil"
 )

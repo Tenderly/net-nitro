@@ -19,8 +19,8 @@ import (
 	"github.com/tenderly/net-nitro/util/redisutil"
 	flag "github.com/spf13/pflag"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 type RedisConfig struct {

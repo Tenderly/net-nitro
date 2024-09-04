@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/go-redis/redis/v8"
 	"github.com/google/uuid"
 	"github.com/tenderly/net-nitro/util/stopwaiter"

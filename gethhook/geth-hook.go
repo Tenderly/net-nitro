@@ -6,11 +6,11 @@ package gethhook
 import (
 	"errors"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi"
-	"github.com/tenderly/net-nitro-go-ethereum/core"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 	"github.com/tenderly/net-nitro/arbos"
 	"github.com/tenderly/net-nitro/precompiles"
 )

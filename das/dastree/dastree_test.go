@@ -8,7 +8,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/util/colors"
 	"github.com/tenderly/net-nitro/util/pretty"

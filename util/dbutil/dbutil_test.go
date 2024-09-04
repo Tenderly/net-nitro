@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 )
 
 func testIsNotExistError(t *testing.T, dbEngine string, isNotExist func(error) bool) {

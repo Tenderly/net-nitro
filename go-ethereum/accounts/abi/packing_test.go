@@ -19,7 +19,7 @@ package abi
 import (
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 type packUnpackTest struct {

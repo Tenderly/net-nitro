@@ -1,7 +1,7 @@
 package sharedmetrics
 
 import (
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 	"github.com/tenderly/net-nitro/arbutil"
 )
 

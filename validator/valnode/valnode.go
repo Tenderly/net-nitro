@@ -5,9 +5,9 @@ import (
 
 	"github.com/tenderly/net-nitro/validator"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/node"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 	"github.com/tenderly/net-nitro/validator/server_api"
 	"github.com/tenderly/net-nitro/validator/server_arb"
 	"github.com/tenderly/net-nitro/validator/server_common"

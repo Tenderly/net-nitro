@@ -22,7 +22,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/asm"
+	"github.com/tenderly/net-nitro/go-ethereum/core/asm"
 	"github.com/urfave/cli/v2"
 )
 

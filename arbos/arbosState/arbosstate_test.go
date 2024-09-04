@@ -7,7 +7,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/arbos/burn"
 	"github.com/tenderly/net-nitro/arbos/storage"
 	"github.com/tenderly/net-nitro/arbos/util"

@@ -7,7 +7,7 @@ import (
 	"strconv"
 
 	"github.com/enescakir/emoji"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/gdamore/tcell/v2"
 	"github.com/tenderly/net-nitro/cmd/seq-coordinator-manager/rediscoordinator"
 	"github.com/tenderly/net-nitro/util/redisutil"

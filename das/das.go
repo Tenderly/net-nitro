@@ -10,9 +10,9 @@ import (
 	"math"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/ethclient"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	flag "github.com/spf13/pflag"
 
 	"github.com/tenderly/net-nitro/arbstate/daprovider"

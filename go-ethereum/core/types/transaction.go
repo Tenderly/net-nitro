@@ -25,10 +25,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/math"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/math"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 )
 
 var (

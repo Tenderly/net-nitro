@@ -21,15 +21,15 @@ import (
 	pgen "github.com/tenderly/net-nitro/solgen/go/precompilesgen"
 	"github.com/tenderly/net-nitro/util/arbmath"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi/bind"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	glog "github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	glog "github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 type ArbosPrecompile interface {

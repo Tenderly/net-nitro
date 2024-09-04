@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common/mclock"
+	"github.com/tenderly/net-nitro/go-ethereum/common/mclock"
 )
 
 func TestExpHeap(t *testing.T) {

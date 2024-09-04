@@ -12,10 +12,10 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/node"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
 	"github.com/tenderly/net-nitro/util/signature"
 )
@@ -148,7 +148,7 @@ func IsAlreadyKnownError(err error) bool {
 		return true
 	}
 	// go-ethereum returns "replacement transaction underpriced" instead of "already known" for blob txs.
-	// This is fixed in https://github.com/tenderly/net-nitro-go-ethereum/pull/29210
+	// This is fixed in https://github.com/tenderly/net-nitro/go-ethereum/pull/29210
 	// TODO: Once a new geth release is out with this fix, we can remove this check.
 	matches := blobTxUnderpricedRegexp.FindSubmatch([]byte(s))
 	if len(matches) == 3 {

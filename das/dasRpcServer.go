@@ -14,11 +14,11 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
 	"github.com/tenderly/net-nitro/blsSignatures"
 	"github.com/tenderly/net-nitro/cmd/genericconf"

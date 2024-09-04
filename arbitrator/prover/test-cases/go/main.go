@@ -17,8 +17,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/math"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/math"
 	merkletree "github.com/wealdtech/go-merkletree"
 
 	"github.com/tenderly/net-nitro/arbcompress"

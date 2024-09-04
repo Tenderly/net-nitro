@@ -6,12 +6,12 @@ import (
 	"encoding/binary"
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
-	"github.com/tenderly/net-nitro-go-ethereum/common/math"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common/math"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 // Returns true if nonce checks should be skipped based on inner's isFake()

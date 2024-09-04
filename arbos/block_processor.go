@@ -16,15 +16,15 @@ import (
 	"github.com/tenderly/net-nitro/arbos/util"
 	"github.com/tenderly/net-nitro/util/arbmath"
 
-	"github.com/tenderly/net-nitro-go-ethereum/arbitrum_types"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core"
-	"github.com/tenderly/net-nitro-go-ethereum/core/state"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
-	"github.com/tenderly/net-nitro-go-ethereum/trie"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum_types"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/trie"
 )
 
 // set by the precompile module, to avoid a package dependence cycle

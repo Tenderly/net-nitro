@@ -14,9 +14,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
-	"github.com/tenderly/net-nitro-go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 	"github.com/spf13/pflag"
 )
 

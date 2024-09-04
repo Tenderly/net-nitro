@@ -22,10 +22,10 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/protocols/eth"
-	"github.com/tenderly/net-nitro-go-ethereum/eth/protocols/snap"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/protocols/eth"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/protocols/snap"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p"
 )
 
 var (

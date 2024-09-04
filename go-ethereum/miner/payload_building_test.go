@@ -21,12 +21,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/beacon/engine"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/consensus/ethash"
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/beacon/engine"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/consensus/ethash"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 func TestBuildPayload(t *testing.T) {

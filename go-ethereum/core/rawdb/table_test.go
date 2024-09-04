@@ -20,7 +20,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
 )
 
 func TestTableDatabase(t *testing.T)            { testTableDatabase(t, "prefix") }

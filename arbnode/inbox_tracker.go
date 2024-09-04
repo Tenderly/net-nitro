@@ -12,11 +12,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 
 	"github.com/tenderly/net-nitro/arbos/arbostypes"
 	"github.com/tenderly/net-nitro/arbstate"

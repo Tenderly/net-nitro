@@ -31,11 +31,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/notinternal/testlog"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/discover/v4wire"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/notinternal/testlog"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/discover/v4wire"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
 )
 
 // shared test variables

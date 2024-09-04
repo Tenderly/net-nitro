@@ -9,10 +9,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/util/containers"
 	"github.com/tenderly/net-nitro/util/stopwaiter"
 	"github.com/tenderly/net-nitro/validator"

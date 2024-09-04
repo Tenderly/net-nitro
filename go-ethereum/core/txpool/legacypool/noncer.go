@@ -19,8 +19,8 @@ package legacypool
 import (
 	"sync"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
 )
 
 // noncer is a tiny virtual state database to manage the executable nonces of

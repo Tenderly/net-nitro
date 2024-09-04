@@ -26,9 +26,9 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common/math"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/common/math"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
 )
 
 var (

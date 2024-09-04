@@ -6,7 +6,7 @@ package burn
 import (
 	"fmt"
 
-	glog "github.com/tenderly/net-nitro-go-ethereum/log"
+	glog "github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbos/util"
 )
 

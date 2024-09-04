@@ -22,9 +22,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/keystore"
-	"github.com/tenderly/net-nitro-go-ethereum/cmd/utils"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/keystore"
+	"github.com/tenderly/net-nitro/go-ethereum/cmd/utils"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 	"github.com/google/uuid"
 	"github.com/urfave/cli/v2"
 )

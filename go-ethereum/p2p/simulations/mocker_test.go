@@ -27,7 +27,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
 )
 
 func TestMocker(t *testing.T) {

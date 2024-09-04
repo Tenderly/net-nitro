@@ -21,10 +21,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/beacon/params"
-	"github.com/tenderly/net-nitro-go-ethereum/beacon/types"
-	"github.com/tenderly/net-nitro-go-ethereum/common/mclock"
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb/memorydb"
+	"github.com/tenderly/net-nitro/go-ethereum/beacon/params"
+	"github.com/tenderly/net-nitro/go-ethereum/beacon/types"
+	"github.com/tenderly/net-nitro/go-ethereum/common/mclock"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb/memorydb"
 )
 
 var (

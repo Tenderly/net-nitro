@@ -17,8 +17,8 @@
 package runtime
 
 import (
-	"github.com/tenderly/net-nitro-go-ethereum/core"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 )
 
 func NewEnv(cfg *Config) *vm.EVM {

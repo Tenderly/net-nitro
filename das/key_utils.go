@@ -10,7 +10,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 	"github.com/tenderly/net-nitro/blsSignatures"
 )
 

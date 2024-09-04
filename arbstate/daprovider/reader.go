@@ -7,8 +7,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/util/blobs"
 )

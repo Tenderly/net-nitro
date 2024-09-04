@@ -27,10 +27,10 @@ import (
 	"testing/quick"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/netutil"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/netutil"
 )
 
 func TestTable_pingReplace(t *testing.T) {

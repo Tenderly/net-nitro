@@ -11,8 +11,8 @@ import (
 	"math/big"
 	"os"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 //go:embed arbitrum_chain_info.json

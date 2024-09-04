@@ -44,13 +44,13 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/notinternal/flags"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/simulations"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/simulations/adapters"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/notinternal/flags"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/simulations"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/simulations/adapters"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 	"github.com/urfave/cli/v2"
 )
 

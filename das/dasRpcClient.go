@@ -9,12 +9,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 	"github.com/tenderly/net-nitro/blsSignatures"
 	"github.com/tenderly/net-nitro/util/pretty"

@@ -24,9 +24,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/event"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/event"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 )
 
 // Msg defines the structure of a p2p message.

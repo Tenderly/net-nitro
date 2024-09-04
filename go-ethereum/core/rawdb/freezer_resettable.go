@@ -21,8 +21,8 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 const tmpSuffix = ".tmp"

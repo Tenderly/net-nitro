@@ -25,7 +25,7 @@ import (
 	"sync"
 	"unicode"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 var (

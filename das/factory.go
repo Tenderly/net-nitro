@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/solgen/go/bridgegen"

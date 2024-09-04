@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 )
 
 // transitionStatus describes the status of eth1/2 transition. This switch

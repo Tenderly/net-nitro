@@ -18,12 +18,12 @@ import (
 	"github.com/tenderly/net-nitro/util/stopwaiter"
 	flag "github.com/spf13/pflag"
 
-	"github.com/tenderly/net-nitro-go-ethereum/arbitrum"
-	"github.com/tenderly/net-nitro-go-ethereum/arbitrum_types"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/ethclient"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum_types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 )
 
 type ForwarderConfig struct {

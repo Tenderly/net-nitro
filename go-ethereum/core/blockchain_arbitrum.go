@@ -21,10 +21,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/state"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 )
 
 // WriteBlockAndSetHeadWithTime also counts processTime, which will cause intermittent TrieDirty cache writes

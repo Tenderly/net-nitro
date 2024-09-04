@@ -13,12 +13,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi/bind"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 
 	"github.com/tenderly/net-nitro/arbnode"
 	"github.com/tenderly/net-nitro/arbos/l2pricing"

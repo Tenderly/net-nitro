@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 

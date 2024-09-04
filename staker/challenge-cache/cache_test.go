@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 var _ HistoryCommitmentCacher = (*Cache)(nil)

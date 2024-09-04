@@ -20,7 +20,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
 )
 
 type MyType [5]byte

@@ -17,11 +17,11 @@
 package trie
 
 import (
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
-	"github.com/tenderly/net-nitro-go-ethereum/trie/trienode"
-	"github.com/tenderly/net-nitro-go-ethereum/triedb/database"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/trie/trienode"
+	"github.com/tenderly/net-nitro/go-ethereum/triedb/database"
 )
 
 // SecureTrie is the old name of StateTrie.

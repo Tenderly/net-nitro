@@ -20,17 +20,17 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/consensus"
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/core/state"
-	"github.com/tenderly/net-nitro-go-ethereum/core/state/snapshot"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
-	"github.com/tenderly/net-nitro-go-ethereum/event"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
-	"github.com/tenderly/net-nitro-go-ethereum/triedb"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/consensus"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state/snapshot"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/event"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/triedb"
 )
 
 // CurrentHeader retrieves the current head header of the canonical chain. The

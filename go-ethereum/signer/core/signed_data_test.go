@@ -27,13 +27,13 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/keystore"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
-	"github.com/tenderly/net-nitro-go-ethereum/common/math"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/signer/core"
-	"github.com/tenderly/net-nitro-go-ethereum/signer/core/apitypes"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/keystore"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common/math"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/signer/core"
+	"github.com/tenderly/net-nitro/go-ethereum/signer/core/apitypes"
 )
 
 var typesStandard = apitypes.Types{

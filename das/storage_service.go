@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 )
 

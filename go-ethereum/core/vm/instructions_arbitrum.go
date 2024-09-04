@@ -19,7 +19,7 @@ package vm
 import (
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 // adaptation of opBlockHash that doesn't require an EVM stack

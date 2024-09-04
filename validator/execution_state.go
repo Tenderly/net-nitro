@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 	"github.com/tenderly/net-nitro/solgen/go/challengegen"
 	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
 )

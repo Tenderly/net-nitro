@@ -22,9 +22,9 @@ import (
 	"path/filepath"
 	"runtime"
 
-	"github.com/tenderly/net-nitro-go-ethereum/p2p"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/nat"
-	"github.com/tenderly/net-nitro-go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/nat"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 )
 
 const (

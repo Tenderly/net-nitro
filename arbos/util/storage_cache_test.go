@@ -8,7 +8,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/google/go-cmp/cmp"
 	"github.com/tenderly/net-nitro/util/testhelpers"
 )

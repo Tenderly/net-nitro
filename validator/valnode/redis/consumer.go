@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/pubsub"
 	"github.com/tenderly/net-nitro/util/redisutil"
 	"github.com/tenderly/net-nitro/util/stopwaiter"

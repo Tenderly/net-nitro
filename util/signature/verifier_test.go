@@ -8,7 +8,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
 	"github.com/tenderly/net-nitro/util/contracts"
 	"github.com/tenderly/net-nitro/util/testhelpers"

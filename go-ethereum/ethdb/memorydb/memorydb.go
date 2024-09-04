@@ -23,8 +23,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
 )
 
 var (

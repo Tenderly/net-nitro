@@ -13,10 +13,10 @@ import (
 	"io"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto/kzg4844"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto/kzg4844"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
 	"github.com/tenderly/net-nitro/arbos/util"
 	"github.com/tenderly/net-nitro/arbutil"

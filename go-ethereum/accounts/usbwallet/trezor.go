@@ -27,12 +27,12 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/usbwallet/trezor"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/usbwallet/trezor"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/golang/protobuf/proto"
 )
 

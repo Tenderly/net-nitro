@@ -12,12 +12,12 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	_ "github.com/tenderly/net-nitro-go-ethereum/eth/tracers/js"
-	_ "github.com/tenderly/net-nitro-go-ethereum/eth/tracers/native"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics/exp"
-	"github.com/tenderly/net-nitro-go-ethereum/node"
+	_ "github.com/tenderly/net-nitro/go-ethereum/eth/tracers/js"
+	_ "github.com/tenderly/net-nitro/go-ethereum/eth/tracers/native"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics/exp"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 
 	"github.com/tenderly/net-nitro/cmd/genericconf"
 	"github.com/tenderly/net-nitro/cmd/util/confighelpers"

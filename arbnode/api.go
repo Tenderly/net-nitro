@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/staker"
 	"github.com/tenderly/net-nitro/validator"

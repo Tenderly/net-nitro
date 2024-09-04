@@ -24,8 +24,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
 )
 
 func init() {

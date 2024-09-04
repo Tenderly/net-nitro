@@ -20,7 +20,7 @@ import (
 	"github.com/tenderly/net-nitro/util/metricsutil"
 	"github.com/tenderly/net-nitro/util/signature"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/arbutil"
 )
 

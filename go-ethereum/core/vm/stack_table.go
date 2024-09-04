@@ -17,7 +17,7 @@
 package vm
 
 import (
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 func minSwapStack(n int) int {

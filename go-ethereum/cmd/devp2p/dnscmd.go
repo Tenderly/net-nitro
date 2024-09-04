@@ -25,11 +25,11 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/keystore"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/console/prompt"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/dnsdisc"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/keystore"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/console/prompt"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/dnsdisc"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
 	"github.com/urfave/cli/v2"
 )
 

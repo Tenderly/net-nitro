@@ -24,9 +24,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common/math"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/common/math"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
 )
 
 // node represents a host on the network.

@@ -15,8 +15,8 @@ import (
 	"github.com/tenderly/net-nitro/util/arbmath"
 	am "github.com/tenderly/net-nitro/util/arbmath"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 // ArbOwner precompile provides owners with tools for managing the rollup.

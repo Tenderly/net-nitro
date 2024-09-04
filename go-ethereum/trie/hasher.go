@@ -19,8 +19,8 @@ package trie
 import (
 	"sync"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 	"golang.org/x/crypto/sha3"
 )
 

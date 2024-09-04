@@ -19,9 +19,9 @@ import (
 	koanfjson "github.com/knadh/koanf/parsers/json"
 	flag "github.com/spf13/pflag"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 	"github.com/tenderly/net-nitro/cmd/genericconf"
 	"github.com/tenderly/net-nitro/cmd/util"

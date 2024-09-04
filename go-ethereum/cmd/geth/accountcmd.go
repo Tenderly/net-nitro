@@ -20,11 +20,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/keystore"
-	"github.com/tenderly/net-nitro-go-ethereum/cmd/utils"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/keystore"
+	"github.com/tenderly/net-nitro/go-ethereum/cmd/utils"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/urfave/cli/v2"
 )
 

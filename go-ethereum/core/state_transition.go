@@ -21,12 +21,12 @@ import (
 	"math"
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	cmath "github.com/tenderly/net-nitro-go-ethereum/common/math"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto/kzg4844"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	cmath "github.com/tenderly/net-nitro/go-ethereum/common/math"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto/kzg4844"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 	"github.com/holiman/uint256"
 )
 

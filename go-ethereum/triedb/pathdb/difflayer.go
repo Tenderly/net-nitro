@@ -20,10 +20,10 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/trie/trienode"
-	"github.com/tenderly/net-nitro-go-ethereum/trie/triestate"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/trie/trienode"
+	"github.com/tenderly/net-nitro/go-ethereum/trie/triestate"
 )
 
 // diffLayer represents a collection of modifications made to the in-memory tries

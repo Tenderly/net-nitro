@@ -10,10 +10,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core/rawdb"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/ethclient"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
 	"github.com/tenderly/net-nitro/arbnode"
 	"github.com/tenderly/net-nitro/arbos/l2pricing"

@@ -6,9 +6,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics/exp"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics/exp"
 	"github.com/tenderly/net-nitro/cmd/dbconv/dbconv"
 	"github.com/tenderly/net-nitro/cmd/genericconf"
 	"github.com/tenderly/net-nitro/cmd/util/confighelpers"

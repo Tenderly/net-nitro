@@ -10,11 +10,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 	"github.com/tenderly/net-nitro/arbos/storage"
 	templates "github.com/tenderly/net-nitro/solgen/go/precompilesgen"
 	"github.com/tenderly/net-nitro/util/arbmath"

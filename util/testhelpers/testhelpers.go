@@ -15,8 +15,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/util/colors"
 	"golang.org/x/exp/slog"
 )

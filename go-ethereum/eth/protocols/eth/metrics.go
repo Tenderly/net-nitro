@@ -16,7 +16,7 @@
 
 package eth
 
-import "github.com/tenderly/net-nitro-go-ethereum/metrics"
+import "github.com/tenderly/net-nitro/go-ethereum/metrics"
 
 // meters stores ingress and egress handshake meters.
 var meters bidirectionalMeters

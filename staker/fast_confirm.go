@@ -10,10 +10,10 @@ import (
 	"math/big"
 	"sort"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi/bind"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
 	"github.com/tenderly/net-nitro/solgen/go/contractsgen"
 	"github.com/tenderly/net-nitro/solgen/go/rollupgen"

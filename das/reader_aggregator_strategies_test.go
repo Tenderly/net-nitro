@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 )
 

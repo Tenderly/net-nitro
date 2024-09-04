@@ -9,7 +9,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/arbos/arbostypes"
 	"github.com/tenderly/net-nitro/arbstate/daprovider"
 )

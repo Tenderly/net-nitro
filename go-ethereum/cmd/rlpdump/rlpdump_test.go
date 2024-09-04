@@ -22,8 +22,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
 )
 
 func TestRoundtrip(t *testing.T) {

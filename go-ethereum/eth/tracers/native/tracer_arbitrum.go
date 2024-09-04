@@ -19,8 +19,8 @@ package native
 import (
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 )
 
 type arbitrumTransfer struct {

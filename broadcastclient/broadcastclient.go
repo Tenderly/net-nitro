@@ -23,8 +23,8 @@ import (
 	"github.com/gobwas/ws/wsflate"
 	flag "github.com/spf13/pflag"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 	"github.com/tenderly/net-nitro/arbutil"
 	m "github.com/tenderly/net-nitro/broadcaster/message"
 	"github.com/tenderly/net-nitro/util/contracts"

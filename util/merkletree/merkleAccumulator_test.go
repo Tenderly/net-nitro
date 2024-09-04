@@ -8,8 +8,8 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 	"github.com/tenderly/net-nitro/arbos/merkleAccumulator"
 )
 

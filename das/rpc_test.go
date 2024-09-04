@@ -13,7 +13,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 	"github.com/tenderly/net-nitro/blsSignatures"
 	"github.com/tenderly/net-nitro/cmd/genericconf"
 	"github.com/tenderly/net-nitro/util/signature"

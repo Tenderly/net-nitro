@@ -11,12 +11,12 @@ import (
 
 	"golang.org/x/term"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/abi/bind"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/keystore"
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/keystore"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
 	"github.com/tenderly/net-nitro/cmd/genericconf"
 	"github.com/tenderly/net-nitro/util/signature"

@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tenderly/net-nitro-go-ethereum/accounts"
-	"github.com/tenderly/net-nitro-go-ethereum/accounts/keystore"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/keystore"
 
 	"github.com/tenderly/net-nitro/cmd/genericconf"
 )

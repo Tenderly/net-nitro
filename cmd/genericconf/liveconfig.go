@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 

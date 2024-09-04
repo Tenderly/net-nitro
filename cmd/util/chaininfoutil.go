@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/cmd/ipfshelper"
 )
 

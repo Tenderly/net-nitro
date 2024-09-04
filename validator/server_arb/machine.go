@@ -19,8 +19,8 @@ import (
 	"sync/atomic"
 	"unsafe"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/arbutil"
 	"github.com/tenderly/net-nitro/util/arbmath"
 	"github.com/tenderly/net-nitro/util/containers"

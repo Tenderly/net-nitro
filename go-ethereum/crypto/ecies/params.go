@@ -43,7 +43,7 @@ import (
 	"fmt"
 	"hash"
 
-	ethcrypto "github.com/tenderly/net-nitro-go-ethereum/crypto"
+	ethcrypto "github.com/tenderly/net-nitro/go-ethereum/crypto"
 )
 
 var (

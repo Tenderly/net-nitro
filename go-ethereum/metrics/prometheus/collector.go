@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 )
 
 var (

@@ -21,16 +21,16 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/core"
-	"github.com/tenderly/net-nitro-go-ethereum/core/types"
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/metrics"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enode"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
-	"github.com/tenderly/net-nitro-go-ethereum/trie"
-	"github.com/tenderly/net-nitro-go-ethereum/trie/trienode"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enode"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/trie"
+	"github.com/tenderly/net-nitro/go-ethereum/trie/trienode"
 )
 
 const (

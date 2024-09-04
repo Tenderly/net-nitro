@@ -25,11 +25,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/core"
-	"github.com/tenderly/net-nitro-go-ethereum/core/forkid"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
-	"github.com/tenderly/net-nitro-go-ethereum/params"
-	"github.com/tenderly/net-nitro-go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/forkid"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 	"github.com/urfave/cli/v2"
 )
 

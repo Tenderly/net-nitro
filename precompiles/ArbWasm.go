@@ -4,7 +4,7 @@
 package precompiles
 
 import (
-	"github.com/tenderly/net-nitro-go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/tenderly/net-nitro/arbos/programs"
 	"github.com/tenderly/net-nitro/arbos/util"
 	"github.com/tenderly/net-nitro/util/arbmath"

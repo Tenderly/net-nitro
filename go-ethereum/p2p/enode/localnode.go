@@ -26,9 +26,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/tenderly/net-nitro-go-ethereum/log"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/enr"
-	"github.com/tenderly/net-nitro-go-ethereum/p2p/netutil"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/enr"
+	"github.com/tenderly/net-nitro/go-ethereum/p2p/netutil"
 )
 
 const (

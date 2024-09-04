@@ -6,8 +6,8 @@ package staker
 import (
 	"math/big"
 
-	"github.com/tenderly/net-nitro-go-ethereum/common"
-	"github.com/tenderly/net-nitro-go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
 	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
 	"github.com/tenderly/net-nitro/util/arbmath"
