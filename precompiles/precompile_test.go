@@ -86,7 +86,7 @@ func TestEvents(t *testing.T) {
 	}
 
 	//nolint:errcheck
-	logs := evm.StateDB.(*state.StateDB).Logs()
+	logs := evm.StateDB.Logs()
 	for _, log := range logs {
 		if log.Address != debugContractAddr {
 			Fail(t, "address mismatch:", log.Address, "vs", debugContractAddr)

@@ -516,7 +516,7 @@ func (n NodeInterface) GasEstimateL1Component(
 	args.Gas = (*hexutil.Uint64)(&randomGas)
 
 	// We set the run mode to eth_call mode here because we want an exact estimate, not a padded estimate
-	msg, err := args.ToMessage(randomGas, n.header, evm.StateDB.(*state.StateDB), core.MessageEthcallMode)
+	msg, err := args.ToMessage(randomGas, n.header, evm.StateDB, core.MessageEthcallMode)
 	if err != nil {
 		return 0, nil, nil, err
 	}
@@ -572,7 +572,7 @@ func (n NodeInterface) GasEstimateComponents(
 	// Setting the gas currently doesn't affect the PosterDataCost,
 	// but we do it anyways for accuracy with potential future changes.
 	args.Gas = &totalRaw
-	msg, err := args.ToMessage(gasCap, n.header, evm.StateDB.(*state.StateDB), core.MessageGasEstimationMode)
+	msg, err := args.ToMessage(gasCap, n.header, evm.StateDB, core.MessageGasEstimationMode)
 	if err != nil {
 		return 0, 0, nil, nil, err
 	}
