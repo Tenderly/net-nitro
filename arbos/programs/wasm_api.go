@@ -1,5 +1,5 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
-// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE
+// For license information, see https://github.com/tenderly/net-nitro/blob/master/LICENSE
 
 //go:build wasm
 // +build wasm
@@ -9,8 +9,8 @@ package programs
 import (
 	"unsafe"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 type stylusConfigHandler uint64

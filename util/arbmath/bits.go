@@ -6,7 +6,7 @@ package arbmath
 import (
 	"encoding/binary"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 	"github.com/holiman/uint256"
 )
 
