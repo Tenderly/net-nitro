@@ -8,10 +8,10 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/offchainlabs/nitro/arbstate/daprovider"
-	"github.com/offchainlabs/nitro/util/pretty"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/arbstate/daprovider"
+	"github.com/tenderly/net-nitro/util/pretty"
 )
 
 // This is a redundant storage service, which replicates data across a set of StorageServices.

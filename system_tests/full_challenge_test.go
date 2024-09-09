@@ -10,7 +10,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/offchainlabs/nitro/util/testhelpers/github"
+	"github.com/tenderly/net-nitro/util/testhelpers/github"
 )
 
 func TestChallengeManagerFullAsserterIncorrect(t *testing.T) {

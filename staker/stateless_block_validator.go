@@ -9,23 +9,23 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/offchainlabs/nitro/arbstate/daprovider"
+	"github.com/tenderly/net-nitro/arbstate/daprovider"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/offchainlabs/nitro/arbos/arbostypes"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/execution"
-	"github.com/offchainlabs/nitro/util/rpcclient"
-	"github.com/offchainlabs/nitro/validator"
-	"github.com/offchainlabs/nitro/validator/client/redis"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
+	"github.com/tenderly/net-nitro/arbos/arbostypes"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/execution"
+	"github.com/tenderly/net-nitro/util/rpcclient"
+	"github.com/tenderly/net-nitro/validator"
+	"github.com/tenderly/net-nitro/validator/client/redis"
 
-	validatorclient "github.com/offchainlabs/nitro/validator/client"
+	validatorclient "github.com/tenderly/net-nitro/validator/client"
 )
 
 type StatelessBlockValidator struct {

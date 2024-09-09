@@ -8,12 +8,12 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/trie"
-	"github.com/offchainlabs/nitro/cmd/dbconv/dbconv"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/trie"
+	"github.com/tenderly/net-nitro/cmd/dbconv/dbconv"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 func TestDatabaseConversion(t *testing.T) {
