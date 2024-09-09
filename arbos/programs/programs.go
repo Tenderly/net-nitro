@@ -425,15 +425,17 @@ func (p Programs) SetProgramCached(
 	if err != nil {
 		return err
 	}
-	if cache {
-		// Not passing in an address is supported pre-Verkle, as in Blockchain's ContractCodeWithPrefix method.
-		code, err := db.Database().ContractCode(common.Address{}, codeHash)
-		if err != nil {
-			return err
+	if address != (common.Address{}) {
+		if cache {
+			// Not passing in an address is supported pre-Verkle, as in Blockchain's ContractCodeWithPrefix method.
+			code, err := db.Database().ContractCode(address, codeHash)
+			if err != nil {
+				return err
+			}
+			cacheProgram(db, moduleHash, program, address, code, codeHash, params, debug, time, runMode)
+		} else {
+			evictProgram(db, moduleHash, program.version, debug, runMode, expired)
 		}
-		cacheProgram(db, moduleHash, program, address, code, codeHash, params, debug, time, runMode)
-	} else {
-		evictProgram(db, moduleHash, program.version, debug, runMode, expired)
 	}
 	program.cached = cache
 	return p.setProgram(codeHash, program)
