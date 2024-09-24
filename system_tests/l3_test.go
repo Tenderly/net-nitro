@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/arbnode"
+	"github.com/tenderly/net-nitro/arbnode"
 )
 
 func TestSimpleL3(t *testing.T) {

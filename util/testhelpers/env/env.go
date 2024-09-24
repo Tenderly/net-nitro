@@ -6,8 +6,8 @@ package env
 import (
 	"os"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 // There are two CI steps, one to run tests using the path state scheme, and one to run tests using the hash state scheme.

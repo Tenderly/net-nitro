@@ -11,12 +11,12 @@ import (
 	"strings"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/eth/tracers"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/tracers"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 func init() {
