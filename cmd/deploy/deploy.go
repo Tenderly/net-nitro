@@ -14,20 +14,20 @@ import (
 	"strings"
 	"time"
 
-	"github.com/offchainlabs/nitro/cmd/chaininfo"
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/solgen/go/precompilesgen"
-	"github.com/offchainlabs/nitro/util/headerreader"
-	"github.com/offchainlabs/nitro/validator/server_common"
+	"github.com/tenderly/net-nitro/cmd/chaininfo"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/solgen/go/precompilesgen"
+	"github.com/tenderly/net-nitro/util/headerreader"
+	"github.com/tenderly/net-nitro/validator/server_common"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/offchainlabs/nitro/arbnode"
-	"github.com/offchainlabs/nitro/cmd/util"
-	deploycode "github.com/offchainlabs/nitro/deploy"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
+	"github.com/tenderly/net-nitro/arbnode"
+	"github.com/tenderly/net-nitro/cmd/util"
+	deploycode "github.com/tenderly/net-nitro/deploy"
 )
 
 func main() {

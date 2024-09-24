@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 )
 
 func testTwoNodesSimple(t *testing.T, dasModeStr string) {
