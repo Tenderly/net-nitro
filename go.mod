@@ -8,14 +8,14 @@ require (
 	github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible
 	github.com/Shopify/toxiproxy v2.1.4+incompatible
 	github.com/alicebob/miniredis/v2 v2.32.1
-	github.com/andybalholm/brotli v1.0.4
+	github.com/andybalholm/brotli v1.0.5
 	github.com/aws/aws-sdk-go-v2 v1.21.2
 	github.com/aws/aws-sdk-go-v2/config v1.18.45
 	github.com/aws/aws-sdk-go-v2/credentials v1.13.43
 	github.com/aws/aws-sdk-go-v2/feature/s3/manager v1.11.10
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.26.9
 	github.com/cavaliergopher/grab/v3 v3.0.1
-	github.com/cockroachdb/pebble v0.0.0-20230928194634-aa077af62593
+	github.com/cockroachdb/pebble v1.1.2
 	github.com/codeclysm/extract/v3 v3.0.2
 	github.com/dgraph-io/badger/v4 v4.2.0
 	github.com/enescakir/emoji v1.0.0
@@ -73,15 +73,15 @@ require (
 	github.com/bits-and-blooms/bitset v1.10.0 // indirect
 	github.com/btcsuite/btcd/btcec/v2 v2.2.0 // indirect
 	github.com/cespare/xxhash/v2 v2.2.0 // indirect
-	github.com/cockroachdb/errors v1.9.1 // indirect
-	github.com/cockroachdb/logtags v0.0.0-20211118104740-dabe8e521a4f // indirect
-	github.com/cockroachdb/redact v1.1.3 // indirect
+	github.com/cockroachdb/errors v1.11.3 // indirect
+	github.com/cockroachdb/logtags v0.0.0-20230118201751-21c54148d20b // indirect
+	github.com/cockroachdb/redact v1.1.5 // indirect
 	github.com/cockroachdb/tokenbucket v0.0.0-20230807174530-cc333fc44b06 // indirect
 	github.com/consensys/bavard v0.1.13 // indirect
 	github.com/consensys/gnark-crypto v0.12.1 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect
 	github.com/crate-crypto/go-ipa v0.0.0-20231025140028-3c0104f4b233 // indirect
-	github.com/crate-crypto/go-kzg-4844 v0.7.0 // indirect
+	github.com/crate-crypto/go-kzg-4844 v1.0.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/deckarep/golang-set/v2 v2.1.0 // indirect
 	github.com/decred/dcrd/dcrec/secp256k1/v4 v4.2.0 // indirect
@@ -97,7 +97,7 @@ require (
 	github.com/gballet/go-libpcsclite v0.0.0-20190607065134-2772fd86a8ff // indirect
 	github.com/gballet/go-verkle v0.1.1-0.20231031103413-a67434b50f46 // indirect
 	github.com/gdamore/encoding v1.0.0 // indirect
-	github.com/getsentry/sentry-go v0.12.0 // indirect
+	github.com/getsentry/sentry-go v0.27.0 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/go-sourcemap/sourcemap v2.1.3+incompatible // indirect
 	github.com/gobwas/pool v0.2.1 // indirect
@@ -160,7 +160,7 @@ require (
 	golang.org/x/mod v0.14.0 // indirect
 	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/oauth2 v0.22.0
-	golang.org/x/sync v0.5.0
+	golang.org/x/sync v0.7.0
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.3.0 // indirect
 	google.golang.org/protobuf v1.33.0 // indirect
