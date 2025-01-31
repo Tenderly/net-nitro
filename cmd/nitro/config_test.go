@@ -14,11 +14,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/cmd/util/confighelpers"
-	"github.com/offchainlabs/nitro/das"
-	"github.com/offchainlabs/nitro/util/colors"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/cmd/util/confighelpers"
+	"github.com/tenderly/net-nitro/das"
+	"github.com/tenderly/net-nitro/util/colors"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 
 	"github.com/r3labs/diff/v3"
 	flag "github.com/spf13/pflag"

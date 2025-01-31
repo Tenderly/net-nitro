@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/offchainlabs/nitro/cmd/conf"
-	"github.com/offchainlabs/nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/cmd/conf"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
 	flag "github.com/spf13/pflag"
 )
 

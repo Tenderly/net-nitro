@@ -6,7 +6,7 @@ package arbos
 import (
 	"testing"
 
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func Require(t *testing.T, err error, printables ...interface{}) {

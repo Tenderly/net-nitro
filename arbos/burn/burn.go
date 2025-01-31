@@ -6,8 +6,8 @@ package burn
 import (
 	"fmt"
 
-	glog "github.com/ethereum/go-ethereum/log"
-	"github.com/offchainlabs/nitro/arbos/util"
+	glog "github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/arbos/util"
 )
 
 type Burner interface {
