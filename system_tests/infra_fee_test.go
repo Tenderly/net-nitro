@@ -11,11 +11,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/offchainlabs/nitro/arbos/l2pricing"
-	"github.com/offchainlabs/nitro/solgen/go/precompilesgen"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/arbos/l2pricing"
+	"github.com/tenderly/net-nitro/solgen/go/precompilesgen"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 func TestInfraFee(t *testing.T) {

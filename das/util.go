@@ -6,9 +6,9 @@ package das
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/offchainlabs/nitro/arbstate/daprovider"
-	"github.com/offchainlabs/nitro/util/pretty"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/arbstate/daprovider"
+	"github.com/tenderly/net-nitro/util/pretty"
 )
 
 func logPut(store string, data []byte, timeout uint64, reader daprovider.DASReader, more ...interface{}) {

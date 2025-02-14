@@ -12,10 +12,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/arbos/arbostypes"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/util/redisutil"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/arbos/arbostypes"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/util/redisutil"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 const messagesPerRound = 20

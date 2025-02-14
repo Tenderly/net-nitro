@@ -11,7 +11,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 	"github.com/r3labs/diff/v3"
 )
 

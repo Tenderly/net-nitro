@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/offchainlabs/nitro/arbos/l1pricing"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/arbos/l1pricing"
 )
 
 // L1 Pricer pool address gets something when the sequencer posts batches
