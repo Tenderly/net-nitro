@@ -402,10 +402,10 @@ func newApiClosures(
 			endInk := takeU64()
 			nameLen := takeU16()
 			argsLen := takeU16()
-			outsLen := takeU16()
+			/*outsLen*/ _ = takeU16()
 			name := string(takeFixed(int(nameLen)))
 			args := takeFixed(int(argsLen))
-			outs := takeFixed(int(outsLen))
+			outs := takeRest()
 
 			captureHostio(name, args, outs, startInk, endInk)
 			return []byte{}, nil, 0
