@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func TestConversion(t *testing.T) {

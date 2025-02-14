@@ -10,15 +10,15 @@ import (
 	"math/big"
 	"sort"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/solgen/go/contractsgen"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
-	"github.com/offchainlabs/nitro/staker/txbuilder"
-	"github.com/offchainlabs/nitro/util/headerreader"
+	"github.com/tenderly/net-nitro/solgen/go/contractsgen"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/staker/txbuilder"
+	"github.com/tenderly/net-nitro/util/headerreader"
 )
 
 type FastConfirmSafe struct {
