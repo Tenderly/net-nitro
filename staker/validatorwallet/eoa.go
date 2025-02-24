@@ -7,14 +7,14 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/offchainlabs/nitro/arbnode/dataposter"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/solgen/go/challengegen"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
-	"github.com/offchainlabs/nitro/staker/txbuilder"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/arbnode/dataposter"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/solgen/go/challengegen"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/staker/txbuilder"
 )
 
 type EOA struct {

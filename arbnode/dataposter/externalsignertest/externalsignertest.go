@@ -16,13 +16,13 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/accounts/keystore"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/rpc"
-	"github.com/ethereum/go-ethereum/signer/core/apitypes"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/keystore"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/signer/core/apitypes"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 var (

@@ -11,16 +11,16 @@ import (
 	"math/big"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
-	"github.com/offchainlabs/nitro/util/headerreader"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/util/headerreader"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 )
 
 var rollupInitializedID common.Hash

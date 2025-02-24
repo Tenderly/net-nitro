@@ -3,9 +3,9 @@ package validator
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 type ValidationSpawner interface {

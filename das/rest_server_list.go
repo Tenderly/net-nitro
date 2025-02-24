@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 const initialMaxRecurseDepth uint16 = 8

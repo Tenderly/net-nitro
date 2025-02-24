@@ -7,12 +7,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/offchainlabs/nitro/arbos/storage"
-	"github.com/offchainlabs/nitro/arbos/util"
-	am "github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
+	"github.com/tenderly/net-nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/arbos/util"
+	am "github.com/tenderly/net-nitro/util/arbmath"
 )
 
 const MaxWasmSize = 128 * 1024      // max decompressed wasm size (programs are also bounded by compressed size)
