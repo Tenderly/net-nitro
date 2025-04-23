@@ -588,8 +588,8 @@ contracts/test/prover/proofs/%.json: $(arbitrator_cases)/%.wasm $(prover_bin)
 	@touch $@
 
 .make/solgen: $(DEP_PREDICATE) solgen/gen.go .make/solidity $(ORDER_ONLY_PREDICATE) .make
-	mkdir -p solgen/go/
-	go run solgen/gen.go
+	# mkdir -p solgen/go/
+	# go run solgen/gen.go
 	@touch $@
 
 .make/solidity: $(DEP_PREDICATE) safe-smart-account/contracts/*/*.sol safe-smart-account/contracts/*.sol contracts/src/*/*.sol contracts-legacy/src/*/*.sol .make/yarndeps $(ORDER_ONLY_PREDICATE) .make
