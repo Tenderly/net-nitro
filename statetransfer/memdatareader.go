@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package statetransfer
 
@@ -97,6 +97,10 @@ func (r *MemoryInitDataReader) GetAccountDataReader() (AccountDataReader, error)
 			length: len(r.d.Accounts),
 		},
 	}, nil
+}
+
+func (r *MemoryInitDataReader) GetChainOwner() (common.Address, error) {
+	return r.d.ChainOwner, nil
 }
 
 func (r *MemoryInitDataReader) Close() error {

@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package arbtest
 
@@ -10,7 +10,8 @@ import (
 
 	"github.com/ethereum/go-ethereum"
 	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
+
+	"github.com/offchainlabs/nitro/cmd/chaininfo"
 	"github.com/offchainlabs/nitro/statetransfer"
 	"github.com/offchainlabs/nitro/util/testhelpers"
 )
@@ -50,7 +51,7 @@ func TestInitContract(t *testing.T) {
 	defer cancel()
 	expectedSums := make(map[common.Address]*big.Int)
 	prand := testhelpers.NewPseudoRandomDataSource(t, 1)
-	l2info := NewArbTestInfo(t, params.ArbitrumDevTestChainConfig().ChainID)
+	l2info := NewArbTestInfo(t, chaininfo.ArbitrumDevTestChainConfig().ChainID)
 	for i := 0; i < 50; i++ {
 		contractData, sum := InitOneContract(prand)
 		accountAddress := prand.GetAddress()

@@ -1,15 +1,15 @@
 // Copyright 2024, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package genericconf
 
 import (
 	"errors"
+	"log/slog"
 	"strconv"
 	"strings"
 
 	"github.com/ethereum/go-ethereum/log"
-	"golang.org/x/exp/slog"
 )
 
 func ToSlogLevel(str string) (slog.Level, error) {

@@ -1,5 +1,5 @@
 // Copyright 2021-2024, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 //go:build wasm
 // +build wasm
@@ -73,7 +73,7 @@ const BYTES_PER_FIELD_ELEMENT = 32
 
 var BLS_MODULUS, _ = new(big.Int).SetString("52435875175126190479447740508185965837690552500527637822603658699938581184513", 10)
 
-var stylusModuleHash = common.HexToHash("a149cf8113ff9c95f2c8c2a1423575367de86dd422d87114bb9ea47baf535dd7") // user.wat
+var stylusModuleHash = common.HexToHash("ae8791cf6ac455ff2806b955d5a736e81bc791f7938a22a40823251637014825") // user.wat
 
 func callStylusProgram(recurse int) {
 	evmData := programs.EvmData{}

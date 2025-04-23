@@ -1,5 +1,5 @@
 // Copyright 2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package das
 
@@ -10,17 +10,17 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/redis/go-redis/v9"
+	flag "github.com/spf13/pflag"
 	"golang.org/x/crypto/sha3"
 
-	"github.com/go-redis/redis/v8"
+	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/log"
+
 	"github.com/offchainlabs/nitro/arbstate/daprovider"
 	"github.com/offchainlabs/nitro/das/dastree"
 	"github.com/offchainlabs/nitro/util/pretty"
 	"github.com/offchainlabs/nitro/util/redisutil"
-	flag "github.com/spf13/pflag"
-
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
 )
 
 type RedisConfig struct {

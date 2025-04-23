@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package blockhash
 
@@ -8,6 +8,8 @@ import (
 	"errors"
 
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/params"
+
 	"github.com/offchainlabs/nitro/arbos/storage"
 )
 
@@ -55,7 +57,7 @@ func (bh *Blockhashes) RecordNewL1Block(number uint64, blockHash common.Hash, ar
 		// fill in hashes for any "skipped over" blocks
 		nextNumber++
 		var nextNumBuf [8]byte
-		if arbosVersion >= 8 {
+		if arbosVersion >= params.ArbosVersion_8 {
 			binary.LittleEndian.PutUint64(nextNumBuf[:], nextNumber)
 		}
 

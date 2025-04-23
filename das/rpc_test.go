@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package das
 
@@ -14,6 +14,7 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/crypto"
+
 	"github.com/offchainlabs/nitro/blsSignatures"
 	"github.com/offchainlabs/nitro/cmd/genericconf"
 	"github.com/offchainlabs/nitro/util/signature"
@@ -83,6 +84,7 @@ func testRpcImpl(t *testing.T, size, times int, concurrent bool) {
 			AssumedHonest:         1,
 			Backends:              beConfigs,
 			MaxStoreChunkBodySize: (chunkSize * 2) + len(sendChunkJSONBoilerplate),
+			EnableChunkedStore:    true,
 		},
 		RequestTimeout: time.Minute,
 	}

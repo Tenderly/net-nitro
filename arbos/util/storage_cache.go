@@ -1,9 +1,11 @@
 // Copyright 2024, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package util
 
 import (
+	"slices"
+
 	"github.com/ethereum/go-ethereum/common"
 )
 
@@ -67,6 +69,10 @@ func (s *storageCache) Flush() []storageCacheStores {
 			})
 		}
 	}
+	sortFunc := func(a, b storageCacheStores) int {
+		return a.Key.Cmp(b.Key)
+	}
+	slices.SortFunc(stores, sortFunc)
 	return stores
 }
 

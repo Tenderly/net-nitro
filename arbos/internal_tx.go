@@ -1,5 +1,5 @@
 // Copyright 2021-2024, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package arbos
 
@@ -8,15 +8,16 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/offchainlabs/nitro/util/arbmath"
-
-	"github.com/ethereum/go-ethereum/log"
-
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/params"
+
 	"github.com/offchainlabs/nitro/arbos/arbosState"
 	"github.com/offchainlabs/nitro/arbos/util"
+	"github.com/offchainlabs/nitro/util/arbmath"
 )
 
 func InternalTxStartBlock(
@@ -55,13 +56,22 @@ func ApplyInternalTxUpdate(tx *types.ArbitrumInternalTx, state *arbosState.Arbos
 			return err
 		}
 
+		var prevHash common.Hash
+		if evm.Context.BlockNumber.Sign() > 0 {
+			prevHash = evm.Context.GetHash(evm.Context.BlockNumber.Uint64() - 1)
+		}
+		// For ArbOS versions >= 40 we need to call ProcessParentBlockHash to fill
+		// the historyStorage with the block hash to support EIP-2935.
+		if state.ArbOSVersion() >= params.ArbosVersion_40 {
+			core.ProcessParentBlockHash(prevHash, evm)
+		}
 		l1BlockNumber := util.SafeMapGet[uint64](inputs, "l1BlockNumber")
 		timePassed := util.SafeMapGet[uint64](inputs, "timePassed")
-		if state.ArbOSVersion() < 3 {
+		if state.ArbOSVersion() < params.ArbosVersion_3 {
 			// (incorrectly) use the L2 block number instead
 			timePassed = util.SafeMapGet[uint64](inputs, "l2BlockNumber")
 		}
-		if state.ArbOSVersion() < 8 {
+		if state.ArbOSVersion() < params.ArbosVersion_8 {
 			// in old versions we incorrectly used an L1 block number one too high
 			l1BlockNumber++
 		}
@@ -73,10 +83,6 @@ func ApplyInternalTxUpdate(tx *types.ArbitrumInternalTx, state *arbosState.Arbos
 		state.Restrict(err)
 
 		if l1BlockNumber > oldL1BlockNumber {
-			var prevHash common.Hash
-			if evm.Context.BlockNumber.Sign() > 0 {
-				prevHash = evm.Context.GetHash(evm.Context.BlockNumber.Uint64() - 1)
-			}
 			state.Restrict(state.Blockhashes().RecordNewL1Block(l1BlockNumber-1, prevHash, state.ArbOSVersion()))
 		}
 

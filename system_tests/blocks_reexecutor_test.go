@@ -5,14 +5,29 @@ import (
 	"testing"
 
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/ethereum/go-ethereum/core/rawdb"
+
 	blocksreexecutor "github.com/offchainlabs/nitro/blocks_reexecutor"
 )
 
 func TestBlocksReExecutorModes(t *testing.T) {
+	testBlocksReExecutorModes(t, false)
+}
+
+func TestBlocksReExecutorMultipleRanges(t *testing.T) {
+	testBlocksReExecutorModes(t, true)
+}
+
+func testBlocksReExecutorModes(t *testing.T, onMultipleRanges bool) {
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
 	builder := NewNodeBuilder(ctx).DefaultConfig(t, false)
+	builder.execConfig.Caching.StateScheme = rawdb.HashScheme
+	// This allows us to see reexecution of multiple ranges
+	if onMultipleRanges {
+		builder.execConfig.Caching.Archive = true
+	}
 	cleanup := builder.Build(t)
 	defer cleanup()
 
@@ -35,9 +50,18 @@ func TestBlocksReExecutorModes(t *testing.T) {
 		}
 	}
 
+	// Set Blocks config field if running blocks reexecution on multiple ranges
+	c := &blocksreexecutor.TestConfig
+	if onMultipleRanges {
+		c.Blocks = `[[0, 29], [30, 59], [60, 99]]`
+	}
+
 	// Reexecute blocks at mode full
+	c.MinBlocksPerThread = 10
+	Require(t, c.Validate())
+	executorFull, err := blocksreexecutor.New(c, blockchain, builder.L2.ExecNode.ChainDB, feedErrChan)
+	Require(t, err)
 	success := make(chan struct{})
-	executorFull := blocksreexecutor.New(&blocksreexecutor.TestConfig, blockchain, feedErrChan)
 	executorFull.Start(ctx, success)
 	select {
 	case err := <-feedErrChan:
@@ -46,10 +70,12 @@ func TestBlocksReExecutorModes(t *testing.T) {
 	}
 
 	// Reexecute blocks at mode random
-	success = make(chan struct{})
-	c := &blocksreexecutor.TestConfig
 	c.Mode = "random"
-	executorRandom := blocksreexecutor.New(c, blockchain, feedErrChan)
+	c.MinBlocksPerThread = 20
+	Require(t, c.Validate())
+	executorRandom, err := blocksreexecutor.New(c, blockchain, builder.L2.ExecNode.ChainDB, feedErrChan)
+	Require(t, err)
+	success = make(chan struct{})
 	executorRandom.Start(ctx, success)
 	select {
 	case err := <-feedErrChan:

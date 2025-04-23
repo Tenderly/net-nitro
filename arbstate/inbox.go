@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package arbstate
 
@@ -85,11 +85,11 @@ func parseSequencerMessage(ctx context.Context, batchNum uint64, batchBlockHash 
 					// Matches the way keyset validation was done inside DAS readers i.e logging the error
 					//  But other daproviders might just want to return the error
 					if errors.Is(err, daprovider.ErrSeqMsgValidation) && daprovider.IsDASMessageHeaderByte(payload[0]) {
-						logLevel := log.Error
 						if keysetValidationMode == daprovider.KeysetPanicIfInvalid {
-							logLevel = log.Crit
+							panic(err.Error())
+						} else {
+							log.Error(err.Error())
 						}
-						logLevel(err.Error())
 					} else {
 						return nil, err
 					}

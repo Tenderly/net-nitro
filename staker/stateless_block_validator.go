@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package staker
 
@@ -9,29 +9,31 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/offchainlabs/nitro/arbstate/daprovider"
-
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/state"
 	"github.com/ethereum/go-ethereum/ethdb"
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/node"
 	"github.com/ethereum/go-ethereum/params"
+
 	"github.com/offchainlabs/nitro/arbos/arbostypes"
+	"github.com/offchainlabs/nitro/arbstate/daprovider"
 	"github.com/offchainlabs/nitro/arbutil"
 	"github.com/offchainlabs/nitro/execution"
 	"github.com/offchainlabs/nitro/util/rpcclient"
 	"github.com/offchainlabs/nitro/validator"
-	"github.com/offchainlabs/nitro/validator/client/redis"
-
 	validatorclient "github.com/offchainlabs/nitro/validator/client"
+	"github.com/offchainlabs/nitro/validator/client/redis"
+	"github.com/offchainlabs/nitro/validator/server_api"
+	"github.com/offchainlabs/nitro/validator/server_common"
 )
 
 type StatelessBlockValidator struct {
 	config *BlockValidatorConfig
 
-	execSpawners   []validator.ExecutionSpawner
-	redisValidator *redis.ValidationClient
+	execSpawners     []validator.ExecutionSpawner
+	boldExecSpawners []validator.BOLDExecutionSpawner
+	redisValidator   *redis.ValidationClient
 
 	recorder execution.ExecutionRecorder
 
@@ -40,6 +42,8 @@ type StatelessBlockValidator struct {
 	streamer     TransactionStreamerInterface
 	db           ethdb.Database
 	dapReaders   []daprovider.Reader
+	stack        *node.Node
+	locator      *server_common.MachineLocator
 }
 
 type BlockValidatorRegistrer interface {
@@ -58,8 +62,8 @@ type InboxTrackerInterface interface {
 type TransactionStreamerInterface interface {
 	BlockValidatorRegistrer
 	GetProcessedMessageCount() (arbutil.MessageIndex, error)
-	GetMessage(seqNum arbutil.MessageIndex) (*arbostypes.MessageWithMetadata, error)
-	ResultAtCount(count arbutil.MessageIndex) (*execution.MessageResult, error)
+	GetMessage(msgIdx arbutil.MessageIndex) (*arbostypes.MessageWithMetadata, error)
+	ResultAtMessageIndex(msgIdx arbutil.MessageIndex) (*execution.MessageResult, error)
 	PauseReorgs()
 	ResumeReorgs()
 	ChainConfig() *params.ChainConfig
@@ -67,6 +71,7 @@ type TransactionStreamerInterface interface {
 
 type InboxReaderInterface interface {
 	GetSequencerMessageBytes(ctx context.Context, seqNum uint64) ([]byte, common.Hash, error)
+	GetFinalizedMsgCount(ctx context.Context) (arbutil.MessageIndex, error)
 }
 
 type GlobalStatePosition struct {
@@ -232,8 +237,10 @@ func NewStatelessBlockValidator(
 	dapReaders []daprovider.Reader,
 	config func() *BlockValidatorConfig,
 	stack *node.Node,
+	wasmRootPath string,
 ) (*StatelessBlockValidator, error) {
 	var executionSpawners []validator.ExecutionSpawner
+	var boldExecutionSpawners []validator.BOLDExecutionSpawner
 	var redisValClient *redis.ValidationClient
 
 	if config().RedisValidationClientConfig.Enabled() {
@@ -247,23 +254,33 @@ func NewStatelessBlockValidator(
 	for i := range configs {
 		i := i
 		confFetcher := func() *rpcclient.ClientConfig { return &config().ValidationServerConfigs[i] }
-		executionSpawners = append(executionSpawners, validatorclient.NewExecutionClient(confFetcher, stack))
+		executionSpawner := validatorclient.NewExecutionClient(confFetcher, stack)
+		executionSpawners = append(executionSpawners, executionSpawner)
+		boldExecutionSpawners = append(boldExecutionSpawners, validatorclient.NewBOLDExecutionClient(executionSpawner))
 	}
 
 	if len(executionSpawners) == 0 {
 		return nil, errors.New("no enabled execution servers")
 	}
 
+	locator, err := server_common.NewMachineLocator(wasmRootPath)
+	if err != nil {
+		return nil, fmt.Errorf("creating new machine locator: %w", err)
+	}
+
 	return &StatelessBlockValidator{
-		config:         config(),
-		recorder:       recorder,
-		redisValidator: redisValClient,
-		inboxReader:    inboxReader,
-		inboxTracker:   inbox,
-		streamer:       streamer,
-		db:             arbdb,
-		dapReaders:     dapReaders,
-		execSpawners:   executionSpawners,
+		config:           config(),
+		recorder:         recorder,
+		redisValidator:   redisValClient,
+		inboxReader:      inboxReader,
+		inboxTracker:     inbox,
+		streamer:         streamer,
+		db:               arbdb,
+		dapReaders:       dapReaders,
+		execSpawners:     executionSpawners,
+		boldExecSpawners: boldExecutionSpawners,
+		stack:            stack,
+		locator:          locator,
 	}, nil
 }
 
@@ -277,6 +294,26 @@ func (v *StatelessBlockValidator) readPostedBatch(ctx context.Context, batchNum 
 	}
 	postedData, _, err := v.inboxReader.GetSequencerMessageBytes(ctx, batchNum)
 	return postedData, err
+}
+
+func (v *StatelessBlockValidator) InboxTracker() InboxTrackerInterface {
+	return v.inboxTracker
+}
+
+func (v *StatelessBlockValidator) InboxReader() InboxReaderInterface {
+	return v.inboxReader
+}
+
+func (v *StatelessBlockValidator) InboxStreamer() TransactionStreamerInterface {
+	return v.streamer
+}
+
+func (v *StatelessBlockValidator) ExecutionSpawners() []validator.ExecutionSpawner {
+	return v.execSpawners
+}
+
+func (v *StatelessBlockValidator) BOLDExecutionSpawners() []validator.BOLDExecutionSpawner {
+	return v.boldExecSpawners
 }
 
 func (v *StatelessBlockValidator) readFullBatch(ctx context.Context, batchNum uint64) (bool, *FullBatchInfo, error) {
@@ -377,7 +414,7 @@ func (v *StatelessBlockValidator) ValidationEntryRecord(ctx context.Context, e *
 	return nil
 }
 
-func buildGlobalState(res execution.MessageResult, pos GlobalStatePosition) validator.GoGlobalState {
+func BuildGlobalState(res execution.MessageResult, pos GlobalStatePosition) validator.GoGlobalState {
 	return validator.GoGlobalState{
 		BlockHash:  res.BlockHash,
 		SendRoot:   res.SendRoot,
@@ -409,28 +446,30 @@ func (v *StatelessBlockValidator) CreateReadyValidationEntry(ctx context.Context
 	if err != nil {
 		return nil, err
 	}
-	result, err := v.streamer.ResultAtCount(pos + 1)
+	result, err := v.streamer.ResultAtMessageIndex(pos)
 	if err != nil {
 		return nil, err
 	}
 	var prevDelayed uint64
+	prevResult := &execution.MessageResult{}
 	if pos > 0 {
 		prev, err := v.streamer.GetMessage(pos - 1)
 		if err != nil {
 			return nil, err
 		}
 		prevDelayed = prev.DelayedMessagesRead
+		prevResult, err = v.streamer.ResultAtMessageIndex(pos - 1)
+		if err != nil {
+			return nil, err
+		}
 	}
-	prevResult, err := v.streamer.ResultAtCount(pos)
-	if err != nil {
-		return nil, err
-	}
+
 	startPos, endPos, err := v.GlobalStatePositionsAtCount(pos + 1)
 	if err != nil {
 		return nil, fmt.Errorf("failed calculating position for validation: %w", err)
 	}
-	start := buildGlobalState(*prevResult, startPos)
-	end := buildGlobalState(*result, endPos)
+	start := BuildGlobalState(*prevResult, startPos)
+	end := BuildGlobalState(*result, endPos)
 	found, fullBatchInfo, err := v.readFullBatch(ctx, start.Batch)
 	if err != nil {
 		return nil, err
@@ -508,23 +547,24 @@ func (v *StatelessBlockValidator) ValidateResult(
 	return true, &entry.End, nil
 }
 
+func (v *StatelessBlockValidator) ValidationInputsAt(ctx context.Context, pos arbutil.MessageIndex, targets ...ethdb.WasmTarget) (server_api.InputJSON, error) {
+	entry, err := v.CreateReadyValidationEntry(ctx, pos)
+	if err != nil {
+		return server_api.InputJSON{}, err
+	}
+	input, err := entry.ToInput(targets)
+	if err != nil {
+		return server_api.InputJSON{}, err
+	}
+	return *server_api.ValidationInputToJson(input), nil
+}
+
 func (v *StatelessBlockValidator) OverrideRecorder(t *testing.T, recorder execution.ExecutionRecorder) {
 	v.recorder = recorder
 }
 
-func (v *StatelessBlockValidator) GetLatestWasmModuleRoot(ctx context.Context) (common.Hash, error) {
-	var lastErr error
-	for _, spawner := range v.execSpawners {
-		var latest common.Hash
-		latest, lastErr = spawner.LatestWasmModuleRoot().Await(ctx)
-		if latest != (common.Hash{}) && lastErr == nil {
-			return latest, nil
-		}
-		if ctx.Err() != nil {
-			return common.Hash{}, ctx.Err()
-		}
-	}
-	return common.Hash{}, fmt.Errorf("couldn't detect latest WasmModuleRoot: %w", lastErr)
+func (v *StatelessBlockValidator) GetLatestWasmModuleRoot() common.Hash {
+	return v.locator.LatestWasmModuleRoot()
 }
 
 func (v *StatelessBlockValidator) Start(ctx_in context.Context) error {

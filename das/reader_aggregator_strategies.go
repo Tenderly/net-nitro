@@ -1,10 +1,11 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package das
 
 import (
 	"errors"
+	"maps"
 	"math/rand"
 	"sort"
 	"sync"
@@ -33,10 +34,7 @@ func (s *abstractAggregatorStrategy) update(readers []daprovider.DASReader, stat
 	s.readers = make([]daprovider.DASReader, len(readers))
 	copy(s.readers, readers)
 
-	s.stats = make(map[daprovider.DASReader]readerStats)
-	for k, v := range stats {
-		s.stats[k] = v
-	}
+	s.stats = maps.Clone(stats)
 }
 
 // Exponentially growing Explore Exploit Strategy

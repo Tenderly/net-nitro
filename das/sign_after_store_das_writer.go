@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package das
 
@@ -81,6 +81,7 @@ func NewSignAfterStoreDASWriter(ctx context.Context, config DataAvailabilityConf
 	if err != nil {
 		return nil, err
 	}
+	log.Info("DAS public key used for signing", "key", hexutil.Encode(blsSignatures.PublicKeyToBytes(publicKey)))
 
 	keyset := &daprovider.DataAvailabilityKeyset{
 		AssumedHonest: 1,

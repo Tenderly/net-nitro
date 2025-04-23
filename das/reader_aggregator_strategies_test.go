@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package das
 
@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/ethereum/go-ethereum/common"
+
 	"github.com/offchainlabs/nitro/arbstate/daprovider"
 )
 
@@ -72,8 +73,10 @@ func TestDAS_SimpleExploreExploit(t *testing.T) {
 		}
 
 		for i := 0; i < len(was) && doMatch; i++ {
-			if expected[i].(*dummyReader).int != was[i].(*dummyReader).int {
-				Fail(t, fmt.Sprintf("expected %d, was %d", expected[i].(*dummyReader).int, was[i].(*dummyReader).int))
+			expR, expOK := expected[i].(*dummyReader)
+			wasR, wasOK := was[i].(*dummyReader)
+			if !expOK || !wasOK || expR.int != wasR.int {
+				Fail(t, fmt.Sprintf("expected %d, was %d", expected[i], was[i]))
 			}
 		}
 	}

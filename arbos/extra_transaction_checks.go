@@ -7,10 +7,12 @@ import (
 	"github.com/ethereum/go-ethereum/core/state"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
+
 	"github.com/offchainlabs/nitro/arbos/arbosState"
 )
 
-// extraPreTxFilter should be modified by chain operators to enforce additional pre-transaction validity rules
+// extraPreTxFilter should be modified by chain operators to enforce additional pre-transaction validity rules.
+// Writes to *state.StateDB object should be avoided to prevent invalid state from permeating
 func extraPreTxFilter(
 	chainConfig *params.ChainConfig,
 	currentBlockHeader *types.Header,

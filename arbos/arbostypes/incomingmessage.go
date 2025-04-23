@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package arbostypes
 
@@ -16,6 +16,7 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 
 	"github.com/offchainlabs/nitro/arbos/util"
+	"github.com/offchainlabs/nitro/cmd/chaininfo"
 	"github.com/offchainlabs/nitro/util/arbmath"
 )
 
@@ -265,7 +266,7 @@ type ParsedInitMessage struct {
 var DefaultInitialL1BaseFee = big.NewInt(50 * params.GWei)
 
 var TestInitMessage = &ParsedInitMessage{
-	ChainId:          params.ArbitrumDevTestChainConfig().ChainID,
+	ChainId:          chaininfo.ArbitrumDevTestChainConfig().ChainID,
 	InitialL1BaseFee: DefaultInitialL1BaseFee,
 }
 

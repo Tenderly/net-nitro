@@ -5,8 +5,9 @@ import (
 	"errors"
 	"fmt"
 	"strings"
+	"time"
 
-	"github.com/go-redis/redis/v8"
+	"github.com/redis/go-redis/v9"
 
 	"github.com/ethereum/go-ethereum/log"
 
@@ -20,12 +21,16 @@ const PRIORITIES_KEY string = "coordinator.priorities"                 // Read o
 const WANTS_LOCKOUT_KEY_PREFIX string = "coordinator.liveliness."      // Per server. Only written by self
 const MESSAGE_KEY_PREFIX string = "coordinator.msg."                   // Per Message. Only written by sequencer holding CHOSEN
 const SIGNATURE_KEY_PREFIX string = "coordinator.msg.sig."             // Per Message. Only written by sequencer holding CHOSEN
+const BLOCKMETADATA_KEY_PREFIX string = "coordinator.blockMetadata."   // Per Message. Only written by sequencer holding CHOSEN
 const WANTS_LOCKOUT_VAL string = "OK"
+const SWITCHED_REDIS string = "SWITCHED_REDIS"
 const INVALID_VAL string = "INVALID"
 const INVALID_URL string = "<?INVALID-URL?>"
 
 type RedisCoordinator struct {
-	Client redis.UniversalClient
+	Client                                redis.UniversalClient
+	firstSequencerWantingLockoutErrorTime time.Time // Time of the first error logged for no sequencer wanting the lockout.
+	lastLockoutErrorLogTime               time.Time // Add this field to track when we last logged lockout errors.
 }
 
 func WantsLockoutKeyFor(url string) string { return WANTS_LOCKOUT_KEY_PREFIX + url }
@@ -59,9 +64,41 @@ func (c *RedisCoordinator) RecommendSequencerWantingLockout(ctx context.Context)
 		if err != nil {
 			return "", err
 		}
+		// We found a sequencer that wants the lockout, so we reset the last time we observed the error
+		// to a value of zero for logging purposes below.
+		c.firstSequencerWantingLockoutErrorTime = time.Time{}
+		c.lastLockoutErrorLogTime = time.Time{} // Reset log throttling timer when state changes.
 		return url, nil
 	}
-	log.Error("no sequencer appears to want the lockout on redis", "priorities", prioritiesString)
+
+	// If we hit this line, it means no sequencer is currently wanting the lockout from Redis.
+	// A log will be emitted at different levels depending on how long it has been since the first error was logged.
+	// At first, the log will be at the debug level, but if it persists for more than 10 seconds, it will be logged at the warn level.
+	// If it persists for more than 20 seconds, it will be logged at the error level.
+	logMessage := func(level func(msg string, ctx ...interface{})) {
+		args := []interface{}{"priorities", prioritiesString}
+		level("no sequencer appears to want the lockout on redis", args...)
+	}
+
+	if c.firstSequencerWantingLockoutErrorTime.IsZero() {
+		c.firstSequencerWantingLockoutErrorTime = time.Now()
+		c.lastLockoutErrorLogTime = time.Now()
+		logMessage(log.Debug)
+	} else {
+		elapsedTime := time.Since(c.firstSequencerWantingLockoutErrorTime)
+		// Only log if it's been at least 5 seconds since the last log,
+		// as these logs would otherwise be spammed at a high rate when they occur.
+		if time.Since(c.lastLockoutErrorLogTime) >= 5*time.Second {
+			if elapsedTime > 20*time.Second {
+				logMessage(log.Error)
+			} else if elapsedTime > 10*time.Second {
+				logMessage(log.Warn)
+			} else {
+				logMessage(log.Debug)
+			}
+			c.lastLockoutErrorLogTime = time.Now() // Update last log time.
+		}
+	}
 	return "", nil
 }
 
@@ -117,4 +154,8 @@ func MessageKeyFor(pos arbutil.MessageIndex) string {
 
 func MessageSigKeyFor(pos arbutil.MessageIndex) string {
 	return fmt.Sprintf("%s%d", SIGNATURE_KEY_PREFIX, pos)
+}
+
+func BlockMetadataKeyFor(pos arbutil.MessageIndex) string {
+	return fmt.Sprintf("%s%d", BLOCKMETADATA_KEY_PREFIX, pos)
 }

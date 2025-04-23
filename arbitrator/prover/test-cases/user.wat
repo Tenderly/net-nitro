@@ -1,5 +1,5 @@
 ;; Copyright 2023, Offchain Labs, Inc.
-;; For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE
+;; For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 (module
     (import "vm_hooks" "storage_load_bytes32" (func $storage_load_bytes32 (param i32 i32)))
@@ -22,6 +22,12 @@
         i32.const 0xFFFFFF
         i32.load
     )
+    (func $infinite_loop (result i32)
+        (loop $loop
+            br $loop
+        )
+        unreachable
+    )
     (func (export "user_entrypoint") (param $args_len i32) (result i32)
         ;; this func uses $args_len to select which func to call
 
@@ -41,6 +47,12 @@
         (i32.eq (local.get $args_len) (i32.const 3))
         (if
             (then (call $out_of_bounds) (return))
+        )
+
+        ;; reverts due to an out-of-gas error
+        (i32.eq (local.get $args_len) (i32.const 4))
+        (if
+            (then (call $infinite_loop) (return))
         )
 
         (i32.eq (local.get $args_len) (i32.const 32))

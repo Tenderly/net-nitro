@@ -1,5 +1,5 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
-// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package client
 
@@ -11,22 +11,23 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/offchainlabs/nitro/validator"
-
-	"github.com/offchainlabs/nitro/util/containers"
-	"github.com/offchainlabs/nitro/util/rpcclient"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
-
-	"github.com/offchainlabs/nitro/validator/server_api"
-	"github.com/offchainlabs/nitro/validator/server_common"
-
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/core/rawdb"
 	"github.com/ethereum/go-ethereum/ethdb"
 	"github.com/ethereum/go-ethereum/log"
+	"github.com/ethereum/go-ethereum/metrics"
 	"github.com/ethereum/go-ethereum/node"
 	"github.com/ethereum/go-ethereum/rpc"
+
+	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/offchainlabs/nitro/util/rpcclient"
+	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/offchainlabs/nitro/validator"
+	"github.com/offchainlabs/nitro/validator/server_api"
+	"github.com/offchainlabs/nitro/validator/server_common"
 )
+
+var executionNodeOfflineGauge = metrics.NewRegisteredGauge("arb/state_provider/execution_node_offline", nil)
 
 type ValidationClient struct {
 	stopwaiter.StopWaiter
@@ -155,10 +156,14 @@ func NewExecutionClient(config rpcclient.ClientConfigFetcher, stack *node.Node) 
 	}
 }
 
-func (c *ExecutionClient) CreateExecutionRun(wasmModuleRoot common.Hash, input *validator.ValidationInput) containers.PromiseInterface[validator.ExecutionRun] {
-	return stopwaiter.LaunchPromiseThread[validator.ExecutionRun](c, func(ctx context.Context) (validator.ExecutionRun, error) {
+func (c *ExecutionClient) CreateExecutionRun(
+	wasmModuleRoot common.Hash,
+	input *validator.ValidationInput,
+	useBoldMachine bool,
+) containers.PromiseInterface[validator.ExecutionRun] {
+	return stopwaiter.LaunchPromiseThread(c, func(ctx context.Context) (validator.ExecutionRun, error) {
 		var res uint64
-		err := c.client.CallContext(ctx, &res, server_api.Namespace+"_createExecutionRun", wasmModuleRoot, server_api.ValidationInputToJson(input))
+		err := c.client.CallContext(ctx, &res, server_api.Namespace+"_createExecutionRun", wasmModuleRoot, server_api.ValidationInputToJson(input), useBoldMachine)
 		if err != nil {
 			return nil, err
 		}
@@ -171,34 +176,84 @@ func (c *ExecutionClient) CreateExecutionRun(wasmModuleRoot common.Hash, input *
 	})
 }
 
+var _ validator.BOLDExecutionSpawner = (*BOLDExecutionClient)(nil)
+
+type BOLDExecutionClient struct {
+	executionSpawner validator.ExecutionSpawner
+}
+
+func NewBOLDExecutionClient(executionSpawner validator.ExecutionSpawner) *BOLDExecutionClient {
+	return &BOLDExecutionClient{
+		executionSpawner: executionSpawner,
+	}
+}
+
+func (b *BOLDExecutionClient) WasmModuleRoots() ([]common.Hash, error) {
+	return b.executionSpawner.WasmModuleRoots()
+}
+
+func (b *BOLDExecutionClient) GetMachineHashesWithStepSize(ctx context.Context, wasmModuleRoot common.Hash, input *validator.ValidationInput, machineStartIndex, stepSize, maxIterations uint64) ([]common.Hash, error) {
+	execRun, err := b.executionSpawner.CreateExecutionRun(wasmModuleRoot, input, true).Await(ctx)
+	if err != nil {
+		return nil, err
+	}
+	defer execRun.Close()
+	ctxCheckAlive, cancelCheckAlive := ctxWithCheckAlive(ctx, execRun)
+	defer cancelCheckAlive()
+	stepLeaves := execRun.GetMachineHashesWithStepSize(machineStartIndex, stepSize, maxIterations)
+	return stepLeaves.Await(ctxCheckAlive)
+}
+
+func (b *BOLDExecutionClient) GetProofAt(ctx context.Context, wasmModuleRoot common.Hash, input *validator.ValidationInput, position uint64) ([]byte, error) {
+	execRun, err := b.executionSpawner.CreateExecutionRun(wasmModuleRoot, input, true).Await(ctx)
+	if err != nil {
+		return nil, err
+	}
+	defer execRun.Close()
+	ctxCheckAlive, cancelCheckAlive := ctxWithCheckAlive(ctx, execRun)
+	defer cancelCheckAlive()
+	oneStepProofPromise := execRun.GetProofAt(position)
+	return oneStepProofPromise.Await(ctxCheckAlive)
+}
+
+// CtxWithCheckAlive Creates a context with a check alive routine that will
+// cancel the context if the check alive routine fails.
+func ctxWithCheckAlive(ctxIn context.Context, execRun validator.ExecutionRun) (context.Context, context.CancelFunc) {
+	// Create a context that will cancel if the check alive routine fails.
+	// This is to ensure that we do not have the validator froze indefinitely if
+	// the execution run is no longer alive.
+	ctx, cancel := context.WithCancel(ctxIn)
+	go func() {
+		// Call cancel so that the calling function is canceled if the check alive
+		// routine fails/returns.
+		defer cancel()
+		ticker := time.NewTicker(10 * time.Second)
+		defer ticker.Stop()
+		for {
+			select {
+			case <-ctx.Done():
+				return
+			case <-ticker.C:
+				// Create a context with a timeout, so that the check alive routine does
+				// not run indefinitely.
+				ctxCheckAliveWithTimeout, cancelCheckAliveWithTimeout := context.WithTimeout(ctx, 5*time.Second)
+				err := execRun.CheckAlive(ctxCheckAliveWithTimeout)
+				if err != nil {
+					executionNodeOfflineGauge.Inc(1)
+					cancelCheckAliveWithTimeout()
+					return
+				}
+				cancelCheckAliveWithTimeout()
+			}
+		}
+	}()
+	return ctx, cancel
+}
+
 type ExecutionClientRun struct {
 	stopwaiter.StopWaiter
 	client *ExecutionClient
 	id     uint64
-}
-
-func (c *ExecutionClient) LatestWasmModuleRoot() containers.PromiseInterface[common.Hash] {
-	return stopwaiter.LaunchPromiseThread[common.Hash](c, func(ctx context.Context) (common.Hash, error) {
-		var res common.Hash
-		err := c.client.CallContext(ctx, &res, server_api.Namespace+"_latestWasmModuleRoot")
-		if err != nil {
-			return common.Hash{}, err
-		}
-		return res, nil
-	})
-}
-
-func (c *ExecutionClient) WriteToFile(input *validator.ValidationInput, expOut validator.GoGlobalState, moduleRoot common.Hash) containers.PromiseInterface[struct{}] {
-	jsonInput := server_api.ValidationInputToJson(input)
-	if err := jsonInput.WriteToFile(); err != nil {
-		return stopwaiter.LaunchPromiseThread[struct{}](c, func(ctx context.Context) (struct{}, error) {
-			return struct{}{}, err
-		})
-	}
-	return stopwaiter.LaunchPromiseThread[struct{}](c, func(ctx context.Context) (struct{}, error) {
-		err := c.client.CallContext(ctx, nil, server_api.Namespace+"_writeToFile", jsonInput, expOut, moduleRoot)
-		return struct{}{}, err
-	})
 }
 
 func (r *ExecutionClientRun) SendKeepAlive(ctx context.Context) time.Duration {
@@ -207,6 +262,10 @@ func (r *ExecutionClientRun) SendKeepAlive(ctx context.Context) time.Duration {
 		log.Error("execution run keepalive failed", "err", err)
 	}
 	return time.Minute // TODO: configurable
+}
+
+func (r *ExecutionClientRun) CheckAlive(ctx context.Context) error {
+	return r.client.client.CallContext(ctx, nil, server_api.Namespace+"_checkAlive", r.id)
 }
 
 func (r *ExecutionClientRun) Start(ctx_in context.Context) {

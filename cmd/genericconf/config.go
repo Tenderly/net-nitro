@@ -1,17 +1,18 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package genericconf
 
 import (
 	"errors"
 	"io"
+	"log/slog"
 	"time"
+
+	flag "github.com/spf13/pflag"
 
 	"github.com/ethereum/go-ethereum/log"
 	"github.com/ethereum/go-ethereum/node"
-	flag "github.com/spf13/pflag"
-	"golang.org/x/exp/slog"
 )
 
 type ConfConfig struct {

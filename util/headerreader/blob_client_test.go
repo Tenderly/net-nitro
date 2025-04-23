@@ -1,5 +1,5 @@
 // Copyright 2024, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package headerreader
 
@@ -11,8 +11,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/offchainlabs/nitro/util/testhelpers"
 	"github.com/r3labs/diff/v3"
+
+	"github.com/offchainlabs/nitro/util/testhelpers"
 )
 
 func TestSaveBlobsToDisk(t *testing.T) {

@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package statetransfer
 
@@ -209,4 +209,8 @@ func (r *JsonInitDataReader) GetAccountDataReader() (AccountDataReader, error) {
 	return &JsonAccountDataReaderr{
 		JsonListReader: listreader,
 	}, nil
+}
+
+func (r *JsonInitDataReader) GetChainOwner() (common.Address, error) {
+	return common.Address{}, nil
 }

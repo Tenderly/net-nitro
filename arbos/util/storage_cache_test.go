@@ -1,15 +1,16 @@
 // Copyright 2024, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package util
 
 import (
-	"bytes"
 	"slices"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
 	"github.com/google/go-cmp/cmp"
+
+	"github.com/ethereum/go-ethereum/common"
+
 	"github.com/offchainlabs/nitro/util/testhelpers"
 )
 
@@ -76,7 +77,7 @@ func TestStorageCache(t *testing.T) {
 			{Key: keys[2], Value: values[2]},
 		}
 		sortFunc := func(a, b storageCacheStores) int {
-			return bytes.Compare(a.Key.Bytes(), b.Key.Bytes())
+			return a.Key.Cmp(b.Key)
 		}
 		slices.SortFunc(stores, sortFunc)
 		slices.SortFunc(expected, sortFunc)

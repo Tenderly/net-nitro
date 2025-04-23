@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package statetransfer
 
@@ -17,6 +17,7 @@ type InitDataReader interface {
 	GetNextBlockNumber() (uint64, error)
 	GetRetryableDataReader() (RetryableDataReader, error)
 	GetAccountDataReader() (AccountDataReader, error)
+	GetChainOwner() (common.Address, error)
 }
 
 type ListReader interface {

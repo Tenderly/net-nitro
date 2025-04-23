@@ -1,5 +1,5 @@
 // Copyright 2021-2022, Offchain Labs, Inc.
-// For license information, see https://github.com/nitro/blob/master/LICENSE
+// For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 
 package confighelpers
 
@@ -209,6 +209,8 @@ func devFlagArgs() []string {
 		"--init.empty=false",
 		"--http.port", "8547",
 		"--http.addr", "127.0.0.1",
+		"--http.api=net,web3,eth,arb,arbdebug,debug",
+		"--node.transaction-streamer.track-block-metadata-from=1",
 	}
 	return args
 }
