@@ -10,8 +10,8 @@ import (
 
 	"github.com/alicebob/miniredis/v2"
 
-	"github.com/offchainlabs/nitro/util/testhelpers"
-	testflag "github.com/offchainlabs/nitro/util/testhelpers/flag"
+	"github.com/tenderly/net-nitro/util/testhelpers"
+	testflag "github.com/tenderly/net-nitro/util/testhelpers/flag"
 )
 
 // CreateTestRedis Provides external redis url, this is only done with --test_redis flag,

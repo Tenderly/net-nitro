@@ -7,14 +7,14 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
 
-	"github.com/offchainlabs/nitro/arbnode/dataposter"
-	"github.com/offchainlabs/nitro/solgen/go/challenge_legacy_gen"
-	"github.com/offchainlabs/nitro/solgen/go/rollup_legacy_gen"
+	"github.com/tenderly/net-nitro/arbnode/dataposter"
+	"github.com/tenderly/net-nitro/solgen/go/challenge_legacy_gen"
+	"github.com/tenderly/net-nitro/solgen/go/rollup_legacy_gen"
 )
 
 // EOA is a ValidatorWallet that uses an Externally Owned Account to sign transactions.

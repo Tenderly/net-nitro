@@ -10,22 +10,22 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
 	protocol "github.com/offchainlabs/bold/chain-abstraction"
 	"github.com/offchainlabs/bold/containers/option"
 	l2stateprovider "github.com/offchainlabs/bold/layer2-state-provider"
 	"github.com/offchainlabs/bold/state-commitments/history"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/execution"
-	"github.com/offchainlabs/nitro/staker"
-	challengecache "github.com/offchainlabs/nitro/staker/challenge-cache"
-	"github.com/offchainlabs/nitro/validator"
-	"github.com/offchainlabs/nitro/validator/server_arb"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/execution"
+	"github.com/tenderly/net-nitro/staker"
+	challengecache "github.com/tenderly/net-nitro/staker/challenge-cache"
+	"github.com/tenderly/net-nitro/validator"
+	"github.com/tenderly/net-nitro/validator/server_arb"
 )
 
 var (

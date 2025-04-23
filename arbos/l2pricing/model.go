@@ -6,9 +6,9 @@ package l2pricing
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 const InitialSpeedLimitPerSecondV0 = 1000000

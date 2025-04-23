@@ -5,20 +5,20 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 
 	boldrollup "github.com/offchainlabs/bold/solgen/go/rollupgen"
-	"github.com/offchainlabs/nitro/solgen/go/bridgegen"
-	"github.com/offchainlabs/nitro/staker"
-	boldstaker "github.com/offchainlabs/nitro/staker/bold"
-	legacystaker "github.com/offchainlabs/nitro/staker/legacy"
-	"github.com/offchainlabs/nitro/staker/txbuilder"
-	"github.com/offchainlabs/nitro/util/headerreader"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
+	"github.com/tenderly/net-nitro/staker"
+	boldstaker "github.com/tenderly/net-nitro/staker/bold"
+	legacystaker "github.com/tenderly/net-nitro/staker/legacy"
+	"github.com/tenderly/net-nitro/staker/txbuilder"
+	"github.com/tenderly/net-nitro/util/headerreader"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 const boldArt = `
