@@ -453,6 +453,9 @@ func (p Programs) SetProgramCached(
 		if err != nil {
 			return err
 		}
+		cacheProgram(db, moduleHash, program, address, code, codeHash, params, debug, time, runMode)
+	} else {
+		evictProgram(db, moduleHash, program.version, debug, runMode, expired)
 	}
 	program.cached = cache
 	return p.setProgram(codeHash, program)

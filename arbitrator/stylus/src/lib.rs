@@ -356,3 +356,9 @@ pub extern "C" fn stylus_get_entry_size_estimate_bytes(
         Ok((_, _, entry_size_estimate_bytes)) => entry_size_estimate_bytes.try_into().unwrap(),
     }
 }
+
+#[no_mangle]
+pub extern "C" fn stylus_drop_vec() {}
+
+#[no_mangle]
+pub extern "C" fn stylus_cache_lru_resize() {}
