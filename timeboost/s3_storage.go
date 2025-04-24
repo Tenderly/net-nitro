@@ -13,11 +13,11 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/util/gzip"
-	"github.com/offchainlabs/nitro/util/s3client"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/util/gzip"
+	"github.com/tenderly/net-nitro/util/s3client"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 type S3StorageServiceConfig struct {

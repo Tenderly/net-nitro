@@ -16,11 +16,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbstate/daprovider"
-	"github.com/offchainlabs/nitro/blsSignatures"
-	testflag "github.com/offchainlabs/nitro/util/testhelpers/flag"
+	"github.com/tenderly/net-nitro/arbstate/daprovider"
+	"github.com/tenderly/net-nitro/blsSignatures"
+	testflag "github.com/tenderly/net-nitro/util/testhelpers/flag"
 )
 
 func TestDAS_BasicAggregationLocal(t *testing.T) {

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 // EphemeralErrorHandler handles errors that are ephemeral in nature i.h these are errors

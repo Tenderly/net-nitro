@@ -14,7 +14,7 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/ethdb/pebble"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb/pebble"
 )
 
 type PersistentConfig struct {
@@ -118,7 +118,7 @@ type PebbleConfig struct {
 }
 
 var PebbleConfigDefault = PebbleConfig{
-	SyncMode:                 false, // use NO-SYNC mode, see: https://github.com/ethereum/go-ethereum/issues/29819
+	SyncMode:                 false, // use NO-SYNC mode, see: https://github.com/tenderly/net-nitro/go-ethereum/issues/29819
 	MaxConcurrentCompactions: runtime.NumCPU(),
 	Experimental:             PebbleExperimentalConfigDefault,
 }

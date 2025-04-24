@@ -11,8 +11,8 @@ import (
 
 	"github.com/redis/go-redis/v9"
 
-	"github.com/offchainlabs/nitro/arbnode/dataposter/storage"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/arbnode/dataposter/storage"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 // Storage implements redis sorted set backed storage. It does not support
