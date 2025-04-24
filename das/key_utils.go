@@ -11,9 +11,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/blsSignatures"
+	"github.com/tenderly/net-nitro/blsSignatures"
 )
 
 // Note for Decode functions

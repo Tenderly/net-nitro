@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/util/redisutil"
+	"github.com/tenderly/net-nitro/util/redisutil"
 )
 
 func TestTimeboostRedisCoordinator(t *testing.T) {

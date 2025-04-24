@@ -13,7 +13,7 @@ import (
 
 	"github.com/r3labs/diff/v3"
 
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func TestSaveBlobsToDisk(t *testing.T) {

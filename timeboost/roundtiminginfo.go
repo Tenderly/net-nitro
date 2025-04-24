@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/offchainlabs/nitro/solgen/go/express_lane_auctiongen"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/solgen/go/express_lane_auctiongen"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 // Validate the express_lane_auctiongen.RoundTimingInfo fields.

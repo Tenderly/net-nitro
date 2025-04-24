@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 func ToSlogLevel(str string) (slog.Level, error) {
