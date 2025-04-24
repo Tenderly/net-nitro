@@ -1,10 +1,10 @@
-module github.com/offchainlabs/nitro
+module github.com/tenderly/net-nitro
 
 go 1.22
 
 replace github.com/VictoriaMetrics/fastcache => ./fastcache
 
-replace github.com/ethereum/go-ethereum => ./go-ethereum
+replace github.com/tenderly/net-nitro/go-ethereum => ./go-ethereum
 
 replace github.com/offchainlabs/bold => ./bold
 

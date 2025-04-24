@@ -15,15 +15,15 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/broadcastclient"
-	"github.com/offchainlabs/nitro/util/arbmath"
-	"github.com/offchainlabs/nitro/util/headerreader"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/broadcastclient"
+	"github.com/tenderly/net-nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/util/headerreader"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 type InboxReaderConfig struct {

@@ -26,9 +26,9 @@ import "C"
 import (
 	"unsafe"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/validator"
+	"github.com/tenderly/net-nitro/validator"
 )
 
 func CreateCByteArray(input []byte) C.CByteArray {

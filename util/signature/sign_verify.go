@@ -6,9 +6,9 @@ import (
 
 	flag "github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/util/contracts"
+	"github.com/tenderly/net-nitro/util/contracts"
 )
 
 type SignVerify struct {

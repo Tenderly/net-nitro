@@ -29,10 +29,10 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 
-	"github.com/offchainlabs/nitro/arbos/util"
-	"github.com/offchainlabs/nitro/arbutil"
+	"github.com/tenderly/net-nitro/arbos/util"
+	"github.com/tenderly/net-nitro/arbutil"
 )
 
 var apiObjects sync.Map
