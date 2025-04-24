@@ -3,7 +3,7 @@
 
 package arbutil
 
-import "github.com/ethereum/go-ethereum/common"
+import "github.com/tenderly/net-nitro/go-ethereum/common"
 
 type FinalityData struct {
 	MsgIdx    MessageIndex

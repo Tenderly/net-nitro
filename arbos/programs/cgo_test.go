@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	testflag "github.com/offchainlabs/nitro/util/testhelpers/flag"
+	testflag "github.com/tenderly/net-nitro/util/testhelpers/flag"
 )
 
 func TestConstants(t *testing.T) {

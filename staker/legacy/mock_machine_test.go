@@ -6,10 +6,10 @@ package legacystaker
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/validator"
-	"github.com/offchainlabs/nitro/validator/server_arb"
+	"github.com/tenderly/net-nitro/validator"
+	"github.com/tenderly/net-nitro/validator/server_arb"
 )
 
 // IncorrectMachine will report a bad global state after the incorrectStep onwards.

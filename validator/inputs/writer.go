@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/offchainlabs/nitro/validator/server_api"
+	"github.com/tenderly/net-nitro/validator/server_api"
 )
 
 // Writer is a configurable writer of InputJSON files.
