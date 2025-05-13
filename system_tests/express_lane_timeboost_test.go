@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/offchainlabs/nitro/util/redisutil"
+	"github.com/tenderly/net-nitro/util/redisutil"
 )
 
 func TestBidValidatorAuctioneerRedisStream(t *testing.T) {

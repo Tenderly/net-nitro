@@ -9,9 +9,9 @@ import (
 
 	googlestorage "cloud.google.com/go/storage"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/das/dastree"
+	"github.com/tenderly/net-nitro/das/dastree"
 )
 
 type mockGCSClient struct {

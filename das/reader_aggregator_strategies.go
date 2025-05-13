@@ -11,7 +11,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/offchainlabs/nitro/arbstate/daprovider"
+	"github.com/tenderly/net-nitro/arbstate/daprovider"
 )
 
 var ErrNoReadersResponded = errors.New("no DAS readers responded successfully")
