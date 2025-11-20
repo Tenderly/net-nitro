@@ -50,7 +50,7 @@ func init() {
 	core.InterceptRPCMessage = func(
 		msg *core.Message,
 		ctx context.Context,
-		statedb *state.StateDB,
+		statedb vm.StateDB,
 		header *types.Header,
 		backend core.NodeInterfaceBackendAPI,
 		blockCtx *vm.BlockContext,
@@ -116,7 +116,7 @@ func init() {
 		return msg, nil, nil
 	}
 
-	core.RPCPostingGasHook = func(msg *core.Message, header *types.Header, statedb *state.StateDB) (uint64, error) {
+	core.RPCPostingGasHook = func(msg *core.Message, header *types.Header, statedb vm.StateDB) (uint64, error) {
 		arbosVersion := arbosState.ArbOSVersion(statedb)
 		if arbosVersion == 0 {
 			// ArbOS hasn't been installed, so use the vanilla gas cap

@@ -282,6 +282,26 @@ pub extern "C" fn stylus_set_cache_lru_capacity(capacity_bytes: u64) {
     InitCache::set_lru_capacity(capacity_bytes);
 }
 
+/// Stub for old apechain API compatibility - resize cache (deprecated, use stylus_set_cache_lru_capacity)
+#[no_mangle]
+#[inline(never)]
+pub extern "C" fn stylus_cache_lru_resize(size: u32) {
+    // Stub for backward compatibility with apechain
+    // This function is deprecated in v3.9.x
+    // Map old API to new API
+    InitCache::set_lru_capacity(size as u64 * 1024);
+}
+
+/// Stub for old apechain API compatibility - drop vec (deprecated)
+#[no_mangle]
+#[inline(never)]
+pub unsafe extern "C" fn stylus_drop_vec(vec: RustBytes) {
+    // Stub for backward compatibility with apechain
+    // This function is deprecated in v3.9.x
+    // Free the vector memory
+    drop(vec.into_vec());
+}
+
 /// Caches an activated user program.
 ///
 /// # Safety

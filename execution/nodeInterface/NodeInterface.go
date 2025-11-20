@@ -16,7 +16,6 @@ import (
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
 	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/log"
@@ -528,11 +527,7 @@ func (n NodeInterface) GasEstimateL1Component(
 	if err := args.CallDefaults(randomGas, evm.Context.BaseFee, evm.ChainConfig().ChainID); err != nil {
 		return 0, nil, nil, err
 	}
-	sdb, ok := evm.StateDB.(*state.StateDB)
-	if !ok {
-		return 0, nil, nil, errors.New("failed to cast to stateDB")
-	}
-	msg := args.ToMessage(evm.Context.BaseFee, randomGas, n.header, sdb, core.NewMessageEthcallContext(), true)
+	msg := args.ToMessage(evm.Context.BaseFee, randomGas, n.header, evm.StateDB, core.NewMessageEthcallContext(), true)
 
 	pricing := c.State.L1PricingState()
 	l1BaseFeeEstimate, err := pricing.PricePerUnit()
@@ -588,11 +583,8 @@ func (n NodeInterface) GasEstimateComponents(
 	if err := args.CallDefaults(gasCap, evm.Context.BaseFee, evm.ChainConfig().ChainID); err != nil {
 		return 0, 0, nil, nil, err
 	}
-	sdb, ok := evm.StateDB.(*state.StateDB)
-	if !ok {
-		return 0, 0, nil, nil, errors.New("failed to cast to stateDB")
-	}
-	msg := args.ToMessage(evm.Context.BaseFee, gasCap, n.header, sdb, core.NewMessageGasEstimationContext(), true)
+	
+	msg := args.ToMessage(evm.Context.BaseFee, gasCap, n.header, evm.StateDB, core.NewMessageGasEstimationContext(), true)
 	brotliCompressionLevel, err := c.State.BrotliCompressionLevel()
 	if err != nil {
 		return 0, 0, nil, nil, fmt.Errorf("failed to get brotli compression level: %w", err)

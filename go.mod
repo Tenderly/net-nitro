@@ -1,6 +1,6 @@
 module github.com/offchainlabs/nitro
 
-go 1.25
+go 1.24.7
 
 replace github.com/ethereum/go-ethereum => ./go-ethereum
 
@@ -21,7 +21,7 @@ require (
 	github.com/cockroachdb/pebble v1.1.5
 	github.com/codeclysm/extract/v3 v3.0.2
 	github.com/enescakir/emoji v1.0.0
-	github.com/ethereum/go-ethereum v1.16.2
+	//github.com/ethereum/go-ethereum v1.16.2
 	github.com/fatih/structtag v1.2.0
 	github.com/gdamore/tcell/v2 v2.7.1
 	github.com/gobwas/httphead v0.1.0
@@ -66,8 +66,9 @@ require (
 	github.com/crate-crypto/go-eth-kzg v1.4.0 // indirect
 	github.com/dchest/siphash v1.2.3 // indirect
 	github.com/emicklei/dot v1.6.2 // indirect
-	github.com/ethereum/c-kzg-4844/v2 v2.1.3 // indirect
+	github.com/ethereum/c-kzg-4844/v2 v2.1.5 // indirect
 	github.com/ethereum/go-bigmodexpfix v0.0.0-20250911101455-f9e208c548ab // indirect
+	github.com/ethereum/go-ethereum v0.0.0-00010101000000-000000000000 // indirect
 	github.com/ethereum/go-verkle v0.2.2 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/ferranbt/fastssz v0.1.4 // indirect
@@ -140,7 +141,7 @@ require (
 	github.com/dlclark/regexp2 v1.7.0 // indirect
 	github.com/dop251/goja v0.0.0-20230806174421-c933cf95e127 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
-	github.com/gammazero/deque v1.1.0 // indirect
+	github.com/gammazero/deque v0.2.1 // indirect
 	github.com/gdamore/encoding v1.0.0 // indirect
 	github.com/getsentry/sentry-go v0.27.0 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
