@@ -12,18 +12,18 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/arbos/arbostypes"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/broadcastclient"
-	"github.com/offchainlabs/nitro/broadcaster"
-	"github.com/offchainlabs/nitro/broadcaster/message"
-	"github.com/offchainlabs/nitro/util/contracts"
-	"github.com/offchainlabs/nitro/util/signature"
-	"github.com/offchainlabs/nitro/util/testhelpers"
-	"github.com/offchainlabs/nitro/wsbroadcastserver"
+	"github.com/tenderly/net-nitro/arbos/arbostypes"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/broadcastclient"
+	"github.com/tenderly/net-nitro/broadcaster"
+	"github.com/tenderly/net-nitro/broadcaster/message"
+	"github.com/tenderly/net-nitro/util/contracts"
+	"github.com/tenderly/net-nitro/util/signature"
+	"github.com/tenderly/net-nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/wsbroadcastserver"
 )
 
 type MockTransactionStreamer struct {

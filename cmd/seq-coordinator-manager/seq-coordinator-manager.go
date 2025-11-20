@@ -10,10 +10,10 @@ import (
 	"github.com/gdamore/tcell/v2"
 	"github.com/rivo/tview"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/cmd/seq-coordinator-manager/rediscoordinator"
-	"github.com/offchainlabs/nitro/util/redisutil"
+	"github.com/tenderly/net-nitro/cmd/seq-coordinator-manager/rediscoordinator"
+	"github.com/tenderly/net-nitro/util/redisutil"
 )
 
 // Tview

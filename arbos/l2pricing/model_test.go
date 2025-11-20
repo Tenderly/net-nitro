@@ -9,7 +9,7 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 func TestCompareLegacyPricingModelWithMultiConstraints(t *testing.T) {

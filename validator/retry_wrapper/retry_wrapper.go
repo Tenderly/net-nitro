@@ -3,11 +3,11 @@ package retry_wrapper
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/util/stopwaiter"
-	"github.com/offchainlabs/nitro/validator"
-	"github.com/offchainlabs/nitro/validator/server_common"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/validator"
+	"github.com/tenderly/net-nitro/validator/server_common"
 )
 
 type ValidationSpawnerRetryWrapper struct {

@@ -6,7 +6,7 @@
 package a
 
 import (
-	"github.com/offchainlabs/nitro/linters/testdata/src/jsonneverempty/b"
+	"github.com/tenderly/net-nitro/linters/testdata/src/jsonneverempty/b"
 )
 
 type (

@@ -13,8 +13,8 @@ import (
 	"golang.org/x/tools/go/analysis/analysistest"
 )
 
-const aPackagePath = "github.com/offchainlabs/nitro/linters/testdata/src/structinit/a"
-const bPackagePath = "github.com/offchainlabs/nitro/linters/testdata/src/structinit/b"
+const aPackagePath = "github.com/tenderly/net-nitro/linters/testdata/src/structinit/a"
+const bPackagePath = "github.com/tenderly/net-nitro/linters/testdata/src/structinit/b"
 
 func TestFieldCountingInSinglePackage(t *testing.T) {
 	result := analysistest.Run(t, getModuleRoot(t), Analyzer, aPackagePath)

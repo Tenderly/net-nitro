@@ -9,7 +9,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/offchainlabs/nitro/daprovider/das/dastree"
+	"github.com/tenderly/net-nitro/daprovider/das/dastree"
 )
 
 func TestCacheStorageService(t *testing.T) {

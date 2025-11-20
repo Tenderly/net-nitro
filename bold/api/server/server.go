@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package server defines the client-facing API methods for fetching data
 // related to BOLD challenges. It handles HTTP methods with their requests and responses.
@@ -14,10 +14,10 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/bold/api/backend"
-	"github.com/offchainlabs/nitro/bold/util/stopwaiter"
+	"github.com/tenderly/net-nitro/bold/api/backend"
+	"github.com/tenderly/net-nitro/bold/util/stopwaiter"
 )
 
 var apiVersion = "/api/v1"

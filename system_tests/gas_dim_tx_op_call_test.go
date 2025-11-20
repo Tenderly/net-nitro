@@ -7,9 +7,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/solgen/go/gas_dimensionsgen"
+	"github.com/tenderly/net-nitro/solgen/go/gas_dimensionsgen"
 )
 
 // this file tests the opcodes that are able to do write-operation CALLs

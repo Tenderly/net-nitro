@@ -7,11 +7,11 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/solgen/go/gas_dimensionsgen"
-	"github.com/offchainlabs/nitro/solgen/go/yulgen"
+	"github.com/tenderly/net-nitro/solgen/go/gas_dimensionsgen"
+	"github.com/tenderly/net-nitro/solgen/go/yulgen"
 )
 
 // test the invalid opcode

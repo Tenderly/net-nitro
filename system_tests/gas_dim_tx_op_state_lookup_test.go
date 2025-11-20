@@ -6,7 +6,7 @@ package arbtest
 import (
 	"testing"
 
-	"github.com/offchainlabs/nitro/solgen/go/gas_dimensionsgen"
+	"github.com/tenderly/net-nitro/solgen/go/gas_dimensionsgen"
 )
 
 // #########################################################################################################

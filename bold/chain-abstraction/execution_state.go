@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package protocol a series of interfaces for interacting with Arbitrum chains' rollup
 // and challenge contracts via a developer-friendly, high-level API.
@@ -10,11 +10,11 @@ import (
 	"encoding/binary"
 	"math"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/solgen/go/challengeV2gen"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/solgen/go/challengeV2gen"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
 )
 
 type GoGlobalState struct {

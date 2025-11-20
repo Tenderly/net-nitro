@@ -6,7 +6,7 @@ package main
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 type GasSimulator struct {

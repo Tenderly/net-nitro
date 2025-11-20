@@ -6,9 +6,9 @@ package arbtest
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/solgen/go/gas_dimensionsgen"
+	"github.com/tenderly/net-nitro/solgen/go/gas_dimensionsgen"
 )
 
 // this file does the tests for the read-only call opcodes, i.e. DELEGATECALL and STATICCALL

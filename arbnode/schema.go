@@ -3,7 +3,7 @@
 
 package arbnode
 
-import "github.com/offchainlabs/nitro/arbnode/db-schema"
+import "github.com/tenderly/net-nitro/arbnode/db-schema"
 
 var (
 	messagePrefix                       = dbschema.MessagePrefix

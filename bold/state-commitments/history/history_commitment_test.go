@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 package history
 
@@ -10,12 +10,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/bold/state-commitments/legacy"
-	"github.com/offchainlabs/nitro/bold/state-commitments/prefix-proofs"
-	"github.com/offchainlabs/nitro/bold/testing/casttest"
+	"github.com/tenderly/net-nitro/bold/state-commitments/legacy"
+	"github.com/tenderly/net-nitro/bold/state-commitments/prefix-proofs"
+	"github.com/tenderly/net-nitro/bold/testing/casttest"
 )
 
 func FuzzHistoryCommitter(f *testing.F) {

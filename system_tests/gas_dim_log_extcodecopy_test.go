@@ -6,9 +6,9 @@ package arbtest
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/solgen/go/gas_dimensionsgen"
+	"github.com/tenderly/net-nitro/solgen/go/gas_dimensionsgen"
 )
 
 // #########################################################################################################

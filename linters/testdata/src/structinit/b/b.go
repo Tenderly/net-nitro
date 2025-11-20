@@ -13,7 +13,7 @@
 package b
 
 import (
-	"github.com/offchainlabs/nitro/linters/testdata/src/structinit/a"
+	"github.com/tenderly/net-nitro/linters/testdata/src/structinit/a"
 )
 
 // lint:require-exhaustive-initialization

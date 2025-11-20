@@ -7,7 +7,7 @@ import (
 	"crypto/sha256"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 // InMemoryStorage implements PreimageStorage interface for in-memory storage

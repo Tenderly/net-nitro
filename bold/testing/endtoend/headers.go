@@ -3,10 +3,10 @@ package endtoend
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/bold/testing/endtoend/backend"
-	"github.com/offchainlabs/nitro/bold/util/stopwaiter"
+	"github.com/tenderly/net-nitro/bold/testing/endtoend/backend"
+	"github.com/tenderly/net-nitro/bold/util/stopwaiter"
 )
 
 type simpleHeaderProvider struct {

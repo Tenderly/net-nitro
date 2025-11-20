@@ -3,11 +3,11 @@ package util
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/metrics/exp"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics/exp"
 
-	"github.com/offchainlabs/nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
 )
 
 type MetricsPProfOpts struct {

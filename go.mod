@@ -1,8 +1,8 @@
-module github.com/offchainlabs/nitro
+module github.com/tenderly/net-nitro
 
 go 1.24.7
 
-replace github.com/ethereum/go-ethereum => ./go-ethereum
+replace github.com/tenderly/net-nitro/go-ethereum => ./go-ethereum
 
 require (
 	cloud.google.com/go/storage v1.43.0
@@ -21,7 +21,7 @@ require (
 	github.com/cockroachdb/pebble v1.1.5
 	github.com/codeclysm/extract/v3 v3.0.2
 	github.com/enescakir/emoji v1.0.0
-	//github.com/ethereum/go-ethereum v1.16.2
+	//github.com/tenderly/net-nitro/go-ethereum v1.16.2
 	github.com/fatih/structtag v1.2.0
 	github.com/gdamore/tcell/v2 v2.7.1
 	github.com/gobwas/httphead v0.1.0
@@ -68,7 +68,7 @@ require (
 	github.com/emicklei/dot v1.6.2 // indirect
 	github.com/ethereum/c-kzg-4844/v2 v2.1.5 // indirect
 	github.com/ethereum/go-bigmodexpfix v0.0.0-20250911101455-f9e208c548ab // indirect
-	github.com/ethereum/go-ethereum v0.0.0-00010101000000-000000000000 // indirect
+	github.com/tenderly/net-nitro/go-ethereum v0.0.0-00010101000000-000000000000 // indirect
 	github.com/ethereum/go-verkle v0.2.2 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
 	github.com/ferranbt/fastssz v0.1.4 // indirect

@@ -10,11 +10,11 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbnode/redislock"
-	"github.com/offchainlabs/nitro/execution"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/arbnode/redislock"
+	"github.com/tenderly/net-nitro/execution"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 type MaintenanceRunner struct {

@@ -7,9 +7,9 @@ package constraints
 import (
 	"iter"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
 
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 // PeriodSecs is the period in seconds for a resource constraint to reach the target.

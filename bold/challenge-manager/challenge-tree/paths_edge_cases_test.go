@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/challenge-manager/challenge-tree/mock"
-	"github.com/offchainlabs/nitro/bold/containers/threadsafe"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/challenge-manager/challenge-tree/mock"
+	"github.com/tenderly/net-nitro/bold/containers/threadsafe"
 )
 
 func Test_findEssentialPaths_edgeCases(t *testing.T) {

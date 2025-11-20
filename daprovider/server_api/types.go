@@ -4,7 +4,7 @@
 package server_api
 
 import (
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
 )
 
 // SupportedHeaderBytesResult is the result struct that data availability providers should use to respond with their supported header bytes

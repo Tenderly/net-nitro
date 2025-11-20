@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/offchainlabs/nitro/daprovider/das/dasutil"
+	"github.com/tenderly/net-nitro/daprovider/das/dasutil"
 )
 
 // These classes are wrappers implementing das.StorageService and das.DataAvailabilityService.

@@ -4,7 +4,7 @@ Note: The latest and most up-to-date documentation can be found on our [docs por
 
 Excited by our work want to get more involved in making Arbitrum more successful? Or maybe you want to learn more about Layer 2 technologies and want to contribute as a first step?
 
-You can explore our [Open Issues](https://github.com/offchainlabs/nitro/issues) or [run a Nitro node](https://docs.arbitrum.io/run-arbitrum-node/run-nitro-dev-node) yourself and suggest improvements. 
+You can explore our [Open Issues](https://github.com/tenderly/net-nitro/issues) or [run a Nitro node](https://docs.arbitrum.io/run-arbitrum-node/run-nitro-dev-node) yourself and suggest improvements. 
 
 <!-- start-trivial-prs -->
 > [!IMPORTANT] 
@@ -23,7 +23,7 @@ You can explore our [Open Issues](https://github.com/offchainlabs/nitro/issues) 
 
 **2. Fork the Nitro repo.**
 
-Sign in to your GitHub account or create a new account if you do not have one already. Then navigate your browser to https://github.com/offchainlabs/nitro. In the upper right hand corner of the page, click “fork”. This will create a copy of the Nitro repo in your account.
+Sign in to your GitHub account or create a new account if you do not have one already. Then navigate your browser to https://github.com/tenderly/net-nitro. In the upper right hand corner of the page, click “fork”. This will create a copy of the Nitro repo in your account.
 
 **3. Create a local clone of Nitro.**
 
@@ -40,7 +40,7 @@ $ git remote add mynitrorepo https://github.com/<your_github_user_name>/nitro.gi
 **5. Link your local clone to the Nitro repo so that you can easily fetch future changes.**
 
 ```
-$ git remote add upstream https://github.com/offchainlabs/nitro.git
+$ git remote add upstream https://github.com/tenderly/net-nitro.git
 $ git remote -v (you should see mynitrorepo and upstream in the list of remotes)
 ```
 
@@ -94,7 +94,7 @@ $ git push mynitrorepo feature-in-progress-branch
 
 **13. Create a pull request.**
 
-Navigate your browser to https://github.com/offchainlabs/nitro and click on the new pull request button. In the “base” box on the left, leave the default selection “base master”, the branch that you want your changes to be applied to. In the “compare” box on the right, select feature-in-progress-branch, the branch containing the changes you want to apply. 
+Navigate your browser to https://github.com/tenderly/net-nitro and click on the new pull request button. In the “base” box on the left, leave the default selection “base master”, the branch that you want your changes to be applied to. In the “compare” box on the right, select feature-in-progress-branch, the branch containing the changes you want to apply. 
 
 **14. Respond to comments by Core Contributors.**
 

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/arbutil"
+	"github.com/tenderly/net-nitro/arbutil"
 )
 
 func TestEthSyncing(t *testing.T) {
