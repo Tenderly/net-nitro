@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 package stateprovider
 
 import (
@@ -14,12 +14,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/layer2-state-provider"
-	"github.com/offchainlabs/nitro/bold/testing"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/layer2-state-provider"
+	"github.com/tenderly/net-nitro/bold/testing"
 )
 
 func mockMachineAtBlock(_ context.Context, block uint64) (Machine, error) {

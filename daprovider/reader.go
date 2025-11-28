@@ -8,12 +8,12 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/util/blobs"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/util/blobs"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 // CertificateValidationError represents an error in certificate validation

@@ -7,17 +7,17 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbnode/mel"
-	"github.com/offchainlabs/nitro/arbnode/mel/extraction"
-	"github.com/offchainlabs/nitro/bold/containers/fsm"
-	"github.com/offchainlabs/nitro/cmd/chaininfo"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/arbnode/mel/extraction"
+	"github.com/tenderly/net-nitro/bold/containers/fsm"
+	"github.com/tenderly/net-nitro/cmd/chaininfo"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 // The default retry interval for the message extractor FSM. After each tick of the FSM,

@@ -4,7 +4,7 @@
 package daprovider
 
 import (
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 type Writer interface {

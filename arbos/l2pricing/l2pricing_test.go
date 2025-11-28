@@ -7,13 +7,13 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/arbos/burn"
-	"github.com/offchainlabs/nitro/arbos/storage"
-	"github.com/offchainlabs/nitro/util/arbmath"
-	"github.com/offchainlabs/nitro/util/colors"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/arbos/burn"
+	"github.com/tenderly/net-nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/util/colors"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func PricingForTest(t *testing.T) *L2PricingState {

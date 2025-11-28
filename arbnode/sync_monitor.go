@@ -7,10 +7,10 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 type SyncMonitor struct {

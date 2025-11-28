@@ -6,11 +6,11 @@ package gethexec
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/arbitrum_types"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum_types"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/timeboost"
+	"github.com/tenderly/net-nitro/timeboost"
 )
 
 type TransactionPublisher interface {

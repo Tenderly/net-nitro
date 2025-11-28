@@ -10,12 +10,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/arbos/burn"
-	"github.com/offchainlabs/nitro/arbos/l2pricing"
-	"github.com/offchainlabs/nitro/arbos/storage"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/arbos/burn"
+	"github.com/tenderly/net-nitro/arbos/l2pricing"
+	"github.com/tenderly/net-nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 var minBaseFee = big.NewInt(params.GWei)

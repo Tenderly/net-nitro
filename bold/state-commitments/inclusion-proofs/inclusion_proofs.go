@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package inclusionproofs defines a series of utilities for generating and
 // verifying traditional Merkle proofs of data.
@@ -12,10 +12,10 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/bold/state-commitments/prefix-proofs"
+	"github.com/tenderly/net-nitro/bold/state-commitments/prefix-proofs"
 )
 
 var (

@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 package challengetree
 
@@ -10,10 +10,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/challenge-manager/challenge-tree/mock"
-	"github.com/offchainlabs/nitro/bold/containers/option"
-	"github.com/offchainlabs/nitro/bold/containers/threadsafe"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/challenge-manager/challenge-tree/mock"
+	"github.com/tenderly/net-nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/containers/threadsafe"
 )
 
 func Test_localTimer(t *testing.T) {

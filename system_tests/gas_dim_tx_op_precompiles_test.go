@@ -3,11 +3,11 @@ package arbtest
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/solgen/go/gas_dimensionsgen"
-	"github.com/offchainlabs/nitro/solgen/go/precompilesgen"
+	"github.com/tenderly/net-nitro/solgen/go/gas_dimensionsgen"
+	"github.com/tenderly/net-nitro/solgen/go/precompilesgen"
 )
 
 // this test calls the ArbBlockNumber function on the ArbSys precompile

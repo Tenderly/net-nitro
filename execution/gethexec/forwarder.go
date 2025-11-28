@@ -16,16 +16,16 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/arbitrum"
-	"github.com/ethereum/go-ethereum/arbitrum_types"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum_types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
-	"github.com/offchainlabs/nitro/timeboost"
-	"github.com/offchainlabs/nitro/util/redisutil"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/timeboost"
+	"github.com/tenderly/net-nitro/util/redisutil"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 type ForwarderConfig struct {

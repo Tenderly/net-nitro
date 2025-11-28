@@ -6,12 +6,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/arbnode/mel"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/solgen/go/bridgegen"
+	"github.com/tenderly/net-nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
 )
 
 func serializeBatch(

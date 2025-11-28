@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package time defines abstractions for time-related operations in BoLD.
 package time

@@ -9,8 +9,8 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/offchainlabs/nitro/arbos/l2pricing"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/arbos/l2pricing"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 type Config interface {

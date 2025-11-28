@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package runtime defines utilities that deal with managing lifecycles of
 // functions and important behaviors at the application runtime, such as
@@ -12,10 +12,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/bold/logs/ephemeral"
+	"github.com/tenderly/net-nitro/bold/logs/ephemeral"
 )
 
 const defaultSleepTime = time.Second * 30

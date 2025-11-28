@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 package solimpl_test
 
@@ -12,19 +12,19 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/chain-abstraction/sol-implementation"
-	"github.com/offchainlabs/nitro/bold/containers/option"
-	"github.com/offchainlabs/nitro/bold/layer2-state-provider"
-	"github.com/offchainlabs/nitro/bold/testing"
-	"github.com/offchainlabs/nitro/bold/testing/setup"
-	"github.com/offchainlabs/nitro/solgen/go/bridgegen"
-	"github.com/offchainlabs/nitro/solgen/go/mocksgen"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction/sol-implementation"
+	"github.com/tenderly/net-nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/layer2-state-provider"
+	"github.com/tenderly/net-nitro/bold/testing"
+	"github.com/tenderly/net-nitro/bold/testing/setup"
+	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
+	"github.com/tenderly/net-nitro/solgen/go/mocksgen"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
 )
 
 func TestNewEmptyStake(t *testing.T) {

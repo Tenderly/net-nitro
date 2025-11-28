@@ -13,13 +13,13 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/blsSignatures"
-	"github.com/offchainlabs/nitro/daprovider/das/dastree"
-	"github.com/offchainlabs/nitro/daprovider/das/dasutil"
-	"github.com/offchainlabs/nitro/util/pretty"
+	"github.com/tenderly/net-nitro/blsSignatures"
+	"github.com/tenderly/net-nitro/daprovider/das/dastree"
+	"github.com/tenderly/net-nitro/daprovider/das/dasutil"
+	"github.com/tenderly/net-nitro/util/pretty"
 )
 
 type KeyConfig struct {

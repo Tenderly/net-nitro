@@ -3,9 +3,9 @@ package mel
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/arbos/arbostypes"
+	"github.com/tenderly/net-nitro/arbos/arbostypes"
 )
 
 // State defines the main struct describing the results of processing a single parent

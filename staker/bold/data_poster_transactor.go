@@ -6,11 +6,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/arbnode/dataposter"
-	"github.com/offchainlabs/nitro/bold/chain-abstraction/sol-implementation"
+	"github.com/tenderly/net-nitro/arbnode/dataposter"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction/sol-implementation"
 )
 
 // DataPosterTransactor is a wrapper around a DataPoster that implements the Transactor interface.

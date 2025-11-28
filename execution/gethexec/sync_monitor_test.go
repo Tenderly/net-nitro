@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/arbutil"
+	"github.com/tenderly/net-nitro/arbutil"
 )
 
 func TestSyncHistory_Add(t *testing.T) {

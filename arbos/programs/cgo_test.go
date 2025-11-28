@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/offchainlabs/nitro/util/testhelpers/flag"
+	"github.com/tenderly/net-nitro/util/testhelpers/flag"
 )
 
 func TestConstants(t *testing.T) {

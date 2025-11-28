@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"math/bits"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 
-	"github.com/offchainlabs/nitro/arbnode/mel"
-	"github.com/offchainlabs/nitro/arbutil"
+	"github.com/tenderly/net-nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/arbutil"
 )
 
 type delayedMessageDatabase struct {

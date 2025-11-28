@@ -1,13 +1,13 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package watcher implements the main monitoring logic for protocol validators.
 // The challenge watcher is a singleton service available to all spawned edge
 // trackers and it tracks common information such as the edges' ancestors and an
 // edge's time unrivaled.
 //
-// See: [github.com/offchainlabs/nitro/bold/challenge-manager/edge-tracker]
+// See: [github.com/tenderly/net-nitro/bold/challenge-manager/edge-tracker]
 package watcher
 
 import (
@@ -19,23 +19,23 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/bold/api"
-	"github.com/offchainlabs/nitro/bold/api/db"
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/chain-abstraction/sol-implementation"
-	"github.com/offchainlabs/nitro/bold/challenge-manager/challenge-tree"
-	"github.com/offchainlabs/nitro/bold/containers/option"
-	"github.com/offchainlabs/nitro/bold/containers/threadsafe"
-	"github.com/offchainlabs/nitro/bold/layer2-state-provider"
-	"github.com/offchainlabs/nitro/bold/logs/ephemeral"
-	"github.com/offchainlabs/nitro/bold/runtime"
-	"github.com/offchainlabs/nitro/bold/util/stopwaiter"
-	"github.com/offchainlabs/nitro/solgen/go/challengeV2gen"
+	"github.com/tenderly/net-nitro/bold/api"
+	"github.com/tenderly/net-nitro/bold/api/db"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction/sol-implementation"
+	"github.com/tenderly/net-nitro/bold/challenge-manager/challenge-tree"
+	"github.com/tenderly/net-nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/containers/threadsafe"
+	"github.com/tenderly/net-nitro/bold/layer2-state-provider"
+	"github.com/tenderly/net-nitro/bold/logs/ephemeral"
+	"github.com/tenderly/net-nitro/bold/runtime"
+	"github.com/tenderly/net-nitro/bold/util/stopwaiter"
+	"github.com/tenderly/net-nitro/solgen/go/challengeV2gen"
 )
 
 var (

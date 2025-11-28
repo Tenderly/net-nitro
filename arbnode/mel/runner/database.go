@@ -6,11 +6,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 
-	"github.com/offchainlabs/nitro/arbnode/db-schema"
-	"github.com/offchainlabs/nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/arbnode/db-schema"
+	"github.com/tenderly/net-nitro/arbnode/mel"
 )
 
 // Database holds an ethdb.Database underneath and implements StateDatabase interface defined in 'mel'

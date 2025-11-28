@@ -6,20 +6,20 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/cmd/chaininfo"
-	"github.com/offchainlabs/nitro/solgen/go/bridge_legacy_gen"
-	"github.com/offchainlabs/nitro/solgen/go/challenge_legacy_gen"
-	"github.com/offchainlabs/nitro/solgen/go/osp_legacy_gen"
-	"github.com/offchainlabs/nitro/solgen/go/rollup_legacy_gen"
-	"github.com/offchainlabs/nitro/solgen/go/upgrade_executorgen"
-	"github.com/offchainlabs/nitro/solgen/go/yulgen"
-	"github.com/offchainlabs/nitro/util/headerreader"
+	"github.com/tenderly/net-nitro/cmd/chaininfo"
+	"github.com/tenderly/net-nitro/solgen/go/bridge_legacy_gen"
+	"github.com/tenderly/net-nitro/solgen/go/challenge_legacy_gen"
+	"github.com/tenderly/net-nitro/solgen/go/osp_legacy_gen"
+	"github.com/tenderly/net-nitro/solgen/go/rollup_legacy_gen"
+	"github.com/tenderly/net-nitro/solgen/go/upgrade_executorgen"
+	"github.com/tenderly/net-nitro/solgen/go/yulgen"
+	"github.com/tenderly/net-nitro/util/headerreader"
 )
 
 func GenerateLegacyRollupConfig(prod bool, wasmModuleRoot common.Hash, rollupOwner common.Address, chainConfig *params.ChainConfig, serializedChainConfig []byte, loserStakeEscrow common.Address) rollup_legacy_gen.Config {

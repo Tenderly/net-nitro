@@ -1,6 +1,6 @@
 // Copyright 2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 package math
 
@@ -11,7 +11,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/offchainlabs/nitro/bold/testing/casttest"
+	"github.com/tenderly/net-nitro/bold/testing/casttest"
 )
 
 var benchResult int

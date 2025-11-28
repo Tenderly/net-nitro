@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package mocks includes simple mocks for unit testing BOLD.
 // nolint:errcheck
@@ -12,17 +12,17 @@ import (
 
 	"github.com/stretchr/testify/mock"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
-	"github.com/offchainlabs/nitro/bold/api/db"
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/containers/option"
-	"github.com/offchainlabs/nitro/bold/layer2-state-provider"
-	"github.com/offchainlabs/nitro/bold/state-commitments/history"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/bold/api/db"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/layer2-state-provider"
+	"github.com/tenderly/net-nitro/bold/state-commitments/history"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
 )
 
 var (

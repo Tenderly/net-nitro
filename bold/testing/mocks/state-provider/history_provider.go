@@ -1,17 +1,17 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 package stateprovider
 
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/containers/option"
-	"github.com/offchainlabs/nitro/bold/layer2-state-provider"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/layer2-state-provider"
 )
 
 // Collects a list of machine hashes at a message number based on some configuration parameters.

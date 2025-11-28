@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/validator/server_api"
+	"github.com/tenderly/net-nitro/validator/server_api"
 )
 
 func TestDefaultBaseDir(t *testing.T) {

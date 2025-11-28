@@ -1,10 +1,10 @@
 package validator
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
 
-	"github.com/offchainlabs/nitro/daprovider"
+	"github.com/tenderly/net-nitro/daprovider"
 )
 
 type BatchInfo struct {

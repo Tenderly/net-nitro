@@ -19,17 +19,17 @@ import (
 	"github.com/knadh/koanf/parsers/json"
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/cmd/util"
-	"github.com/offchainlabs/nitro/cmd/util/confighelpers"
-	"github.com/offchainlabs/nitro/daprovider/das"
-	"github.com/offchainlabs/nitro/daprovider/das/dastree"
-	"github.com/offchainlabs/nitro/daprovider/das/dasutil"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/cmd/util"
+	"github.com/tenderly/net-nitro/cmd/util/confighelpers"
+	"github.com/tenderly/net-nitro/daprovider/das"
+	"github.com/tenderly/net-nitro/daprovider/das/dastree"
+	"github.com/tenderly/net-nitro/daprovider/das/dasutil"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 func main() {

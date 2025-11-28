@@ -6,10 +6,10 @@ import (
 	"encoding/binary"
 	"errors"
 
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/util/arbmath"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 // lint:require-exhaustive-initialization

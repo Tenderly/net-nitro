@@ -11,16 +11,16 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbos/util"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/blsSignatures"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/daprovider/das/dastree"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/arbos/util"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/blsSignatures"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/daprovider/das/dastree"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 type DASReader interface {

@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/daprovider/das/dasutil"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/daprovider/das/dasutil"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func testDASStoreRetrieveMultipleInstances(t *testing.T, storageType string) {

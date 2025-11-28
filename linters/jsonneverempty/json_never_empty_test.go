@@ -14,7 +14,7 @@ import (
 	"golang.org/x/tools/go/analysis/analysistest"
 )
 
-const aPackagePath = "github.com/offchainlabs/nitro/linters/testdata/src/jsonneverempty/a"
+const aPackagePath = "github.com/tenderly/net-nitro/linters/testdata/src/jsonneverempty/a"
 
 func TestOmitemptyTagValidity(t *testing.T) {
 	analysistest.Run(t, getModuleRoot(t), Analyzer, aPackagePath)

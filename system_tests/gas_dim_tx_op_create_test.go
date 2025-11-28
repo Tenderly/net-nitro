@@ -7,7 +7,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/offchainlabs/nitro/solgen/go/gas_dimensionsgen"
+	"github.com/tenderly/net-nitro/solgen/go/gas_dimensionsgen"
 )
 
 // #########################################################################################################

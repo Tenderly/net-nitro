@@ -9,11 +9,11 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/arbnode/mel"
-	"github.com/offchainlabs/nitro/solgen/go/bridgegen"
+	"github.com/tenderly/net-nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
 )
 
 func Test_serializeBatch(t *testing.T) {

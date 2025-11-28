@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package types includes types and interfaces specific to the challenge manager instance.
 package types
@@ -8,7 +8,7 @@ package types
 import (
 	"context"
 
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
 )
 
 // RivalHandler is the interface between the challenge manager and the assertion

@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package challengemanager includes the main entrypoint for setting up a BoLD
 // challenge manager instance and challenging assertions onchain.
@@ -14,24 +14,24 @@ import (
 	"github.com/ccoveille/go-safecast"
 	"github.com/pkg/errors"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	gethtypes "github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	gethtypes "github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/bold/api/server"
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/challenge-manager/chain-watcher"
-	"github.com/offchainlabs/nitro/bold/challenge-manager/edge-tracker"
-	"github.com/offchainlabs/nitro/bold/challenge-manager/types"
-	"github.com/offchainlabs/nitro/bold/containers/events"
-	"github.com/offchainlabs/nitro/bold/containers/option"
-	"github.com/offchainlabs/nitro/bold/containers/threadsafe"
-	"github.com/offchainlabs/nitro/bold/layer2-state-provider"
-	"github.com/offchainlabs/nitro/bold/runtime"
-	utilTime "github.com/offchainlabs/nitro/bold/time"
-	"github.com/offchainlabs/nitro/bold/util/stopwaiter"
+	"github.com/tenderly/net-nitro/bold/api/server"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/challenge-manager/chain-watcher"
+	"github.com/tenderly/net-nitro/bold/challenge-manager/edge-tracker"
+	"github.com/tenderly/net-nitro/bold/challenge-manager/types"
+	"github.com/tenderly/net-nitro/bold/containers/events"
+	"github.com/tenderly/net-nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/containers/threadsafe"
+	"github.com/tenderly/net-nitro/bold/layer2-state-provider"
+	"github.com/tenderly/net-nitro/bold/runtime"
+	utilTime "github.com/tenderly/net-nitro/bold/time"
+	"github.com/tenderly/net-nitro/bold/util/stopwaiter"
 )
 
 var (

@@ -12,7 +12,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 const stopDelayWarningTimeout = 30 * time.Second

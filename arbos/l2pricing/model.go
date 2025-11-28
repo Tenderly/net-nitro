@@ -7,10 +7,10 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/arbos/storage"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 const ArbosMultiConstraintsVersion = params.ArbosVersion_50

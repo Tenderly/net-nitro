@@ -5,9 +5,9 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/solgen/go/localgen"
+	"github.com/tenderly/net-nitro/solgen/go/localgen"
 )
 
 func TestSelfDestruct(t *testing.T) {

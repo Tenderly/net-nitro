@@ -1,6 +1,6 @@
 // Copyright 2023-2024, Offchain Labs, Inc.
 // For license information, see:
-// https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 // Package challengetree includes logic for keeping track of royal edges within a challenge
 // with utilities for computing cumulative path timers for said edges. This is helpful during
@@ -13,9 +13,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/offchainlabs/nitro/bold/chain-abstraction"
-	"github.com/offchainlabs/nitro/bold/containers/threadsafe"
-	"github.com/offchainlabs/nitro/bold/layer2-state-provider"
+	"github.com/tenderly/net-nitro/bold/chain-abstraction"
+	"github.com/tenderly/net-nitro/bold/containers/threadsafe"
+	"github.com/tenderly/net-nitro/bold/layer2-state-provider"
 )
 
 // MetadataReader can read certain information about edges from the backend.
