@@ -10,14 +10,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/trie"
 
-	"github.com/offchainlabs/nitro/arbnode/mel/recording"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/mel-replay"
+	"github.com/tenderly/net-nitro/arbnode/mel/recording"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/mel-replay"
 )
 
 type mockBlockReader struct {

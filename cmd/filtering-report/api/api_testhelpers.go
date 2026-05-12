@@ -6,9 +6,9 @@ package api
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 
-	"github.com/offchainlabs/nitro/util/sqsclient"
+	"github.com/tenderly/net-nitro/util/sqsclient"
 )
 
 func NewTestStack(t *testing.T, queueClient sqsclient.QueueClient) *node.Node {

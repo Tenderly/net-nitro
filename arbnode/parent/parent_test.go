@@ -12,7 +12,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 func TestBlobConfigSelectsNextWhenHeaderTimePastActivation(t *testing.T) {

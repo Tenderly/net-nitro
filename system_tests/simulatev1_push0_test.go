@@ -9,10 +9,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 
-	"github.com/offchainlabs/nitro/statetransfer"
+	"github.com/tenderly/net-nitro/statetransfer"
 )
 
 func TestSimulateV1Push0(t *testing.T) {

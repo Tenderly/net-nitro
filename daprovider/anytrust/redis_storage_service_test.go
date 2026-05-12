@@ -12,7 +12,7 @@ import (
 
 	"github.com/alicebob/miniredis/v2"
 
-	"github.com/offchainlabs/nitro/daprovider/anytrust/tree"
+	"github.com/tenderly/net-nitro/daprovider/anytrust/tree"
 )
 
 func TestRedisStorageService(t *testing.T) {

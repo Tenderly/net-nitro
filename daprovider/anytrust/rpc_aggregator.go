@@ -14,10 +14,10 @@ import (
 	"github.com/knadh/koanf"
 	"github.com/knadh/koanf/providers/confmap"
 
-	"github.com/offchainlabs/nitro/blsSignatures"
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
-	"github.com/offchainlabs/nitro/util/metricsutil"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/blsSignatures"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
+	"github.com/tenderly/net-nitro/util/metricsutil"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 type BackendConfig struct {

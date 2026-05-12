@@ -14,16 +14,16 @@ import (
 
 	"github.com/spf13/pflag"
 
-	_ "github.com/ethereum/go-ethereum/eth/tracers/js"
-	_ "github.com/ethereum/go-ethereum/eth/tracers/native"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
+	_ "github.com/tenderly/net-nitro/go-ethereum/eth/tracers/js"
+	_ "github.com/tenderly/net-nitro/go-ethereum/eth/tracers/native"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/cmd/util"
-	"github.com/offchainlabs/nitro/cmd/util/confighelpers"
-	_ "github.com/offchainlabs/nitro/execution/nodeinterface"
-	"github.com/offchainlabs/nitro/validator/valnode"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/cmd/util"
+	"github.com/tenderly/net-nitro/cmd/util/confighelpers"
+	_ "github.com/tenderly/net-nitro/execution/nodeinterface"
+	"github.com/tenderly/net-nitro/validator/valnode"
 )
 
 func printSampleUsage(name string) {

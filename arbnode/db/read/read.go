@@ -5,11 +5,11 @@ package read
 import (
 	"encoding/binary"
 
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 
-	"github.com/offchainlabs/nitro/arbnode/db/schema"
-	"github.com/offchainlabs/nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/arbnode/db/schema"
+	"github.com/tenderly/net-nitro/arbnode/mel"
 )
 
 // MELSequencerBatchCount returns the batch count corresponding to the head MEL state

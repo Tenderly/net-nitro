@@ -13,11 +13,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/util/containers"
-	"github.com/offchainlabs/nitro/util/stopwaiter/state"
-	"github.com/offchainlabs/nitro/util/stopwaiter/stoppable"
+	"github.com/tenderly/net-nitro/util/containers"
+	"github.com/tenderly/net-nitro/util/stopwaiter/state"
+	"github.com/tenderly/net-nitro/util/stopwaiter/stoppable"
 )
 
 // Re-exported for callers' convenience: use stopwaiter.Stoppable / stopwaiter.StoppableChild
@@ -219,14 +219,16 @@ func (s *StopWaiterSafe) LaunchThreadSafe(foo func(context.Context)) error {
 	st := s.RLock()
 	name := st.Name
 	s.RUnlock()
-	s.wg.Go(func() {
+	s.wg.Add(1)
+	go func() {
+		defer s.wg.Done()
 		defer func() {
 			if r := recover(); r != nil {
 				log.Error("Thread crashed", "name", name, "message", r, "stack", string(debug.Stack()))
 			}
 		}()
 		foo(ctx)
-	})
+	}()
 	return nil
 }
 

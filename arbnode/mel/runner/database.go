@@ -5,14 +5,14 @@ package melrunner
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 
-	"github.com/offchainlabs/nitro/arbnode/db/read"
-	"github.com/offchainlabs/nitro/arbnode/db/schema"
-	"github.com/offchainlabs/nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/arbnode/db/read"
+	"github.com/tenderly/net-nitro/arbnode/db/schema"
+	"github.com/tenderly/net-nitro/arbnode/mel"
 )
 
 // Database holds an ethdb.KeyValueStore underneath and implements reading of

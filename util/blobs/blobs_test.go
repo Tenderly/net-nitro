@@ -9,8 +9,8 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/crypto/kzg4844"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto/kzg4844"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 const bytesEncodedPerBlob = 254 * 4096 / 8

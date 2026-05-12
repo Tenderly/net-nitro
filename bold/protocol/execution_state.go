@@ -9,11 +9,11 @@ import (
 	"encoding/binary"
 	"math"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/solgen/go/challengeV2gen"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/solgen/go/challengeV2gen"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
 )
 
 type GoGlobalState struct {

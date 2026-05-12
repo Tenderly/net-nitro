@@ -6,9 +6,9 @@ package l2pricing
 import (
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
 
-	"github.com/offchainlabs/nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/arbos/storage"
 )
 
 const (

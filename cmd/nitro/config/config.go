@@ -17,20 +17,20 @@ import (
 	"github.com/knadh/koanf/providers/confmap"
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbnode"
-	nitroversionalerter "github.com/offchainlabs/nitro/arbnode/nitro-version-alerter"
-	blocksreexecutor "github.com/offchainlabs/nitro/blocks_reexecutor"
-	"github.com/offchainlabs/nitro/cmd/chaininfo"
-	"github.com/offchainlabs/nitro/cmd/conf"
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/cmd/util/confighelpers"
-	"github.com/offchainlabs/nitro/daprovider/anytrust"
-	"github.com/offchainlabs/nitro/execution/gethexec"
-	"github.com/offchainlabs/nitro/util/colors"
-	"github.com/offchainlabs/nitro/validator/valnode"
+	"github.com/tenderly/net-nitro/arbnode"
+	nitroversionalerter "github.com/tenderly/net-nitro/arbnode/nitro-version-alerter"
+	blocksreexecutor "github.com/tenderly/net-nitro/blocks_reexecutor"
+	"github.com/tenderly/net-nitro/cmd/chaininfo"
+	"github.com/tenderly/net-nitro/cmd/conf"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/cmd/util/confighelpers"
+	"github.com/tenderly/net-nitro/daprovider/anytrust"
+	"github.com/tenderly/net-nitro/execution/gethexec"
+	"github.com/tenderly/net-nitro/util/colors"
+	"github.com/tenderly/net-nitro/validator/valnode"
 )
 
 type NodeConfig struct {

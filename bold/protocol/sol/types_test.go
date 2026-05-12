@@ -3,7 +3,7 @@
 
 package sol
 
-import "github.com/offchainlabs/nitro/bold/protocol"
+import "github.com/tenderly/net-nitro/bold/protocol"
 
 var (
 	_ = protocol.SpecEdge(&specEdge{})

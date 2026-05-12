@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/offchainlabs/nitro/bold/containers/fsm"
+	"github.com/tenderly/net-nitro/bold/containers/fsm"
 )
 
 func (m *MessageExtractor) reorg(ctx context.Context, current *fsm.CurrentState[action, FSMState]) (time.Duration, error) {

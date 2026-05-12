@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 )
 
 func TestProgramMaxStylusCallDepth(t *testing.T) {

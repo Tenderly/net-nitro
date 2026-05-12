@@ -12,12 +12,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
 
-	"github.com/offchainlabs/nitro/arbos/programs"
+	"github.com/tenderly/net-nitro/arbos/programs"
 )
 
 // stackOverflowWat is a WAT program that recurses 1,000 times using a

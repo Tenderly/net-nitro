@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/daprovider/anytrust/tree"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/daprovider/anytrust/tree"
 )
 
 const LocalServerAddressForTest = "localhost"

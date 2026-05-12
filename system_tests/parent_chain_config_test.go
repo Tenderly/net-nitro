@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/arbnode/parent"
-	"github.com/offchainlabs/nitro/util/headerreader"
+	"github.com/tenderly/net-nitro/arbnode/parent"
+	"github.com/tenderly/net-nitro/util/headerreader"
 )
 
 func TestParentChainEthConfigPolling(t *testing.T) {

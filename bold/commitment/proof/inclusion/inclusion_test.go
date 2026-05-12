@@ -9,10 +9,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/commitment/proof/prefix"
-	"github.com/offchainlabs/nitro/bold/testing/casttest"
+	"github.com/tenderly/net-nitro/bold/commitment/proof/prefix"
+	"github.com/tenderly/net-nitro/bold/testing/casttest"
 )
 
 func TestInclusionProof(t *testing.T) {

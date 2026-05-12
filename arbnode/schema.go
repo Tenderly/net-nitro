@@ -4,7 +4,7 @@
 package arbnode
 
 import (
-	"github.com/offchainlabs/nitro/arbnode/db/schema"
+	"github.com/tenderly/net-nitro/arbnode/db/schema"
 )
 
 //nolint:unused

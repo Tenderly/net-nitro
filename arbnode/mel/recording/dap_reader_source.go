@@ -6,12 +6,12 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/arbstate"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/util/containers"
-	"github.com/offchainlabs/nitro/validator"
+	"github.com/tenderly/net-nitro/arbstate"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/util/containers"
+	"github.com/tenderly/net-nitro/validator"
 )
 
 // DAPReader implements recording of data avaialability preimages when melextraction.ExtractMessages function is called by

@@ -1,5 +1,5 @@
 // Copyright 2026, Offchain Labs, Inc.
-// For license information, see https://github.com/offchainlabs/nitro/blob/master/LICENSE.md
+// For license information, see https://github.com/tenderly/net-nitro/blob/master/LICENSE.md
 
 package programs
 
@@ -9,16 +9,16 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	gethParams "github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/core/tracing"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	gethParams "github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/arbcompress"
-	"github.com/offchainlabs/nitro/arbos/util"
+	"github.com/tenderly/net-nitro/arbcompress"
+	"github.com/tenderly/net-nitro/arbos/util"
 )
 
 type testBurner struct {

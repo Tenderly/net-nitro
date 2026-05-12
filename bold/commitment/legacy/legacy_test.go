@@ -9,9 +9,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/commitment/proof/inclusion"
+	"github.com/tenderly/net-nitro/bold/commitment/proof/inclusion"
 )
 
 func TestHistoryCommitment_LeafProofs(t *testing.T) {

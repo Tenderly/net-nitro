@@ -5,11 +5,11 @@ package arbnode
 import (
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
 
-	"github.com/offchainlabs/nitro/arbnode/db/schema"
-	"github.com/offchainlabs/nitro/arbnode/mel"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/arbnode/db/schema"
+	"github.com/tenderly/net-nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 func TestDeleteBatchMetadata(t *testing.T) {

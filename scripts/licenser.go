@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/offchainlabs/nitro/util/colors"
+	"github.com/tenderly/net-nitro/util/colors"
 )
 
 const (

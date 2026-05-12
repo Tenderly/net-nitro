@@ -11,10 +11,10 @@ import (
 
 	"github.com/ccoveille/go-safecast"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/commitment/proof/inclusion"
-	"github.com/offchainlabs/nitro/bold/commitment/proof/prefix"
+	"github.com/tenderly/net-nitro/bold/commitment/proof/inclusion"
+	"github.com/tenderly/net-nitro/bold/commitment/proof/prefix"
 )
 
 var (

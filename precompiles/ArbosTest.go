@@ -6,7 +6,7 @@ package precompiles
 import (
 	"errors"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
 )
 
 // ArbosTest provides a method of burning arbitrary amounts of gas, which exists for historical reasons.

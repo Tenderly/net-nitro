@@ -12,21 +12,21 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/bold/challenge/tree"
-	"github.com/offchainlabs/nitro/bold/clock"
-	"github.com/offchainlabs/nitro/bold/commitment/history"
-	"github.com/offchainlabs/nitro/bold/containers"
-	"github.com/offchainlabs/nitro/bold/containers/events"
-	"github.com/offchainlabs/nitro/bold/containers/fsm"
-	"github.com/offchainlabs/nitro/bold/containers/option"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/state"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/bold/challenge/tree"
+	"github.com/tenderly/net-nitro/bold/clock"
+	"github.com/tenderly/net-nitro/bold/commitment/history"
+	"github.com/tenderly/net-nitro/bold/containers"
+	"github.com/tenderly/net-nitro/bold/containers/events"
+	"github.com/tenderly/net-nitro/bold/containers/fsm"
+	"github.com/tenderly/net-nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/state"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 var (
@@ -92,7 +92,7 @@ type Opt func(et *Tracker)
 
 // WithTimeReference allows setting the timer used by the tracker to determine that time
 // passed in accordance with the act interval set with [WithActInterval]. The default is
-// to use [github.com/offchainlabs/nitro/bold/clock.NewRealTimeReference].
+// to use [github.com/tenderly/net-nitro/bold/clock.NewRealTimeReference].
 // This is useful for testing with a fake time reference to avoid waiting for real time.
 func WithTimeReference(ref clock.Reference) Opt {
 	return func(et *Tracker) {

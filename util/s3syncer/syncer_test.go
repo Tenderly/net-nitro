@@ -6,7 +6,7 @@ package s3syncer
 import (
 	"testing"
 
-	"github.com/offchainlabs/nitro/util/s3client"
+	"github.com/tenderly/net-nitro/util/s3client"
 )
 
 func TestConfigValidate(t *testing.T) {

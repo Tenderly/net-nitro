@@ -14,10 +14,10 @@ import (
 	"github.com/google/uuid"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/util/s3client"
-	"github.com/offchainlabs/nitro/util/s3syncer"
+	"github.com/tenderly/net-nitro/util/s3client"
+	"github.com/tenderly/net-nitro/util/s3syncer"
 )
 
 func TestHashStore_IsRestricted(t *testing.T) {

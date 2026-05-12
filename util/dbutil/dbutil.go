@@ -9,7 +9,7 @@ import (
 	"io/fs"
 	"regexp"
 
-	"github.com/ethereum/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
 )
 
 var pebbleNotExistErrorRegex = regexp.MustCompile("pebble: database .* does not exist")

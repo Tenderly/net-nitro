@@ -6,8 +6,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/bold/protocol"
 )
 
 type MockInboxTracker struct {

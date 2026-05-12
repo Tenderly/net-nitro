@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/execution/gethexec/addressfilter"
+	"github.com/tenderly/net-nitro/execution/gethexec/addressfilter"
 )
 
 // ReportFilteredTransactions enqueues each report to SQS. All reports are

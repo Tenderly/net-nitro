@@ -7,12 +7,12 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/trie"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/trie"
 
-	blocksreexecutor "github.com/offchainlabs/nitro/blocks_reexecutor"
+	blocksreexecutor "github.com/tenderly/net-nitro/blocks_reexecutor"
 )
 
 func TestBlocksReExecutorModes(t *testing.T) {

@@ -13,9 +13,9 @@ import (
 	"github.com/spf13/pflag"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
 
-	"github.com/offchainlabs/nitro/util/rpcclient"
+	"github.com/tenderly/net-nitro/util/rpcclient"
 )
 
 const (

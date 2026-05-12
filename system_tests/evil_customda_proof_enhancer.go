@@ -7,10 +7,10 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/validator/proofenhancement"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/validator/proofenhancement"
 )
 
 // EvilCustomDAProofEnhancer wraps the standard ReadPreimageProofEnhancer to inject evil certificates

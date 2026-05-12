@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/offchainlabs/nitro/util/s3client"
+	"github.com/tenderly/net-nitro/util/s3client"
 )
 
 // Config holds the S3 configuration for syncing data.

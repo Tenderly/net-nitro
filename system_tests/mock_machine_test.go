@@ -4,9 +4,9 @@
 package arbtest
 
 import (
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/validator/server_arb"
+	"github.com/tenderly/net-nitro/validator/server_arb"
 )
 
 // IncorrectIntermediateMachine will report an incorrect hash while running from incorrectStep onwards.

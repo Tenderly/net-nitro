@@ -11,14 +11,14 @@ import (
 
 	"github.com/gobwas/ws"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbos/arbostypes"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/broadcaster/backlog"
-	m "github.com/offchainlabs/nitro/broadcaster/message"
-	"github.com/offchainlabs/nitro/util/signature"
-	"github.com/offchainlabs/nitro/wsbroadcastserver"
+	"github.com/tenderly/net-nitro/arbos/arbostypes"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/broadcaster/backlog"
+	m "github.com/tenderly/net-nitro/broadcaster/message"
+	"github.com/tenderly/net-nitro/util/signature"
+	"github.com/tenderly/net-nitro/wsbroadcastserver"
 )
 
 const SupportedBroadcastVersion = m.V1

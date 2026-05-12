@@ -9,9 +9,9 @@ import (
 	"net"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
-	"github.com/offchainlabs/nitro/pubsub"
+	"github.com/tenderly/net-nitro/pubsub"
 )
 
 const (

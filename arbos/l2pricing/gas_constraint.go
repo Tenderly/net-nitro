@@ -3,7 +3,7 @@
 
 package l2pricing
 
-import "github.com/offchainlabs/nitro/arbos/storage"
+import "github.com/tenderly/net-nitro/arbos/storage"
 
 const (
 	gasConstraintTargetOffset uint64 = iota

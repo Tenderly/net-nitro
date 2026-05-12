@@ -6,8 +6,8 @@ package threadsafe
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common/lru"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/common/lru"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 )
 
 type LruSet[T comparable] struct {

@@ -12,10 +12,10 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/util/s3syncer"
+	"github.com/tenderly/net-nitro/util/s3syncer"
 )
 
 // trimHexPrefix strips a leading "0x" or "0X" prefix from a hex string.

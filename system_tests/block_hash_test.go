@@ -7,9 +7,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
 
-	"github.com/offchainlabs/nitro/solgen/go/localgen"
+	"github.com/tenderly/net-nitro/solgen/go/localgen"
 )
 
 func TestBlockHash(t *testing.T) {

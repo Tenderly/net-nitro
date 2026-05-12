@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/daprovider/anytrust/tree"
+	"github.com/tenderly/net-nitro/daprovider/anytrust/tree"
 )
 
 func TestSimpleReaderAggregator(t *testing.T) { //nolint

@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/offchainlabs/nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/containers/option"
 )
 
 func Test_computeRequiredNumberOfHashes(t *testing.T) {

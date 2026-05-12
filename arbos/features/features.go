@@ -4,7 +4,7 @@
 package features
 
 import (
-	"github.com/offchainlabs/nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/arbos/storage"
 )
 
 const (

@@ -8,7 +8,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
 )
 
 func TestClassicOutboxRetrieverGetMsg(t *testing.T) {

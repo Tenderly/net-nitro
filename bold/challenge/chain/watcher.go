@@ -6,7 +6,7 @@
 // trackers and it tracks common information such as the edges' ancestors and an
 // edge's time unrivaled.
 //
-// See: [github.com/offchainlabs/nitro/bold/challenge/tracker]
+// See: [github.com/tenderly/net-nitro/bold/challenge/tracker]
 package chain
 
 import (
@@ -18,23 +18,23 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/bold/api"
-	"github.com/offchainlabs/nitro/bold/api/db"
-	"github.com/offchainlabs/nitro/bold/challenge/tree"
-	"github.com/offchainlabs/nitro/bold/containers/option"
-	"github.com/offchainlabs/nitro/bold/containers/threadsafe"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/protocol/sol"
-	"github.com/offchainlabs/nitro/bold/retry"
-	"github.com/offchainlabs/nitro/bold/state"
-	"github.com/offchainlabs/nitro/solgen/go/challengeV2gen"
-	"github.com/offchainlabs/nitro/util"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/bold/api"
+	"github.com/tenderly/net-nitro/bold/api/db"
+	"github.com/tenderly/net-nitro/bold/challenge/tree"
+	"github.com/tenderly/net-nitro/bold/containers/option"
+	"github.com/tenderly/net-nitro/bold/containers/threadsafe"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/protocol/sol"
+	"github.com/tenderly/net-nitro/bold/retry"
+	"github.com/tenderly/net-nitro/bold/state"
+	"github.com/tenderly/net-nitro/solgen/go/challengeV2gen"
+	"github.com/tenderly/net-nitro/util"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 var (

@@ -8,9 +8,9 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/daprovider"
+	"github.com/tenderly/net-nitro/daprovider"
 )
 
 func buildSequencerMsg(payload []byte) []byte {

@@ -9,7 +9,7 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/offchainlabs/nitro/util/s3syncer"
+	"github.com/tenderly/net-nitro/util/s3syncer"
 )
 
 type Config struct {

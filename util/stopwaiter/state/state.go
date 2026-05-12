@@ -8,7 +8,7 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/offchainlabs/nitro/util/stopwaiter/stoppable"
+	"github.com/tenderly/net-nitro/util/stopwaiter/stoppable"
 )
 
 // lint:require-exhaustive-initialization

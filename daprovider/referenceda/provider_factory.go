@@ -10,12 +10,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
 
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 // lint:require-exhaustive-initialization

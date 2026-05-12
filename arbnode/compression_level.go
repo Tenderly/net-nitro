@@ -12,7 +12,7 @@ import (
 	"github.com/knadh/koanf"
 	"github.com/knadh/koanf/providers/confmap"
 
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 // CompressionLevelStep defines compression levels to use at a given backlog threshold.

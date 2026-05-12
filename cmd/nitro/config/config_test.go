@@ -17,12 +17,12 @@ import (
 	"github.com/r3labs/diff/v3"
 	"github.com/spf13/pflag"
 
-	"github.com/offchainlabs/nitro/arbnode"
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/cmd/util/confighelpers"
-	"github.com/offchainlabs/nitro/daprovider/anytrust"
-	"github.com/offchainlabs/nitro/util/colors"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/arbnode"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/cmd/util/confighelpers"
+	"github.com/tenderly/net-nitro/daprovider/anytrust"
+	"github.com/tenderly/net-nitro/util/colors"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func TestEmptyCliConfig(t *testing.T) {

@@ -6,9 +6,9 @@ package arbos
 import (
 	"testing"
 
-	"github.com/offchainlabs/nitro/arbos/arbosState"
-	"github.com/offchainlabs/nitro/arbos/storage"
-	"github.com/offchainlabs/nitro/arbos/util"
+	"github.com/tenderly/net-nitro/arbos/arbosState"
+	"github.com/tenderly/net-nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/arbos/util"
 )
 
 // This file contains tests for the storage submodule, but it needs to be in the top-level module to

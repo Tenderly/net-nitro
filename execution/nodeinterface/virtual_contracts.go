@@ -8,22 +8,22 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/arbitrum"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbos"
-	"github.com/offchainlabs/nitro/arbos/arbosState"
-	"github.com/offchainlabs/nitro/arbos/l1pricing"
-	"github.com/offchainlabs/nitro/execution/gethexec"
-	"github.com/offchainlabs/nitro/gethhook"
-	"github.com/offchainlabs/nitro/precompiles"
-	"github.com/offchainlabs/nitro/solgen/go/node_interfacegen"
-	"github.com/offchainlabs/nitro/solgen/go/precompilesgen"
+	"github.com/tenderly/net-nitro/arbos"
+	"github.com/tenderly/net-nitro/arbos/arbosState"
+	"github.com/tenderly/net-nitro/arbos/l1pricing"
+	"github.com/tenderly/net-nitro/execution/gethexec"
+	"github.com/tenderly/net-nitro/gethhook"
+	"github.com/tenderly/net-nitro/precompiles"
+	"github.com/tenderly/net-nitro/solgen/go/node_interfacegen"
+	"github.com/tenderly/net-nitro/solgen/go/precompilesgen"
 )
 
 type addr = common.Address
@@ -50,11 +50,16 @@ func init() {
 	core.InterceptRPCMessage = func(
 		msg *core.Message,
 		ctx context.Context,
-		statedb *state.StateDB,
+		vmStatedb vm.StateDB,
 		header *types.Header,
 		backend core.NodeInterfaceBackendAPI,
 		blockCtx *vm.BlockContext,
 	) (*core.Message, *ExecutionResult, error) {
+		statedb, ok := vmStatedb.(*state.StateDB)
+		if !ok {
+			// NodeInterface precompile dispatch needs concrete arbos state access; non-state.StateDB wrappers pass through.
+			return msg, nil, nil
+		}
 		to := msg.To
 		arbosVersion := arbosState.ArbOSVersion(statedb) // check ArbOS has been installed
 		if to != nil && arbosVersion != 0 {
@@ -116,7 +121,12 @@ func init() {
 		return msg, nil, nil
 	}
 
-	core.RPCPostingGasHook = func(msg *core.Message, header *types.Header, statedb *state.StateDB) (uint64, error) {
+	core.RPCPostingGasHook = func(msg *core.Message, header *types.Header, vmStatedb vm.StateDB) (uint64, error) {
+		statedb, ok := vmStatedb.(*state.StateDB)
+		if !ok {
+			// Non-state.StateDB backends (e.g. external simulation wrappers) skip poster-gas accounting.
+			return 0, nil
+		}
 		arbosVersion := arbosState.ArbOSVersion(statedb)
 		if arbosVersion == 0 {
 			// ArbOS hasn't been installed, so use the vanilla gas cap
