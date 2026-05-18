@@ -24,7 +24,7 @@ import (
 	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
 	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 	"github.com/tenderly/net-nitro/go-ethereum/crypto"
-	"github.com/tenderly/net-nitro/go-ethereum/crypto/secp256k1"
+	"github.com/ethereum/go-ethereum/crypto/secp256k1"
 	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
 	"github.com/tenderly/net-nitro/go-ethereum/log"
 	"github.com/tenderly/net-nitro/go-ethereum/node"
