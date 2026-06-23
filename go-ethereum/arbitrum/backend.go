@@ -1,0 +1,213 @@
+package arbitrum
+
+import (
+	"context"
+	"time"
+
+	"github.com/tenderly/net-nitro/go-ethereum/accounts"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum_types"
+	"github.com/tenderly/net-nitro/go-ethereum/consensus"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/filtermaps"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/eth/filters"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/event"
+	"github.com/tenderly/net-nitro/go-ethereum/notinternal/shutdowncheck"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
+)
+
+type Backend struct {
+	arb        ArbInterface
+	stack      *node.Node
+	apiBackend *APIBackend
+	config     *Config
+	chainDb    ethdb.Database
+
+	txFeed event.Feed
+	scope  event.SubscriptionScope
+
+	filterMaps *filtermaps.FilterMaps
+
+	shutdownTracker *shutdowncheck.ShutdownTracker
+
+	chanTxs         chan *types.Transaction
+	closeFilterMaps chan chan struct{} // closeFilterMaps signals updateFilterMapsHeads to stop; the inner channel is closed by the goroutine to confirm it has exited
+	chanNewBlock    chan struct{}      //create new L2 block unless empty
+
+	filterSystem *filters.FilterSystem
+}
+
+func NewBackend(stack *node.Node, config *Config, chainDb ethdb.Database, publisher ArbInterface, filterConfig filters.Config, stateScheme string, txFilterer core.TxFilterer) (*Backend, *filters.FilterSystem, error) {
+	backend := &Backend{
+		arb:     publisher,
+		stack:   stack,
+		config:  config,
+		chainDb: chainDb,
+
+		shutdownTracker: shutdowncheck.NewShutdownTracker(chainDb),
+
+		chanTxs:         make(chan *types.Transaction, 100),
+		closeFilterMaps: make(chan chan struct{}),
+		chanNewBlock:    make(chan struct{}, 1),
+	}
+
+	scheme, err := rawdb.ParseStateScheme(stateScheme, chainDb)
+	if err != nil {
+		return nil, nil, err
+	}
+	// Initialize filtermaps log index.
+	fmConfig := filtermaps.Config{
+		History:        config.LogHistory,
+		Disabled:       config.LogNoHistory,
+		ExportFileName: config.LogExportCheckpoints,
+		HashScheme:     scheme == rawdb.HashScheme,
+	}
+	chainView := backend.newChainView(backend.arb.BlockChain().CurrentBlock())
+	historyCutoff, _ := backend.arb.BlockChain().HistoryPruningCutoff()
+	var finalBlock uint64
+	if fb := backend.arb.BlockChain().CurrentFinalBlock(); fb != nil {
+		finalBlock = fb.Number.Uint64()
+	}
+	backend.filterMaps, err = filtermaps.NewFilterMaps(chainDb, chainView, historyCutoff, finalBlock, filtermaps.DefaultParams, fmConfig)
+	if err != nil {
+		return nil, nil, err
+	}
+	if len(config.AllowMethod) > 0 {
+		rpcFilter := make(map[string]bool)
+		for _, method := range config.AllowMethod {
+			rpcFilter[method] = true
+		}
+		backend.stack.ApplyAPIFilter(rpcFilter)
+	}
+
+	filterSystem, err := createRegisterAPIBackend(backend, filterConfig, config.ClassicRedirect, config.ClassicRedirectTimeout, config.BlockRedirects, txFilterer)
+	if err != nil {
+		return nil, nil, err
+	}
+	backend.filterSystem = filterSystem
+	return backend, filterSystem, nil
+}
+func (b *Backend) newChainView(head *types.Header) *filtermaps.ChainView {
+	if head == nil {
+		return nil
+	}
+	return filtermaps.NewChainView(b.arb.BlockChain(), head.Number.Uint64(), head.Hash())
+}
+
+func (b *Backend) AccountManager() *accounts.Manager { return b.stack.AccountManager() }
+func (b *Backend) APIBackend() *APIBackend           { return b.apiBackend }
+func (b *Backend) APIs() []rpc.API                   { return b.apiBackend.GetAPIs(b.filterSystem) }
+func (b *Backend) ArbInterface() ArbInterface        { return b.arb }
+func (b *Backend) BlockChain() *core.BlockChain      { return b.arb.BlockChain() }
+func (b *Backend) ChainDb() ethdb.Database           { return b.chainDb }
+func (b *Backend) Engine() consensus.Engine          { return b.arb.BlockChain().Engine() }
+func (b *Backend) Stack() *node.Node                 { return b.stack }
+
+func (b *Backend) ResetWithGenesisBlock(gb *types.Block) {
+	b.arb.BlockChain().ResetWithGenesisBlock(gb)
+}
+
+func (b *Backend) EnqueueL2Message(ctx context.Context, tx *types.Transaction, options *arbitrum_types.ConditionalOptions) error {
+	return b.arb.PublishTransaction(ctx, tx, options)
+}
+
+func (b *Backend) SubscribeNewTxsEvent(ch chan<- core.NewTxsEvent) event.Subscription {
+	return b.scope.Track(b.txFeed.Subscribe(ch))
+}
+
+// TODO: this is used when registering backend as lifecycle in stack
+func (b *Backend) Start() error {
+	b.filterMaps.Start()
+	b.shutdownTracker.MarkStartup()
+	b.shutdownTracker.Start()
+	go b.updateFilterMapsHeads()
+	return nil
+}
+
+func (b *Backend) updateFilterMapsHeads() {
+	defer close(b.closeFilterMaps)
+	headEventCh := make(chan core.ChainEvent, 10)
+	blockProcCh := make(chan bool, 10)
+	sub := b.arb.BlockChain().SubscribeChainEvent(headEventCh)
+	if sub == nil {
+		log.Error("arbitrum Backend: failed subscribing to Head Event")
+		return
+	}
+	sub2 := b.arb.BlockChain().SubscribeBlockProcessingEvent(blockProcCh)
+	if sub2 == nil {
+		log.Error("arbitrum Backend: failed subscribing to Block Processing Event")
+		sub.Unsubscribe()
+		return
+	}
+	defer func() {
+		sub.Unsubscribe()
+		sub2.Unsubscribe()
+		for {
+			select {
+			case <-headEventCh:
+			case <-blockProcCh:
+			default:
+				return
+			}
+		}
+	}()
+
+	var head *types.Header
+	setHead := func(newHead *types.Header) {
+		if newHead == nil {
+			return
+		}
+		if head == nil || newHead.Hash() != head.Hash() {
+			head = newHead
+			chainView := b.newChainView(head)
+			// passing nil chainView to FilterMaps.SetTarget triggers a panic
+			// newChainView can return nil not only when head == nil but also when ChainView.extendNonCanonical returns false
+			if chainView == nil {
+				return
+			}
+			historyCutoff, _ := b.arb.BlockChain().HistoryPruningCutoff()
+			var finalBlock uint64
+			if fb := b.arb.BlockChain().CurrentFinalBlock(); fb != nil {
+				finalBlock = fb.Number.Uint64()
+			}
+			b.filterMaps.SetTarget(chainView, historyCutoff, finalBlock)
+		}
+	}
+	setHead(b.arb.BlockChain().CurrentBlock())
+
+	for {
+		select {
+		case ev := <-headEventCh:
+			setHead(ev.Header)
+		case blockProc := <-blockProcCh:
+			b.filterMaps.SetBlockProcessing(blockProc)
+		case <-time.After(time.Second * 10):
+			setHead(b.arb.BlockChain().CurrentBlock())
+		case ch := <-b.closeFilterMaps:
+			close(ch)
+			return
+		}
+	}
+}
+
+func (b *Backend) Stop() error {
+	b.scope.Close()
+
+	// stop updateFilterMapsHeads goroutine and wait for it to finish
+	ch := make(chan struct{})
+	select {
+	case <-b.closeFilterMaps:
+		// updateFilterMapsHeads exited earlier and closed closeFilterMaps channel
+	case b.closeFilterMaps <- ch:
+		<-ch
+	}
+
+	b.filterMaps.Stop()
+	b.shutdownTracker.Stop()
+	b.chainDb.Close()
+	return nil
+}

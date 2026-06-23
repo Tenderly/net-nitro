@@ -8,14 +8,15 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/ethereum/go-ethereum/arbitrum/filter"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/filter"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/execution/gethexec/addressfilter"
-	"github.com/offchainlabs/nitro/execution/gethexec/eventfilter"
+	"github.com/tenderly/net-nitro/execution/gethexec/addressfilter"
+	"github.com/tenderly/net-nitro/execution/gethexec/eventfilter"
 )
 
 // txFilterer implements core.TxFilterer for address-based transaction filtering
@@ -28,18 +29,31 @@ type txFilterer struct {
 	filteringReportRPCClient *FilteringReportRPCClient
 }
 
-func (f *txFilterer) Setup(statedb *state.StateDB) {
+func (f *txFilterer) Setup(vmStatedb vm.StateDB) {
+	statedb, ok := vmStatedb.(*state.StateDB)
+	if !ok {
+		// Non-state.StateDB backends (e.g. external simulation wrappers) skip tx filtering setup.
+		return
+	}
 	if f.execEngine.addressChecker != nil {
 		statedb.SetAddressCheckerState(f.execEngine.addressChecker.NewTxState())
 	}
 	statedb.SetTxContext(common.Hash{}, 0)
 }
 
-func (f *txFilterer) TouchAddresses(statedb *state.StateDB, tx *types.Transaction, sender common.Address) {
+func (f *txFilterer) TouchAddresses(vmStatedb vm.StateDB, tx *types.Transaction, sender common.Address) {
+	statedb, ok := vmStatedb.(*state.StateDB)
+	if !ok {
+		return
+	}
 	touchAddresses(statedb, tx, sender)
 }
 
-func (f *txFilterer) CheckFiltered(statedb *state.StateDB, rootTx *types.Transaction, header *types.Header) error {
+func (f *txFilterer) CheckFiltered(vmStatedb vm.StateDB, rootTx *types.Transaction, header *types.Header) error {
+	statedb, ok := vmStatedb.(*state.StateDB)
+	if !ok {
+		return nil
+	}
 	applyEventFilter(f.eventFilter, statedb)
 	if filtered, records := statedb.IsAddressFiltered(); filtered {
 		if f.filteringReportRPCClient != nil {

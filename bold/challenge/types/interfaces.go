@@ -7,7 +7,7 @@ package types
 import (
 	"context"
 
-	"github.com/offchainlabs/nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/protocol"
 )
 
 // RivalHandler is the interface between the challenge manager and the assertion

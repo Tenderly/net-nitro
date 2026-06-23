@@ -7,19 +7,19 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/vm"
-	"github.com/ethereum/go-ethereum/triedb"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/triedb"
 
-	"github.com/offchainlabs/nitro/arbos/arbosState"
-	"github.com/offchainlabs/nitro/arbos/arbostypes"
-	"github.com/offchainlabs/nitro/arbos/burn"
-	"github.com/offchainlabs/nitro/cmd/chaininfo"
-	"github.com/offchainlabs/nitro/gethhook"
-	"github.com/offchainlabs/nitro/precompiles"
+	"github.com/tenderly/net-nitro/arbos/arbosState"
+	"github.com/tenderly/net-nitro/arbos/arbostypes"
+	"github.com/tenderly/net-nitro/arbos/burn"
+	"github.com/tenderly/net-nitro/cmd/chaininfo"
+	"github.com/tenderly/net-nitro/gethhook"
+	"github.com/tenderly/net-nitro/precompiles"
 )
 
 const fuzzGas uint64 = 1200000

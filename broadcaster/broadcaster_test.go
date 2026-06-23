@@ -9,11 +9,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/arbos/arbostypes"
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/broadcaster/message"
-	"github.com/offchainlabs/nitro/util/testhelpers"
-	"github.com/offchainlabs/nitro/wsbroadcastserver"
+	"github.com/tenderly/net-nitro/arbos/arbostypes"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/broadcaster/message"
+	"github.com/tenderly/net-nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/wsbroadcastserver"
 )
 
 type predicate interface {

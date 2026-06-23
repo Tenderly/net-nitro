@@ -8,16 +8,16 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/daprovider/daclient"
-	"github.com/offchainlabs/nitro/daprovider/data_streaming"
-	"github.com/offchainlabs/nitro/daprovider/referenceda"
-	"github.com/offchainlabs/nitro/util/signature"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/daprovider/daclient"
+	"github.com/tenderly/net-nitro/daprovider/data_streaming"
+	"github.com/tenderly/net-nitro/daprovider/referenceda"
+	"github.com/tenderly/net-nitro/util/signature"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func TestInteractionBetweenClientAndProviderServer_SimpleStoreSucceeds(t *testing.T) {

@@ -3,7 +3,7 @@
 
 package sol
 
-import "github.com/offchainlabs/nitro/bold/protocol"
+import "github.com/tenderly/net-nitro/bold/protocol"
 
 func (a *AssertionChain) SetBackend(b protocol.ChainBackend) {
 	a.backend = b

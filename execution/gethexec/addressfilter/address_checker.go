@@ -7,10 +7,10 @@ import (
 	"context"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/arbitrum/filter"
-	"github.com/ethereum/go-ethereum/core/state"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/filter"
+	"github.com/tenderly/net-nitro/go-ethereum/core/state"
 
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 // HashedAddressChecker is a global, shared address checker that filters

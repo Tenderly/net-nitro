@@ -9,13 +9,13 @@ import (
 	"github.com/holiman/uint256"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 
-	"github.com/offchainlabs/nitro/arbos/arbosState"
-	"github.com/offchainlabs/nitro/arbos/programs"
-	"github.com/offchainlabs/nitro/cmd/chaininfo"
+	"github.com/tenderly/net-nitro/arbos/arbosState"
+	"github.com/tenderly/net-nitro/arbos/programs"
+	"github.com/tenderly/net-nitro/cmd/chaininfo"
 )
 
 // These tests cover the reject branch of the depth gate in

@@ -6,11 +6,11 @@ package anytrust
 import (
 	"encoding/binary"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/daprovider/anytrust/tree"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/daprovider/anytrust/tree"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 // uniquifyingPrefix keeps "DAS" for protocol compatibility - changing this would break signature verification

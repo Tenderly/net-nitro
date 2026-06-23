@@ -13,10 +13,10 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/daprovider/anytrust/tree"
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
+	"github.com/tenderly/net-nitro/daprovider/anytrust/tree"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
 )
 
 // RestfulClient implements anytrustutil.Reader

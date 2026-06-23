@@ -7,12 +7,12 @@ import (
 	"context"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/testing"
-	"github.com/offchainlabs/nitro/bold/testing/setup"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/testing"
+	"github.com/tenderly/net-nitro/bold/testing/setup"
 )
 
 var _ Backend = &LocalSimulatedBackend{}

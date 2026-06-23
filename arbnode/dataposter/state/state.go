@@ -7,7 +7,7 @@ import (
 	"math/big"
 	"sync"
 
-	"github.com/offchainlabs/nitro/arbnode/dataposter/storage"
+	"github.com/tenderly/net-nitro/arbnode/dataposter/storage"
 )
 
 // lint:require-exhaustive-initialization

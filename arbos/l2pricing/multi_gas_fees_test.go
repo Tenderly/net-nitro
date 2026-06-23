@@ -9,10 +9,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
 
-	"github.com/offchainlabs/nitro/arbos/burn"
-	"github.com/offchainlabs/nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/arbos/burn"
+	"github.com/tenderly/net-nitro/arbos/storage"
 )
 
 func TestMultiGasFeesCommitNextToCurrent(t *testing.T) {

@@ -6,11 +6,11 @@ package stateprovider
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/state"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/state"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 // Collects a list of machine hashes at a message number based on some configuration parameters.

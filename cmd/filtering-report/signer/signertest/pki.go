@@ -17,7 +17,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer"
 )
 
 const DefaultTestSAN = "https://test-webhook-signer.internal"

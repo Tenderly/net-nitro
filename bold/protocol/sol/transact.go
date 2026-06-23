@@ -11,14 +11,14 @@ import (
 	"github.com/ccoveille/go-safecast"
 	"github.com/pkg/errors"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
-	"github.com/offchainlabs/nitro/bold/containers"
-	"github.com/offchainlabs/nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/containers"
+	"github.com/tenderly/net-nitro/bold/protocol"
 )
 
 const FUSAKA_MAX_GAS = 1 << 24 // Fusaka hard fork adds a max cap for transactions of 2**24 gas.

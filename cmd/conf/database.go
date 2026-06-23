@@ -13,10 +13,10 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/ethdb/pebble"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb"
+	"github.com/tenderly/net-nitro/go-ethereum/ethdb/pebble"
 
-	"github.com/offchainlabs/nitro/util"
+	"github.com/tenderly/net-nitro/util"
 )
 
 type PersistentConfig struct {

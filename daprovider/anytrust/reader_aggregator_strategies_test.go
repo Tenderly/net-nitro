@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
 )
 
 type dummyReader struct {

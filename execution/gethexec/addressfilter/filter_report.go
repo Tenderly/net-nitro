@@ -6,9 +6,9 @@ package addressfilter
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/arbitrum/filter"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/filter"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
 )
 
 // lint:require-exhaustive-initialization

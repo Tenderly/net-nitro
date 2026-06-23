@@ -1,0 +1,59 @@
+[package]
+name = "stylus-tools"
+keywords = ["arbitrum", "ethereum", "stylus", "alloy"]
+description = "Tools to compile, deploy and verify Arbitrum Stylus contracts"
+readme = "../README.md"
+
+authors.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+version.workspace = true
+
+include = [
+    "src/**/*",
+    "precompiles/*.sol",
+    "templates/**",
+]
+
+[dependencies]
+alloy = { workspace = true, features = ["contract", "getrandom", "rpc-types", "signer-local", "sol-types"] }
+cargo-util-schemas.workspace = true
+clap.workspace = true
+eyre.workspace = true
+hex.workspace = true
+log.workspace = true
+regex.workspace = true
+reqwest.workspace = true
+testcontainers = { workspace = true, optional = true }
+tokio.workspace = true
+trybuild.workspace = true
+cfg-if.workspace = true
+typed-builder = "0.23.0"
+
+anyhow = "1"
+brotli2 = "0.3.2"
+bytesize = "1.2.0"
+cargo_metadata = "0.20"
+escargot = "0.5"
+glob = "0.3"
+rust-toolchain-file = "0.1"
+rustc-host = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sneks = "0.1"
+sys-info = "0.9.1"
+tempfile = "3.8"
+thiserror = "2.0"
+tiny-keccak = { version = "2.0", features = ["keccak"] }
+toml = "0.8"
+toml_edit = "0.22.26"
+wasm-encoder = "0.213.0"
+wasm-gen = "0.1.4"
+wasmer = "3.1.0"
+wasmparser = "0.213.0"
+wasmprinter = "0.221.2"
+wat = "1.230"
+
+[features]
+integration-tests = ["dep:testcontainers"]

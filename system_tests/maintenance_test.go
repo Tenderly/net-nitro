@@ -14,10 +14,10 @@ import (
 
 	"github.com/redis/go-redis/v9"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/util/redisutil"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/util/redisutil"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func checkMaintenanceRun(t *testing.T, builder *NodeBuilder, ctx context.Context, logHandler *testhelpers.LogHandler) {

@@ -8,16 +8,16 @@ import (
 	"crypto/sha256"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/ethclient"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/solgen/go/localgen"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/solgen/go/localgen"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 // Reader implements the daprovider.Reader interface for ReferenceDA

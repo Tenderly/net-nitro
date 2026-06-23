@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 func testAnyTrustStoreRetrieveMultipleInstances(t *testing.T, storageType string) {

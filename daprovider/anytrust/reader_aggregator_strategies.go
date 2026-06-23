@@ -11,7 +11,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
 )
 
 var ErrNoReadersResponded = errors.New("no AnyTrust readers responded successfully")

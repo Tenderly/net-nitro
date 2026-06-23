@@ -11,19 +11,19 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/api/db"
-	"github.com/offchainlabs/nitro/bold/challenge/chain"
-	"github.com/offchainlabs/nitro/bold/challenge/tracker"
-	"github.com/offchainlabs/nitro/bold/challenge/types"
-	"github.com/offchainlabs/nitro/bold/clock"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/state"
-	"github.com/offchainlabs/nitro/bold/testing/mocks"
-	"github.com/offchainlabs/nitro/bold/testing/setup"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/api/db"
+	"github.com/tenderly/net-nitro/bold/challenge/chain"
+	"github.com/tenderly/net-nitro/bold/challenge/tracker"
+	"github.com/tenderly/net-nitro/bold/challenge/types"
+	"github.com/tenderly/net-nitro/bold/clock"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/state"
+	"github.com/tenderly/net-nitro/bold/testing/mocks"
+	"github.com/tenderly/net-nitro/bold/testing/setup"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 var _ = types.RivalHandler(&Manager{})

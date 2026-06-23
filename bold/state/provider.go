@@ -11,12 +11,12 @@ import (
 	"errors"
 	"math/big"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/api/db"
-	"github.com/offchainlabs/nitro/bold/commitment/history"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/api/db"
+	"github.com/tenderly/net-nitro/bold/commitment/history"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 var ErrChainCatchingUp = errors.New("chain is catching up to the execution state")

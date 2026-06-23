@@ -6,11 +6,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 
-	"github.com/offchainlabs/nitro/arbnode"
-	"github.com/offchainlabs/nitro/execution/gethexec"
+	"github.com/tenderly/net-nitro/arbnode"
+	"github.com/tenderly/net-nitro/execution/gethexec"
 )
 
 func InitAndStartExecutionAndConsensusNodes(ctx context.Context, stack *node.Node, execNode *gethexec.ExecutionNode, consensusNode *arbnode.Node) (func(), error) {

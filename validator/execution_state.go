@@ -7,11 +7,11 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/solgen/go/challenge_legacy_gen"
-	"github.com/offchainlabs/nitro/solgen/go/rollup_legacy_gen"
+	"github.com/tenderly/net-nitro/solgen/go/challenge_legacy_gen"
+	"github.com/tenderly/net-nitro/solgen/go/rollup_legacy_gen"
 )
 
 type GoGlobalState struct {

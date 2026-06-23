@@ -4,15 +4,15 @@
 package precompiles
 
 import (
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/core/vm"
-	gethparams "github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/tracing"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
+	gethparams "github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/arbos/programs"
-	"github.com/offchainlabs/nitro/arbos/util"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/arbos/programs"
+	"github.com/tenderly/net-nitro/arbos/util"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 type ArbWasm struct {

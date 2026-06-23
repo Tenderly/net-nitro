@@ -7,13 +7,13 @@ import (
 	"context"
 	"errors"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
 
-	"github.com/offchainlabs/nitro/daprovider"
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
-	"github.com/offchainlabs/nitro/util/headerreader"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/daprovider"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
+	"github.com/tenderly/net-nitro/util/headerreader"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 // lint:require-exhaustive-initialization

@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
 )
 
 // These classes are wrappers implementing StorageService.

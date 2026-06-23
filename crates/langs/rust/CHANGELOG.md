@@ -1,0 +1,230 @@
+# Changelog
+
+These crates follow [semver](https://semver.org).
+
+## [0.10.4](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.10.4) - 2026-04-09
+
+### Fixed
+
+- Fix `cargo stylus new` panic when installed from crates.io registry [#421](https://github.com/OffchainLabs/stylus-sdk-rs/pull/421)
+
+## [0.10.3](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.10.3) - 2026-04-01
+
+### New
+
+- Detect ABI selector collisions at compile time within `#[public]` blocks [#401](https://github.com/OffchainLabs/stylus-sdk-rs/pull/401)
+
+### Fixed
+
+- Fix `sol_interface!` ABI decode panic on multi-value return types containing dynamic types (e.g. `returns (string, uint256)`) [#414](https://github.com/OffchainLabs/stylus-sdk-rs/pull/414)
+- Fix `cargo stylus new` leaving projects in a broken state when dependency resolution fails [#416](https://github.com/OffchainLabs/stylus-sdk-rs/pull/416)
+- Fix codehash-keepalive command sending read-only call instead of transaction [#411](https://github.com/OffchainLabs/stylus-sdk-rs/pull/411)
+
+### Changed
+
+- Update Rust toolchain to 1.91.0 and alloy dependencies to latest (alloy-primitives/alloy-sol-types 1.5.7, alloy 1.7.3) [#410](https://github.com/OffchainLabs/stylus-sdk-rs/pull/410)
+- Update MSRV to 1.91.0 [#410](https://github.com/OffchainLabs/stylus-sdk-rs/pull/410)
+- Remove exact version pins on `ruint`, `branches`, and `rclite`; disable `ruint` default features to prevent `std` leaking into WASM builds [#413](https://github.com/OffchainLabs/stylus-sdk-rs/pull/413)
+- Switch ABI decoding to validating variants that reject malformed data [#415](https://github.com/OffchainLabs/stylus-sdk-rs/pull/415)
+- Adopt stricter `rustfmt` configuration [#417](https://github.com/OffchainLabs/stylus-sdk-rs/pull/417)
+- Extensive integration test improvements for examples [#365](https://github.com/OffchainLabs/stylus-sdk-rs/pull/365)
+- Improve smoke test for `cargo stylus new` with scaffolding verification [#416](https://github.com/OffchainLabs/stylus-sdk-rs/pull/416)
+
+## [0.10.2](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.10.2) - 2026-03-09
+
+### Fixed
+
+- Pin `keccak` dependency to `>=0.1.6` to avoid resolving to broken `0.1.5` [#397](https://github.com/OffchainLabs/stylus-sdk-rs/pull/397)
+- Fix subcrate READMEs to point to repo root instead of broken symlinks [#398](https://github.com/OffchainLabs/stylus-sdk-rs/pull/398)
+- Fix docs compilation error [#394](https://github.com/OffchainLabs/stylus-sdk-rs/pull/394)
+- Fix 404 links and editorial nits [#376](https://github.com/OffchainLabs/stylus-sdk-rs/pull/376)
+
+## [0.10.1](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.10.1) - 2026-03-09
+
+### New
+
+- Support for deploying large contracts via fragmented deployment, including constructor support for fragments [#383](https://github.com/OffchainLabs/stylus-sdk-rs/pull/383)
+- Add `--wasm-file` flag to deployment CLI for deploying pre-built WASM files [#389](https://github.com/OffchainLabs/stylus-sdk-rs/pull/389)
+
+### Changed
+
+- Add AssemblyScript SDK to README [#386](https://github.com/OffchainLabs/stylus-sdk-rs/pull/386)
+
+## [0.10.0](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.10.0)
+
+### New
+
+- Introduction of a new library for building and deploying stylus contracts: `stylus-tools`
+- Support for cargo workspaces. Cargo-stylus now supports building and deploying contracts within a cargo workspace. Contracts are marked with a `Stylus.toml` file. Future configuration will be added to this file to facilitate per-contract and workspace-wide configuration options for contracts.
+- Addition of a new `contract-client-gen` feature flag which allows contracts within a crate to be used as a "library" to be called by other contracts.
+- Support for nested structs in return types
+- More convenient integer functions for storage
+- Support for custom storage slots
+- Support for tuples in return types
+- cargo stylus codehash-keepalive command
+
+### Changed
+
+- Update calls / deploys / logs to use noew hostio model
+- Additional integration tests
+- Upgrade alloy version
+- More example contracts from Stylus By Example
+- Use alloy::Bytes type instead of our own
+- Improvements to CI
+- Move `cargo-stylus` into the `OffchainLabs/stylus-sdk-rs` repo to simplify development and release of new cargo-stylus versions
+- Updates to `cargo stylus new` for creating workspaces and individual contracts (`--workspace` and `--contract` flags respectively)
+- Allow pure functions in trait-based inheritance model
+- Traits used for contract routing inheritance must now use the `#[public]` macro
+- Mini-alloc has been moved to its own crate since it has been stable for some time
+
+### Fixed
+
+- Fix panic when using `alloy_primitives::utils::keccak256()`
+- Proper encoding of tuples containing dynamic length types
+- Add missing definitions in `export-abi` output
+- Support for associated types in `export-abi`
+- Disallow shadowing of constructor function selector
+- Better sanitization of names in `export-abi` output
+- Disallow `AbiType` definitions which shadow solidity reserved type names
+- Fix panic when using `console!` macro in testing environment
+- Allow parameterized traits with associated types
+- Increase size of `ConstString` used to define potentially long `AbiTypes
+- Support for solidity mapping types in `sol_storage!` macro
+
+### Removed
+
+- Removal of deprecateed code from previous versions
+- Old inheritance model no longer supproted
+
+## [0.9.2](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.9.2) - 2025-09-23
+
+### Fixed
+
+- Fix segfault when testing with the keccak function in alloy.
+
+## [0.9.0](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.9.0) - 2025-05-20
+
+### Changed
+
+- Fix formatting by @amsanghi in #222
+- Add Stylus constructors by @gligneul in #184
+- first pass implementation of trait based inheritance by @rory-ocl in #223
+- Fix Cargo Stylus Replay by @gligneul in #225
+- Update CHANGELOG.md (main) by @gligneul in #228
+- Remove mark_used function to reduce binary size by @gligneul in #235
+- Port 0.8.3 changes to main by @gligneul in #231
+- add StorageU96 int alias by @0xNeshi in #234
+- Remove the HostIO-caching feature by @gligneul in #237
+- Add a README to Stylus Test by @rauljordan in #239
+- Be more strict with special function names by @gligneul in #242
+- Resolve Audit Feedback Related to TestVM and Fallbacks by @rauljordan in #241
+
+## [0.8.3](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.8.3) - 2025-03-18
+
+### Fixed
+
+- Fix stylus SDK dependencies in wasm32
+- Do not require contract crate to define stylus-test feature
+
+## [0.8.2](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.8.2) - 2025-03-11
+
+### Fixed
+
+- Fix cargo stylus replay [#226](https://github.com/OffchainLabs/stylus-sdk-rs/pull/226)
+
+## [0.8.1](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.8.1) - 2025-02-21
+
+### Fixed
+
+- Add Reentrant Feature to Stylus Test When Enabled in SDK [#221](https://github.com/OffchainLabs/stylus-sdk-rs/pull/221)
+
+## [0.8.0](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.8.0) - 2025-02-12
+
+### Added
+
+- Define a Host Trait for the Stylus SDK [#199](https://github.com/OffchainLabs/stylus-sdk-rs/pull/199)
+- Define Initial WasmHost Implementation for Wasm Targets [#200](https://github.com/OffchainLabs/stylus-sdk-rs/pull/200)
+- Use a Boxed, Dyn Host Trait for Contract Initialization [#203](https://github.com/OffchainLabs/stylus-sdk-rs/pull/203)
+- Define Testing VM to Implement the Mock Trait [#204](https://github.com/OffchainLabs/stylus-sdk-rs/pull/204)
+- Rename Stylus-Host to Stylus-Core and Make Calls Part of the VM [#206](https://github.com/OffchainLabs/stylus-sdk-rs/pull/206)
+- Make Deployment Logic Part of the Host Trait [#207](https://github.com/OffchainLabs/stylus-sdk-rs/pull/207)
+- Add unit tests to storage bytes [#213](https://github.com/OffchainLabs/stylus-sdk-rs/pull/213)
+- Add Missing Methods to Host Trait [#210](https://github.com/OffchainLabs/stylus-sdk-rs/pull/210)
+- Reduce Wasm Code Size Impact of Host Trait [#216](https://github.com/OffchainLabs/stylus-sdk-rs/pull/216)
+- Add a Powerful Test VM [#212](https://github.com/OffchainLabs/stylus-sdk-rs/pull/212)
+
+### Changed
+
+- Deprecate Old Hostios and Improve TestVM Ergonomics [#209](https://github.com/OffchainLabs/stylus-sdk-rs/pull/209)
+- Minimize calls to storage for bytes/string [#217](https://github.com/OffchainLabs/stylus-sdk-rs/pull/217)
+- Make CI fail for clippy warnings [#220](https://github.com/OffchainLabs/stylus-sdk-rs/pull/220)
+- v0.8.0 Release Candidate [#218](https://github.com/OffchainLabs/stylus-sdk-rs/pull/218)
+
+### Fixed
+
+- Fix storage bytes set-len when shrinking [#211](https://github.com/OffchainLabs/stylus-sdk-rs/pull/211)
+- Fix examples and doctest [#219](https://github.com/OffchainLabs/stylus-sdk-rs/pull/219)
+
+## [0.7.0](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.7.0) - 2025-02-03
+
+### Added
+
+- `impl From<alloy_primitives::Bytes> for stylus_sdk::Bytes`
+- Support for integer types from `alloy_primitives`
+- Fallback/receive functionality for routers created using `#[public]`
+
+### Changed
+
+- Upgrade alloy dependency to `0.8.14`
+- Allow struct references within `sol_interface!` macro
+- `pub` structs in `sol_interface!` macro
+- Refactor of proc macros for better maintainability and testability
+
+
+## [0.6.0](https://github.com/OffchainLabs/stylus-sdk-rs/releases/tag/v0.6.0) - 2024-08-30
+
+### Breaking Changes
+
+- `#[selector(id = ...)]` syntax has been removed to avoid misleading contracts
+  from being implemented.
+- Several methods in `RawDeploy` which were not fully implemented yet
+- `#[pure]`, `#[view]` and `#[write]` attributes have been removed in favor of
+  using arguments to infer state mutability.
+- `stylus-sdk` now ships with `mini-alloc` enabled by default. This means that
+  a `#[global_allocator]` should not be declared in most cases. If a custom
+  allocator is still needed the `mini-alloc` should be disabled (enabled by
+  default).
+- `StorageU1` and `StorageI1` types have been removed.
+
+### Deprecated
+
+- The `#[external]` macro is now deprecated in favor of `#[public]` which
+  provides the same funcitonality.
+- The `#[solidity_storage]` macro is now deprecated in favor of `#[storage]`
+  which provides the same functionality.
+
+### Changed
+
+- Ensure consistency between proc macros when parsing attributes.
+- Update `sol_interface!` macro to report errors when using Solidity features
+  which have not yet been implemented.
+
+### Fixed
+
+- Properly encode bytes when calling external contracts.
+- Properly encode BYtes and strings in return types.
+- Bytes type now works properly in `export-abi`.
+- `export-abi` now works for contracts with no functions with returned values.
+- Off-by-one error when storing strings with length 32.
+- Interfaces in `sol_interface!` no longer incorrectly inherit functions from
+  previous definitions.
+
+### Documentation
+
+- Various documentation updates for clarity.
+- Cleaned up typos and moved TODOs to the github issue tracker.
+
+### Security
+
+- Function signatures which generate the same selector values will now fail
+  at compile-time to avoid misleading contract calls.

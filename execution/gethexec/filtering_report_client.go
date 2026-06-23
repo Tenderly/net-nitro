@@ -6,12 +6,12 @@ package gethexec
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/execution/gethexec/addressfilter"
-	"github.com/offchainlabs/nitro/util/containers"
-	"github.com/offchainlabs/nitro/util/rpcclient"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/execution/gethexec/addressfilter"
+	"github.com/tenderly/net-nitro/util/containers"
+	"github.com/tenderly/net-nitro/util/rpcclient"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 const FilteringReportNamespace = "filteringreport"

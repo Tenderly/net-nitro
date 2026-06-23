@@ -14,15 +14,15 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/blsSignatures"
-	"github.com/offchainlabs/nitro/daprovider/anytrust/tree"
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
-	"github.com/offchainlabs/nitro/daprovider/data_streaming"
-	"github.com/offchainlabs/nitro/util/pretty"
-	"github.com/offchainlabs/nitro/util/rpcclient"
+	"github.com/tenderly/net-nitro/blsSignatures"
+	"github.com/tenderly/net-nitro/daprovider/anytrust/tree"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
+	"github.com/tenderly/net-nitro/daprovider/data_streaming"
+	"github.com/tenderly/net-nitro/util/pretty"
+	"github.com/tenderly/net-nitro/util/rpcclient"
 )
 
 // Metric path keeps "das" for backward compatibility with existing dashboards

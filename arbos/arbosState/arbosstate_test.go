@@ -7,12 +7,12 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/arbos/burn"
-	"github.com/offchainlabs/nitro/arbos/storage"
-	"github.com/offchainlabs/nitro/arbos/util"
-	"github.com/offchainlabs/nitro/util/colors"
+	"github.com/tenderly/net-nitro/arbos/burn"
+	"github.com/tenderly/net-nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/arbos/util"
+	"github.com/tenderly/net-nitro/util/colors"
 )
 
 func TestStorageOpenFromEmpty(t *testing.T) {

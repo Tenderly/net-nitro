@@ -1,0 +1,56 @@
+package filter
+
+import (
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+)
+
+type FilterReasonType string
+
+const (
+	ReasonFrom                          FilterReasonType = "from"
+	ReasonTo                            FilterReasonType = "to"
+	ReasonDealiasedFrom                 FilterReasonType = "dealiased_from"
+	ReasonRetryableBeneficiary          FilterReasonType = "retryable_beneficiary"
+	ReasonRetryableFeeRefund            FilterReasonType = "retryable_fee_refund"
+	ReasonRetryableTo                   FilterReasonType = "retryable_to"
+	ReasonDealiasedRetryableBeneficiary FilterReasonType = "dealiased_retryable_beneficiary"
+	ReasonDealiasedRetryableFeeRefund   FilterReasonType = "dealiased_retryable_fee_refund"
+	ReasonEventRule                     FilterReasonType = "event_rule"
+	ReasonCallTarget                    FilterReasonType = "call_target"
+	ReasonCreate                        FilterReasonType = "create"
+	ReasonSelfdestructBeneficiary       FilterReasonType = "selfdestruct_beneficiary"
+	ReasonToL1                          FilterReasonType = "to_l1"
+)
+
+// lint:require-exhaustive-initialization
+type RawLog struct {
+	Address common.Address `json:"address"`
+	Topics  []common.Hash  `json:"topics"`
+	Data    hexutil.Bytes  `json:"data"`
+}
+
+// lint:require-exhaustive-initialization
+type EventRuleMatch struct {
+	MatchedEvent      string  `json:"matchedEvent"`
+	MatchedTopicIndex int     `json:"matchedTopicIndex,omitempty"`
+	RawLog            *RawLog `json:"rawLog,omitempty"`
+}
+
+// lint:require-exhaustive-initialization
+type FilterReason struct {
+	Reason FilterReasonType `json:"reason"`
+	*EventRuleMatch
+}
+
+// lint:require-exhaustive-initialization
+type FilteredAddressWithReason struct {
+	Address common.Address `json:"address"`
+	FilterReason
+}
+
+// lint:require-exhaustive-initialization
+type FilteredAddressRecord struct {
+	FilterSetID string `json:"filterSetId"`
+	FilteredAddressWithReason
+}

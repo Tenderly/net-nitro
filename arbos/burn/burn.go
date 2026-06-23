@@ -6,10 +6,10 @@ package burn
 import (
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/arbos/util"
+	"github.com/tenderly/net-nitro/arbos/util"
 )
 
 type Burner interface {

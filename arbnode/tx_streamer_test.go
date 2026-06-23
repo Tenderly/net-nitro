@@ -8,11 +8,11 @@ import (
 	"encoding/binary"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/rlp"
 
-	"github.com/offchainlabs/nitro/arbnode/db/schema"
-	"github.com/offchainlabs/nitro/arbutil"
+	"github.com/tenderly/net-nitro/arbnode/db/schema"
+	"github.com/tenderly/net-nitro/arbutil"
 )
 
 func TestTimeboostBackfillingsTrackersForMissingBlockMetadata(t *testing.T) {

@@ -13,16 +13,16 @@ import (
 
 	"github.com/ccoveille/go-safecast"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/bold/api"
-	"github.com/offchainlabs/nitro/bold/api/db"
-	"github.com/offchainlabs/nitro/bold/commitment/history"
-	"github.com/offchainlabs/nitro/bold/commitment/proof/prefix"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/api"
+	"github.com/tenderly/net-nitro/bold/api/db"
+	"github.com/tenderly/net-nitro/bold/commitment/history"
+	"github.com/tenderly/net-nitro/bold/commitment/proof/prefix"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 // MachineHashCollector defines an interface which collects hashes of the state
@@ -331,7 +331,7 @@ func (p *HistoryCommitmentProvider) historyCommitmentImpl(
 		// TODO: Replace NewUniformSample(100) with
 		// NewBoundedHistogramSample(), once offchainlabs geth is merged in
 		// bold.
-		// Eg https://github.com/offchainlabs/nitro/blob/ab6790a9e33884c3b4e81de2a97dae5bf904266e/das/restful_server.go#L30
+		// Eg https://github.com/tenderly/net-nitro/blob/ab6790a9e33884c3b4e81de2a97dae5bf904266e/das/restful_server.go#L30
 		sizeInt, err := safecast.ToInt(stepSize)
 		if err != nil {
 			return

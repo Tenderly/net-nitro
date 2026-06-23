@@ -15,14 +15,14 @@ import (
 	sqstypes "github.com/aws/aws-sdk-go-v2/service/sqs/types"
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer"
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/util/httperror"
-	"github.com/offchainlabs/nitro/util/sqsclient"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/util/httperror"
+	"github.com/tenderly/net-nitro/util/sqsclient"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 var (

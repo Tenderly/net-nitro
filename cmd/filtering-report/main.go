@@ -13,13 +13,13 @@ import (
 	"github.com/knadh/koanf/parsers/json"
 	"github.com/spf13/pflag"
 
-	"github.com/offchainlabs/nitro/cmd/conf"
-	"github.com/offchainlabs/nitro/cmd/filtering-report/api"
-	"github.com/offchainlabs/nitro/cmd/filtering-report/forwarder"
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/cmd/util"
-	"github.com/offchainlabs/nitro/cmd/util/confighelpers"
-	"github.com/offchainlabs/nitro/util/sqsclient"
+	"github.com/tenderly/net-nitro/cmd/conf"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/api"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/forwarder"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/cmd/util"
+	"github.com/tenderly/net-nitro/cmd/util/confighelpers"
+	"github.com/tenderly/net-nitro/util/sqsclient"
 )
 
 type FilteringReportConfig struct {

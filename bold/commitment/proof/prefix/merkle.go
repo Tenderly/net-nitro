@@ -6,7 +6,7 @@ package prefix
 import (
 	"math/bits"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 )
 
 type MerkleExpansion []common.Hash

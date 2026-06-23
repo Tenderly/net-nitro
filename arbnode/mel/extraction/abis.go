@@ -3,10 +3,10 @@
 package melextraction
 
 import (
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/solgen/go/bridgegen"
+	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
 )
 
 var BatchDeliveredID common.Hash

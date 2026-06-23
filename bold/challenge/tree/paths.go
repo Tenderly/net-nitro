@@ -12,9 +12,9 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/offchainlabs/nitro/bold/containers"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	util_containers "github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/containers"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	util_containers "github.com/tenderly/net-nitro/util/containers"
 )
 
 type ComputePathWeightArgs struct {

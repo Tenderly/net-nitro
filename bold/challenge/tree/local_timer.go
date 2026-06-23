@@ -8,9 +8,9 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/offchainlabs/nitro/bold/containers/threadsafe"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/containers/threadsafe"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 // Gets the local timer of an edge at a block number, T. If T is earlier than the edge's creation,

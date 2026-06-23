@@ -6,7 +6,7 @@ package daprovider
 import (
 	"errors"
 
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 // ErrFallbackRequested is returned by a DA provider to explicitly signal that

@@ -7,10 +7,10 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/ethereum/go-ethereum/common/math"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/common/math"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 
-	"github.com/offchainlabs/nitro/arbcompress"
+	"github.com/tenderly/net-nitro/arbcompress"
 )
 
 func main() {

@@ -2,7 +2,7 @@
 // For license information, see https://github.com/OffchainLabs/nitro/blob/master/LICENSE.md
 package melrunner
 
-import "github.com/ethereum/go-ethereum/metrics"
+import "github.com/tenderly/net-nitro/go-ethereum/metrics"
 
 var (
 	// FSM health.

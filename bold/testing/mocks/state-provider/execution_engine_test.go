@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/protocol"
 )
 
 func TestExecutionEngine(t *testing.T) {

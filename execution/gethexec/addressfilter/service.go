@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/util/s3syncer"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/util/s3syncer"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 // Service manages the address-filteress synchronization pipeline.

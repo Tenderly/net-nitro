@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer"
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer/signertest"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer/signertest"
 )
 
 const testReloadInterval = time.Minute

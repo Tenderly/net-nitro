@@ -9,10 +9,10 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/util/s3client"
-	"github.com/offchainlabs/nitro/util/s3syncer/s3syncertest"
+	"github.com/tenderly/net-nitro/util/s3client"
+	"github.com/tenderly/net-nitro/util/s3syncer/s3syncertest"
 )
 
 func TestSyncer_FailedETagTracking(t *testing.T) {

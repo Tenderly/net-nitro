@@ -8,9 +8,9 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/staker"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/staker"
 )
 
 const (

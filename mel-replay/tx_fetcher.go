@@ -5,9 +5,9 @@ package melreplay
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/arbnode/mel/extraction"
+	"github.com/tenderly/net-nitro/arbnode/mel/extraction"
 )
 
 type txFetcherForBlock struct {

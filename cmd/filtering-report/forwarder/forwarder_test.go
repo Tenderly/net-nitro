@@ -15,15 +15,15 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
 
-	"github.com/offchainlabs/nitro/cmd/filtering-report/api"
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer"
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer/signertest"
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/execution/gethexec/addressfilter"
-	"github.com/offchainlabs/nitro/util/sqsclient"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/api"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer/signertest"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/execution/gethexec/addressfilter"
+	"github.com/tenderly/net-nitro/util/sqsclient"
 )
 
 func TestForwarder_ForwardsMessages(t *testing.T) {

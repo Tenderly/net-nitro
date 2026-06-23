@@ -6,7 +6,7 @@ package threadsafe
 import (
 	"sync"
 
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 )
 
 type Map[K comparable, V any] struct {

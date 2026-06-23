@@ -11,16 +11,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 
-	"github.com/offchainlabs/nitro/arbnode"
-	"github.com/offchainlabs/nitro/arbos/arbosState"
-	"github.com/offchainlabs/nitro/execution/gethexec"
-	"github.com/offchainlabs/nitro/solgen/go/localgen"
-	"github.com/offchainlabs/nitro/solgen/go/precompilesgen"
+	"github.com/tenderly/net-nitro/arbnode"
+	"github.com/tenderly/net-nitro/arbos/arbosState"
+	"github.com/tenderly/net-nitro/execution/gethexec"
+	"github.com/tenderly/net-nitro/solgen/go/localgen"
+	"github.com/tenderly/net-nitro/solgen/go/precompilesgen"
 )
 
 func TestScheduleArbosUpgrade(t *testing.T) {

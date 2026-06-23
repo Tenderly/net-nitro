@@ -4,10 +4,10 @@
 package env
 
 import (
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	testflag "github.com/offchainlabs/nitro/util/testhelpers/flag"
+	testflag "github.com/tenderly/net-nitro/util/testhelpers/flag"
 )
 
 const MemoryDB = "in-memory"

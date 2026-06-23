@@ -9,10 +9,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/execution/gethexec/addressfilter"
+	"github.com/tenderly/net-nitro/execution/gethexec/addressfilter"
 )
 
 var (

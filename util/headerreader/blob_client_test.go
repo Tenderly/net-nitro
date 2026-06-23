@@ -13,12 +13,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/hexutil"
-	"github.com/ethereum/go-ethereum/crypto/kzg4844"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common/hexutil"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto/kzg4844"
 
-	"github.com/offchainlabs/nitro/util/blobs"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/util/blobs"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 // createTestBlobs creates test blobs and their versioned hashes

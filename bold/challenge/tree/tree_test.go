@@ -13,14 +13,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/challenge/tree/mock"
-	"github.com/offchainlabs/nitro/bold/containers/threadsafe"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/state"
-	"github.com/offchainlabs/nitro/bold/testing/mocks"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/challenge/tree/mock"
+	"github.com/tenderly/net-nitro/bold/containers/threadsafe"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/state"
+	"github.com/tenderly/net-nitro/bold/testing/mocks"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 func simpleAssertionMetadata() *state.AssociatedAssertionMetadata {

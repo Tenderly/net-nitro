@@ -18,11 +18,11 @@ import (
 	"github.com/johannesboyne/gofakes3"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/util/s3client"
-	"github.com/offchainlabs/nitro/util/s3syncer"
-	"github.com/offchainlabs/nitro/util/s3syncer/s3syncertest"
+	"github.com/tenderly/net-nitro/util/s3client"
+	"github.com/tenderly/net-nitro/util/s3syncer"
+	"github.com/tenderly/net-nitro/util/s3syncer/s3syncertest"
 )
 
 func TestHashStore_IsRestricted(t *testing.T) {

@@ -23,15 +23,15 @@ import (
 	"github.com/gobwas/ws/wsflate"
 	"github.com/spf13/pflag"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/broadcaster/message"
-	"github.com/offchainlabs/nitro/util/contracts"
-	"github.com/offchainlabs/nitro/util/signature"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
-	"github.com/offchainlabs/nitro/wsbroadcastserver"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/broadcaster/message"
+	"github.com/tenderly/net-nitro/util/contracts"
+	"github.com/tenderly/net-nitro/util/signature"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/wsbroadcastserver"
 )
 
 var (

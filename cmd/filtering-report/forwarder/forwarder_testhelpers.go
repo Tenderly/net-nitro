@@ -12,11 +12,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer"
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer/signertest"
-	"github.com/offchainlabs/nitro/cmd/genericconf"
-	"github.com/offchainlabs/nitro/execution/gethexec/addressfilter"
-	"github.com/offchainlabs/nitro/util/sqsclient"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer/signertest"
+	"github.com/tenderly/net-nitro/cmd/genericconf"
+	"github.com/tenderly/net-nitro/execution/gethexec/addressfilter"
+	"github.com/tenderly/net-nitro/util/sqsclient"
 )
 
 type MockExternalEndpoint struct {

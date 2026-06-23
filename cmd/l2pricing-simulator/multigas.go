@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
 )
 
 func ParseResourceKind(s string) (multigas.ResourceKind, error) {

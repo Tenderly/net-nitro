@@ -7,10 +7,10 @@ import (
 	"maps"
 	"slices"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
 
-	"github.com/offchainlabs/nitro/arbos/storage"
-	"github.com/offchainlabs/nitro/util/arbmath"
+	"github.com/tenderly/net-nitro/arbos/storage"
+	"github.com/tenderly/net-nitro/util/arbmath"
 )
 
 // Fixed flat layout for a Multi-Constraint:

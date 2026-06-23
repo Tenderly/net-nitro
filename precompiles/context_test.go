@@ -7,8 +7,8 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 )
 
 func TestContextBurn(t *testing.T) {

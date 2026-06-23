@@ -14,16 +14,16 @@ import (
 
 	"github.com/ccoveille/go-safecast"
 
-	"github.com/ethereum/go-ethereum/accounts/abi"
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/bold/api/db"
-	"github.com/offchainlabs/nitro/bold/commitment/history"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/state"
-	"github.com/offchainlabs/nitro/bold/testing"
-	"github.com/offchainlabs/nitro/bold/testing/casttest"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/api/db"
+	"github.com/tenderly/net-nitro/bold/commitment/history"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/state"
+	"github.com/tenderly/net-nitro/bold/testing"
+	"github.com/tenderly/net-nitro/bold/testing/casttest"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 // Defines the ABI encoding structure for submission of prefix proofs to the protocol contracts

@@ -10,15 +10,15 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/bold/challenge/types"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/state"
-	challenge_testing "github.com/offchainlabs/nitro/bold/testing"
-	stateprovider "github.com/offchainlabs/nitro/bold/testing/mocks/state-provider"
-	"github.com/offchainlabs/nitro/bold/testing/setup"
+	"github.com/tenderly/net-nitro/bold/challenge/types"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/state"
+	challenge_testing "github.com/tenderly/net-nitro/bold/testing"
+	stateprovider "github.com/tenderly/net-nitro/bold/testing/mocks/state-provider"
+	"github.com/tenderly/net-nitro/bold/testing/setup"
 )
 
 // TestSelfChallengeBugWhenStateProviderReturnsTransientWrongRoot is the

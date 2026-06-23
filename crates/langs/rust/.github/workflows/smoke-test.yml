@@ -1,0 +1,68 @@
+name: Smoke Test
+on:
+  pull_request:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - ci-testing
+jobs:
+  setup-cargo-stylus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Install stable
+        uses: dtolnay/rust-toolchain@1.91.0
+      - name: Get latest cargo-stylus version
+        id: get-version
+        shell: bash
+        run: |
+          version=$(cargo info cargo-stylus | grep 'version:' | awk 'NR==1 {print $2; exit}')
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+      - name: Install cargo-stylus
+        shell: bash
+        run: cargo install --locked --path ./cargo-stylus
+      - name: Archive cargo-stylus binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: cargo-stylus-binary
+          path: ~/.cargo/bin/cargo-stylus
+          retention-days: 1 # Keep artifact for 1 day
+  smoke-test:
+    runs-on: ubuntu-latest
+    name: smoke-test (${{ matrix.toolchain }})
+    needs: setup-cargo-stylus
+    strategy:
+      matrix:
+        toolchain: [1.91.0, nightly-2025-10-01]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Install ${{ matrix.toolchain }}
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ matrix.toolchain }}
+          targets: wasm32-unknown-unknown
+      - name: Download cargo-stylus binary
+        uses: actions/download-artifact@v4
+        with:
+          name: cargo-stylus-binary
+          path: ~/.cargo/bin
+      - name: Make cargo-stylus executable
+        shell: bash
+        run: chmod +x ~/.cargo/bin/cargo-stylus
+      - name: Login to DockerHub
+        if: ${{ secrets.DOCKERHUB_USERNAME != '' && secrets.DOCKERHUB_TOKEN != '' }}
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - uses: OffchainLabs/actions/run-nitro-test-node@main
+        with:
+          nitro-testnode-ref: release
+          no-token-bridge: true
+          # no-simple must be false for now as our nitro testnode branch doesn't have that option
+          no-simple: false
+      - name: Smoke Test Deployment
+        run: ./ci/smoke_test.sh

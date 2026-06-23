@@ -14,10 +14,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
-	"github.com/offchainlabs/nitro/pubsub"
-	"github.com/offchainlabs/nitro/util/redisutil"
+	"github.com/tenderly/net-nitro/pubsub"
+	"github.com/tenderly/net-nitro/util/redisutil"
 )
 
 func TestStaticEndpointManager_CloseAndReconnect(t *testing.T) {

@@ -10,17 +10,17 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/bold/api"
-	"github.com/offchainlabs/nitro/bold/protocol"
-	"github.com/offchainlabs/nitro/bold/protocol/sol"
-	"github.com/offchainlabs/nitro/bold/retry"
-	"github.com/offchainlabs/nitro/bold/state"
-	"github.com/offchainlabs/nitro/solgen/go/rollupgen"
-	"github.com/offchainlabs/nitro/util/containers"
+	"github.com/tenderly/net-nitro/bold/api"
+	"github.com/tenderly/net-nitro/bold/protocol"
+	"github.com/tenderly/net-nitro/bold/protocol/sol"
+	"github.com/tenderly/net-nitro/bold/retry"
+	"github.com/tenderly/net-nitro/bold/state"
+	"github.com/tenderly/net-nitro/solgen/go/rollupgen"
+	"github.com/tenderly/net-nitro/util/containers"
 )
 
 func (m *Manager) syncAssertions(ctx context.Context) {

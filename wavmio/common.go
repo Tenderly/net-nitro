@@ -6,8 +6,8 @@ package wavmio
 import (
 	"encoding/hex"
 
-	"github.com/ethereum/go-ethereum/crypto"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 )
 
 // To generate:

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 )
 
 // TestReproTraceTimeoutEmptyCallstackPanic ensures a trace that times out before its

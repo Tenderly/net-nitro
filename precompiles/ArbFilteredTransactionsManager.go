@@ -4,10 +4,10 @@
 package precompiles
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/vm"
 
-	"github.com/offchainlabs/nitro/arbos/filteredTransactions"
+	"github.com/tenderly/net-nitro/arbos/filteredTransactions"
 )
 
 // ArbFilteredTransactionsManager precompile enables ability to filter transactions by authorized callers.

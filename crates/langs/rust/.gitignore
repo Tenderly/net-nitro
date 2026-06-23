@@ -1,0 +1,5 @@
+target/
+.config/spellcheck.toml
+.config/stylus.dic
+.vim
+.idea/

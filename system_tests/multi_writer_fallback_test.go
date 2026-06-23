@@ -11,17 +11,17 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/ethclient"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/ethclient"
 
-	"github.com/offchainlabs/nitro/arbnode"
-	"github.com/offchainlabs/nitro/arbnode/mel"
-	"github.com/offchainlabs/nitro/cmd/chaininfo"
-	"github.com/offchainlabs/nitro/daprovider"
-	"github.com/offchainlabs/nitro/daprovider/anytrust"
-	"github.com/offchainlabs/nitro/daprovider/referenceda"
-	"github.com/offchainlabs/nitro/util/signature"
+	"github.com/tenderly/net-nitro/arbnode"
+	"github.com/tenderly/net-nitro/arbnode/mel"
+	"github.com/tenderly/net-nitro/cmd/chaininfo"
+	"github.com/tenderly/net-nitro/daprovider"
+	"github.com/tenderly/net-nitro/daprovider/anytrust"
+	"github.com/tenderly/net-nitro/daprovider/referenceda"
+	"github.com/tenderly/net-nitro/util/signature"
 )
 
 // TestMultiWriterFailure_CustomDAShutdownWithAnyTrustAvailable tests that batch posting fails when CustomDA shuts down

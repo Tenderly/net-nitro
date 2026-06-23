@@ -8,11 +8,11 @@ import (
 	"errors"
 	"sync"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/daprovider/anytrust/tree"
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
+	"github.com/tenderly/net-nitro/daprovider/anytrust/tree"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
 )
 
 type MemoryBackedStorageService struct { // intended for testing and debugging

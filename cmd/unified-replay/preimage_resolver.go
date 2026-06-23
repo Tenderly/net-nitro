@@ -7,11 +7,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto/kzg4844"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto/kzg4844"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/melwavmio"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/melwavmio"
 )
 
 type wavmPreimageResolver struct{}

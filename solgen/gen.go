@@ -12,7 +12,7 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/abigen"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/abigen"
 )
 
 type HardHatArtifact struct {

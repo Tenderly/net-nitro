@@ -64,7 +64,7 @@ formatters:
       sections:
         - standard
         - default
-        - prefix(github.com/ethereum/go-ethereum)
+        - prefix(github.com/tenderly/net-nitro/go-ethereum)
         - prefix(github.com/offchainlabs)
   exclusions:
     generated: lax

@@ -12,10 +12,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/crypto"
 
-	"github.com/offchainlabs/nitro/daprovider/referenceda"
+	"github.com/tenderly/net-nitro/daprovider/referenceda"
 )
 
 // SequencerInboxHeader represents the decoded header of a sequencer inbox message

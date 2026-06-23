@@ -6,11 +6,11 @@ package gethexec
 import (
 	"context"
 
-	"github.com/ethereum/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
 
-	"github.com/offchainlabs/nitro/util/containers"
-	"github.com/offchainlabs/nitro/util/rpcclient"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/util/containers"
+	"github.com/tenderly/net-nitro/util/rpcclient"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
 )
 
 const TransactionFiltererNamespace = "transactionfilterer"

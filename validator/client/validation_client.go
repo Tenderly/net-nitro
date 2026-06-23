@@ -10,18 +10,18 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 
-	"github.com/offchainlabs/nitro/util/containers"
-	"github.com/offchainlabs/nitro/util/rpcclient"
-	"github.com/offchainlabs/nitro/util/stopwaiter"
-	"github.com/offchainlabs/nitro/validator"
-	"github.com/offchainlabs/nitro/validator/server_api"
-	"github.com/offchainlabs/nitro/validator/server_common"
+	"github.com/tenderly/net-nitro/util/containers"
+	"github.com/tenderly/net-nitro/util/rpcclient"
+	"github.com/tenderly/net-nitro/util/stopwaiter"
+	"github.com/tenderly/net-nitro/validator"
+	"github.com/tenderly/net-nitro/validator/server_api"
+	"github.com/tenderly/net-nitro/validator/server_common"
 )
 
 var executionNodeOfflineCounter = metrics.NewRegisteredCounter("arb/state_provider/execution_node_offline", nil)

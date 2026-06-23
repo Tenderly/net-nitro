@@ -8,9 +8,9 @@ import (
 
 	"github.com/holiman/uint256"
 
-	"github.com/ethereum/go-ethereum/arbitrum/multigas"
-	"github.com/ethereum/go-ethereum/core/tracing"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/multigas"
+	"github.com/tenderly/net-nitro/go-ethereum/core/tracing"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 // ArbNativeTokenManager precompile enables minting and burning native tokens.

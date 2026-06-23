@@ -13,10 +13,10 @@ import (
 	"github.com/aws/aws-sdk-go-v2/feature/s3/manager"
 	"github.com/aws/aws-sdk-go-v2/service/s3"
 
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/metrics"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/metrics"
 
-	"github.com/offchainlabs/nitro/util/s3client"
+	"github.com/tenderly/net-nitro/util/s3client"
 )
 
 var ErrObjectTooLarge = errors.New("s3 object exceeds max-file-size-mb")

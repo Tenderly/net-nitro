@@ -9,8 +9,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer"
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer/signertest"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer/signertest"
 )
 
 func assertErrorContains(t *testing.T, err error, want string) {

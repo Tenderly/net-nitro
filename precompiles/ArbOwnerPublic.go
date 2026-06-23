@@ -4,8 +4,8 @@
 package precompiles
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/params"
 )
 
 // ArbOwnerPublic precompile provides non-owners with info about the current chain owners.

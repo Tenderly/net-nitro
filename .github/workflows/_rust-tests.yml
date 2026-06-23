@@ -32,7 +32,7 @@ jobs:
       - name: Install custom go-ethereum
         run: |
           cd /tmp
-          git clone --branch v1.16.2 --depth 1 https://github.com/ethereum/go-ethereum.git
+          git clone --branch v1.16.2 --depth 1 https://github.com/tenderly/net-nitro/go-ethereum.git
           cd go-ethereum
           go build -o /usr/local/bin/geth ./cmd/geth
 

@@ -10,14 +10,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum/go-ethereum/node"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
-	"github.com/offchainlabs/nitro/arbutil"
-	"github.com/offchainlabs/nitro/execution"
-	"github.com/offchainlabs/nitro/execution/gethexec"
-	utilrpc "github.com/offchainlabs/nitro/util/rpcclient"
-	"github.com/offchainlabs/nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/arbutil"
+	"github.com/tenderly/net-nitro/execution"
+	"github.com/tenderly/net-nitro/execution/gethexec"
+	utilrpc "github.com/tenderly/net-nitro/util/rpcclient"
+	"github.com/tenderly/net-nitro/util/testhelpers"
 )
 
 // mockExecutionService implements a minimal execution RPC service for testing.

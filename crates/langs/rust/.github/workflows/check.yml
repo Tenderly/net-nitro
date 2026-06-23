@@ -1,0 +1,60 @@
+name: check
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+jobs:
+  fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Install nightly with rustfmt
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: nightly
+          components: rustfmt
+      - name: cargo +nightly fmt --check
+        uses: actions-rs/cargo@v1
+        with:
+          toolchain: nightly
+          command: fmt
+          args: --check
+  yamlfmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v5
+      - name: install yamlfmt
+        run: |
+          go install github.com/google/yamlfmt/cmd/yamlfmt@latest
+      - name: run yamlfmt
+        run: |
+          yamlfmt -lint .github
+  clippy:
+    runs-on: ubuntu-latest
+    name: clippy (${{ matrix.toolchain }})
+    strategy:
+      fail-fast: false
+      matrix:
+        toolchain: [1.91.0, nightly-2025-10-01]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+      - name: Install ${{ matrix.toolchain }}
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ matrix.toolchain }}
+          components: clippy
+      # contract-client-gen and export-abi features considerably change the structure of the output code.
+      # So they are checked individually.
+      - name: Run clippy excluding contract-client-gen and export-abi features
+        run: ./ci/clippy.sh --all-excluding-special-features
+      - name: Run clippy on stylus-proc with contract-client-gen feature
+        run: ./ci/clippy.sh --contract-client-gen
+      - name: Run clippy on stylus-proc with export-abi feature
+        run: ./ci/clippy.sh --export-abi

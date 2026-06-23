@@ -6,10 +6,10 @@ package anytrust
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	anytrustutil "github.com/offchainlabs/nitro/daprovider/anytrust/util"
-	"github.com/offchainlabs/nitro/util/pretty"
+	anytrustutil "github.com/tenderly/net-nitro/daprovider/anytrust/util"
+	"github.com/tenderly/net-nitro/util/pretty"
 )
 
 func logPut(store string, data []byte, timeout uint64, reader anytrustutil.Reader, more ...interface{}) {

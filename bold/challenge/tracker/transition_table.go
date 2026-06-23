@@ -4,7 +4,7 @@
 package tracker
 
 import (
-	"github.com/offchainlabs/nitro/bold/containers/fsm"
+	"github.com/tenderly/net-nitro/bold/containers/fsm"
 )
 
 func newEdgeTrackerFsm(

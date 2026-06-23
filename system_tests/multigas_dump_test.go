@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
 )
 
 // TestMultigasDataFromReceipts spins up an L2 node with ancd checks if multigas data is present in receipts

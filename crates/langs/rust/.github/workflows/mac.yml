@@ -1,0 +1,25 @@
+name: mac
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: macos-latest
+    name: macos-test (${{ matrix.toolchain }})
+    env:
+      CFG_RELEASE_CHANNEL: ${{ matrix.toolchain }}
+    strategy:
+      matrix:
+        toolchain: [1.91.0, nightly-2025-10-01]
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Install ${{ matrix.toolchain }}
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ matrix.toolchain }}
+      - name: Build and Test
+        run: ./ci/build_and_test.sh

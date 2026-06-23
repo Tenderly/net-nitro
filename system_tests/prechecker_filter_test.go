@@ -11,20 +11,20 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/accounts/abi/bind"
-	"github.com/ethereum/go-ethereum/arbitrum/filter"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/accounts/abi/bind"
+	"github.com/tenderly/net-nitro/go-ethereum/arbitrum/filter"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
 
-	"github.com/offchainlabs/nitro/arbnode"
-	"github.com/offchainlabs/nitro/execution/gethexec"
-	"github.com/offchainlabs/nitro/execution/gethexec/addressfilter"
-	"github.com/offchainlabs/nitro/execution/gethexec/eventfilter"
-	"github.com/offchainlabs/nitro/solgen/go/bridgegen"
-	"github.com/offchainlabs/nitro/solgen/go/localgen"
-	"github.com/offchainlabs/nitro/solgen/go/precompilesgen"
-	"github.com/offchainlabs/nitro/util/testhelpers"
-	"github.com/offchainlabs/nitro/util/testhelpers/env"
+	"github.com/tenderly/net-nitro/arbnode"
+	"github.com/tenderly/net-nitro/execution/gethexec"
+	"github.com/tenderly/net-nitro/execution/gethexec/addressfilter"
+	"github.com/tenderly/net-nitro/execution/gethexec/eventfilter"
+	"github.com/tenderly/net-nitro/solgen/go/bridgegen"
+	"github.com/tenderly/net-nitro/solgen/go/localgen"
+	"github.com/tenderly/net-nitro/solgen/go/precompilesgen"
+	"github.com/tenderly/net-nitro/util/testhelpers"
+	"github.com/tenderly/net-nitro/util/testhelpers/env"
 )
 
 // These tests use a two-node setup: a sequencer (node A) and a forwarder

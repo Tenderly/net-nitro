@@ -6,8 +6,8 @@ package config
 import (
 	"github.com/spf13/pflag"
 
-	"github.com/offchainlabs/nitro/daprovider/anytrust"
-	"github.com/offchainlabs/nitro/daprovider/daclient"
+	"github.com/tenderly/net-nitro/daprovider/anytrust"
+	"github.com/tenderly/net-nitro/daprovider/daclient"
 )
 
 // DAConfig contains configuration for all DA providers

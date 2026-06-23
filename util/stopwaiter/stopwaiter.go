@@ -13,11 +13,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
 
-	"github.com/offchainlabs/nitro/util/containers"
-	"github.com/offchainlabs/nitro/util/stopwaiter/state"
-	"github.com/offchainlabs/nitro/util/stopwaiter/stoppable"
+	"github.com/tenderly/net-nitro/util/containers"
+	"github.com/tenderly/net-nitro/util/stopwaiter/state"
+	"github.com/tenderly/net-nitro/util/stopwaiter/stoppable"
 )
 
 // Re-exported for callers' convenience: use stopwaiter.Stoppable / stopwaiter.StoppableChild

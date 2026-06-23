@@ -9,14 +9,14 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/ethereum/go-ethereum"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/tenderly/net-nitro/go-ethereum"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/log"
+	"github.com/tenderly/net-nitro/go-ethereum/rpc"
 
-	"github.com/offchainlabs/nitro/arbnode/mel"
-	melextraction "github.com/offchainlabs/nitro/arbnode/mel/extraction"
-	"github.com/offchainlabs/nitro/bold/containers/fsm"
+	"github.com/tenderly/net-nitro/arbnode/mel"
+	melextraction "github.com/tenderly/net-nitro/arbnode/mel/extraction"
+	"github.com/tenderly/net-nitro/bold/containers/fsm"
 )
 
 // txByLogFetcher is wrapper around ParentChainReader to implement TransactionByLog method

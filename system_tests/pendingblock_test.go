@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/offchainlabs/nitro/solgen/go/localgen"
+	"github.com/tenderly/net-nitro/solgen/go/localgen"
 )
 
 func TestPendingBlockTimeAndNumberAdvance(t *testing.T) {

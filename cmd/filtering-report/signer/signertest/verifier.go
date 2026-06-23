@@ -16,7 +16,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/offchainlabs/nitro/cmd/filtering-report/signer"
+	"github.com/tenderly/net-nitro/cmd/filtering-report/signer"
 )
 
 const DefaultTimestampSkew = 5 * time.Minute

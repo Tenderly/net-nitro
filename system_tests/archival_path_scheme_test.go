@@ -9,7 +9,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ethereum/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
 )
 
 func TestAccessingPathSchemeState(t *testing.T) {

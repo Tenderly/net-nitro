@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/offchainlabs/nitro/bold/testing/casttest"
+	"github.com/tenderly/net-nitro/bold/testing/casttest"
 )
 
 var benchResult int

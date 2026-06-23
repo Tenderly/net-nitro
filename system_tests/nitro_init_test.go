@@ -9,16 +9,16 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/rawdb"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/node"
+	"github.com/tenderly/net-nitro/go-ethereum/common"
+	"github.com/tenderly/net-nitro/go-ethereum/core/rawdb"
+	"github.com/tenderly/net-nitro/go-ethereum/core/types"
+	"github.com/tenderly/net-nitro/go-ethereum/node"
 
-	"github.com/offchainlabs/nitro/arbos/arbostypes"
-	"github.com/offchainlabs/nitro/cmd/chaininfo"
-	"github.com/offchainlabs/nitro/cmd/nitro/config"
-	"github.com/offchainlabs/nitro/cmd/nitro/init"
-	"github.com/offchainlabs/nitro/execution/gethexec"
+	"github.com/tenderly/net-nitro/arbos/arbostypes"
+	"github.com/tenderly/net-nitro/cmd/chaininfo"
+	"github.com/tenderly/net-nitro/cmd/nitro/config"
+	"github.com/tenderly/net-nitro/cmd/nitro/init"
+	"github.com/tenderly/net-nitro/execution/gethexec"
 )
 
 func TestGetConsensusParsedInitMsgNoParentChain(t *testing.T) {

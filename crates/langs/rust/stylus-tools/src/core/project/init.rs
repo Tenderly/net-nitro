@@ -1,0 +1,142 @@
+// Copyright 2025, Offchain Labs, Inc.
+// For licensing, see https://github.com/OffchainLabs/stylus-sdk-rs/blob/main/licenses/COPYRIGHT.md
+
+//! Initialize Stylus workspaces and contracts.
+
+use std::path::Path;
+
+use crate::utils::{
+    cargo::{self, manifest::ManifestMut},
+    create_dir_if_dne,
+    stylus_sdk::contract_dependencies,
+};
+
+/// Comment which is added to the `opt-level` key within the `[profile.release]` section of
+/// `Cargo.toml` for contracts.
+///
+/// This provides a potential hint to users looking to optimize their contract binary size.
+const OPT_LEVEL_COMMENT: &str = r#"
+# If you need to reduce the binary size, it is advisable to try other
+# optimization levels, such as "s" and "z"
+"#;
+
+/// Errors which may occur from initializing Stylus projects.
+#[derive(Debug, thiserror::Error)]
+pub enum InitError {
+    #[error("io error: {0}")]
+    Io(#[from] std::io::Error),
+
+    #[error("toml edit error: {0}")]
+    TomlEdit(#[from] toml_edit::TomlError),
+
+    #[error("cargo manifest error: {0}")]
+    CargoManifest(#[from] crate::utils::cargo::manifest::CargoManifestError),
+    #[error("{0}")]
+    Command(#[from] crate::error::CommandError),
+}
+
+/// Extract a valid UTF-8 project name from a path.
+pub(super) fn project_name(path: &Path) -> Result<String, InitError> {
+    let name = path
+        .file_name()
+        .ok_or_else(|| {
+            InitError::Io(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                format!("invalid project path: '{}'", path.display()),
+            ))
+        })?
+        .to_str()
+        .ok_or_else(|| {
+            InitError::Io(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                format!("project path contains invalid UTF-8: '{}'", path.display()),
+            ))
+        })?;
+    Ok(name.replace("-", "_"))
+}
+
+/// Initialize a Stylus contract in an existing Rust crate.
+pub fn init_contract(path: impl AsRef<Path>, sdk_path: Option<&Path>) -> Result<(), InitError> {
+    let path = path.as_ref();
+    let project = project_name(path)?;
+
+    // Add files from template
+    copy_from_template_if_dne!(
+        (&project),
+        "templates/contract" -> path,
+        "src/lib.rs",
+        "src/main.rs",
+        "rust-toolchain.toml",
+        "Stylus.toml",
+    );
+
+    // Update Cargo.toml
+    // This must be done after copying templates, as it will fail if there is no src/[lib|main].rs
+    init_package_manifest(path, sdk_path)?;
+
+    Ok(())
+}
+
+/// Initialize a Stylus workspace in an existing directory.
+pub fn init_workspace(path: impl AsRef<Path>) -> Result<(), InitError> {
+    let path = path.as_ref();
+    let project = project_name(path)?;
+
+    // Create standard directories
+    create_dir_if_dne(path.join("contracts"))?;
+    create_dir_if_dne(path.join("crates"))?;
+
+    // Add files from template
+    copy_from_template_if_dne!(
+        (&project),
+        "templates/workspace" -> path,
+        "Cargo.toml.tmpl",
+        "rust-toolchain.toml",
+        "Stylus.toml",
+    );
+
+    Ok(())
+}
+
+/// Initialize a contract's Cargo.toml.
+///
+/// Takes a path to the package directory.
+fn init_package_manifest(path: impl AsRef<Path>, sdk_path: Option<&Path>) -> Result<(), InitError> {
+    // Add required dependencies
+    cargo::add(&path, contract_dependencies(sdk_path))?;
+
+    // Parse existing manifest to add default configs
+    // TODO: get this from cargo metadata
+    let mut manifest = ManifestMut::read(path.as_ref().join("Cargo.toml"))?;
+    manifest.lib().extend_crate_type(["lib", "cdylib"])?;
+
+    // Add [features] section
+    let mut features = manifest.features();
+    features.extend_feature("default", ["mini-alloc"])?;
+    features.extend_feature("export-abi", ["stylus-sdk/export-abi"])?;
+    features.extend_feature("debug", ["stylus-sdk/debug"])?;
+    features.extend_feature("mini-alloc", ["stylus-sdk/mini-alloc"])?;
+    features.extend_feature("contract-client-gen", [])?;
+
+    // Add [profile.release] section
+    let mut release = manifest.profile("release")?;
+    release.set_default("codegen-units", 1);
+    release.set_default("strip", true);
+    release.set_default("lto", true);
+    release.set_default("panic", "abort");
+    if release.set_default("opt-level", 3) {
+        release.add_comment("opt-level", OPT_LEVEL_COMMENT)?;
+    }
+
+    // Add expected features
+    manifest
+        .features()
+        .extend_feature("default", ["mini-alloc"])?
+        .extend_feature("export-abi", ["stylus-sdk/export-abi"])?
+        .extend_feature("debug", ["stylus-sdk/debug"])?
+        .extend_feature("mini-alloc", ["stylus-sdk/mini-alloc"])?;
+
+    // Write the modified Cargo.toml file
+    manifest.write()?;
+    Ok(())
+}

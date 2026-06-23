@@ -9,7 +9,7 @@ import (
 	"math/bits"
 	"unsafe"
 
-	eth_math "github.com/ethereum/go-ethereum/common/math"
+	eth_math "github.com/tenderly/net-nitro/go-ethereum/common/math"
 )
 
 // NextPowerOf2 the smallest power of two greater than the input
